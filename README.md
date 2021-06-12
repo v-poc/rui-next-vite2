@@ -11,6 +11,38 @@ React with Vite Playground - Mobile web UI components - (react-hooks+vite2).
 - More UI components WIP based on React hooks.
 - About project test, will provide unit/e2e test in next major version.
 
+## Project setup
+
+Install dependencies
+
+```bash
+$ npm install
+```
+
+Prepare for docs-dev
+
+```bash
+$ npm run dev
+```
+
+Start the dev server for docs-dev
+
+```bash
+$ npm start
+```
+
+Build lib
+
+```bash
+$ npm run build-lib
+```
+
+Build documentation
+
+```bash
+$ npm run docs-build
+```
+
 ## Customize configuration
 
 About vite and vitepress, please check Configuration Reference - [vite](https://vitejs.dev/config/), [vitepress](https://vitepress.vuejs.org).

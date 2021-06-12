@@ -10,10 +10,22 @@ Install dependencies
 $ npm install
 ```
 
+Prepare for docs-dev
+
+```bash
+$ npm run dev
+```
+
 Start the dev server for docs-dev
 
 ```bash
 $ npm start
+```
+
+Build lib
+
+```bash
+$ npm run build-lib
 ```
 
 Build documentation
