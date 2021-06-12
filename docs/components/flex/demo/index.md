@@ -1,12 +1,17 @@
 ---
-category: Components
-type: Layout
 title: Flex
 ---
 
 # Flex
 
 `Flex` is a wrap of Flexible Box.
+
+```jsx
+<Flex>
+  <Flex.Item><PlaceHolder /></Flex.Item>
+  <Flex.Item><PlaceHolder /></Flex.Item>
+</Flex>
+```
 
 ## Example
 
@@ -19,7 +24,7 @@ import { Flex } from "rui-next";
 // Example Styles
 import styled from "styled-components";
 
-const FlexContainer = styled.div`
+const ExampleContainer = styled.div`
   margin: 0 15px;
 
   .inline {
@@ -59,8 +64,8 @@ const PlaceHolder = ({
 );
 
 // Example FC
-const FlexExample = () => (
-  <FlexContainer>
+const Example = () => (
+  <ExampleContainer>
     <div className="sub-title">Basic</div>
     <Flex>
       <Flex.Item><PlaceHolder /></Flex.Item>
@@ -127,10 +132,10 @@ const FlexExample = () => (
       <PlaceHolder className="inline small" />
       <PlaceHolder className="inline" />
     </Flex>
-  </FlexContainer>
+  </ExampleContainer>
 );
 
-export default FlexExample;
+export default Example;
 ```
 
 ## API

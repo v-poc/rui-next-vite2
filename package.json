@@ -1,6 +1,6 @@
 {
     "name": "rui-next",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "react UI components demo+docs base on vitepress",
     "repository": "https://github.com/bluepower/rui-next.git",
     "author": "Niko Ni",

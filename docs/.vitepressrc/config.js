@@ -54,6 +54,7 @@ function getLocalSidebar(){
 			text: "Layout",
 			children: [
 				{ text: "Flex", link: "/components/flex/demo/index" },
+        { text: "WhiteSpace", link: "/components/white-space/demo/index" },
 			]
 		},
 	]
