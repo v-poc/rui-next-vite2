@@ -12,6 +12,8 @@ export interface WhiteSpaceProps extends WhiteSpacePropsType {
   className?: string;
   style?: React.CSSProperties;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
+  children?: any;
+  vertical?: boolean; // vertical or horizontal
 }
 
 // WhiteSpace FC
@@ -21,12 +23,18 @@ const WhiteSpace = (props: WhiteSpaceProps) => {
     size,
     className,
     style,
-    onClick
+    onClick,
+    children,
+    vertical = true,
   } = props;
 
+  const _cls = prefixCls || (vertical ? "r-whitespace" : "r-wingblank");
+  const _size = size || (vertical ? "md" : "lg");
+
   const wrapCls = classnames(
-    prefixCls,
-    `${prefixCls}-${size}`, className
+    _cls,
+    `${_cls}-${_size}`,
+    className
   );
 
   return (
@@ -34,13 +42,10 @@ const WhiteSpace = (props: WhiteSpaceProps) => {
       className={wrapCls}
       style={style}
       onClick={onClick}
-    />
+    >
+      {children}
+    </div>
   );
-};
-
-WhiteSpace.defaultProps = {
-  prefixCls: 'r-whitespace',
-  size: 'md',
 };
 
 export default WhiteSpace;

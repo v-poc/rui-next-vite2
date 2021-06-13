@@ -8,6 +8,7 @@ title: WhiteSpace
 
 ```jsx
 <WhiteSpace size="md" />
+<WhiteSpace vertical={false} size='lg'>...</WhiteSpace>
 ```
 
 ## Example
@@ -45,6 +46,7 @@ const PlaceHolder = ({
 // Example FC
 const Example = () => (
   <ExampleContainer>
+    <p>WhiteSpace vertical</p>
     <WhiteSpace size="xs" />
     <PlaceHolder />
 
@@ -59,6 +61,15 @@ const Example = () => (
     
     <WhiteSpace size="xl" />
     <PlaceHolder />
+
+    <br />
+    <p>WhiteSpace horizontal</p>
+    <br />
+    <WhiteSpace vertical={false}><PlaceHolder /></WhiteSpace>
+    <br />
+    <WhiteSpace vertical={false} size="md"><PlaceHolder /></WhiteSpace>
+    <br />
+    <WhiteSpace vertical={false} size="sm"><PlaceHolder /></WhiteSpace>
   </ExampleContainer>
 );
 
@@ -67,6 +78,16 @@ export default Example;
 
 ## API
 
+### WhiteSpace vertical
+
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
 | size | up and down margins, optional values: `xs`,`sm`,`md`,`lg`,`xl` | string | `md` |
+| vertical | whether vertical or hozirontal | boolean | `true` |
+
+### WhiteSpace horizontal
+
+Properties | Descrition | Type | Default
+-----------|------------|------|--------
+| size | left and right blank space, optional values:`sm`,`md`,`lg` | string | `lg` |
+| vertical | whether vertical or hozirontal | boolean | `false` |
