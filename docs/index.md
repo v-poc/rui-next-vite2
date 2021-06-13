@@ -16,7 +16,7 @@ Prepare for docs-dev
 $ npm run dev
 ```
 
-Start the dev server for docs-dev
+Start the dev server for [docs-dev](http://localhost:3000/rui-next/)
 
 ```bash
 $ npm start

@@ -1,19 +1,19 @@
 const path = require('path');
 
 module.exports = {
+  base: '/rui-next',
   lang: 'en-US',
   title: 'RUI.next',
-  description: 'Vite & React powered static site generator.',
-  base: '/rui-next',
-  alias:{
+  description: 'The demo+docs of RUI.next',
+  alias: {
     'root': path.resolve(__dirname, '../')
   },
 
-  md:{
+  md: {
 	  codeScope: {
 		  'rui-next': path.resolve(__dirname, '../components/index.tsx'),
 	  },
-	  docgen:{
+	  docgen: {
 		  
 	  }
   },
@@ -31,17 +31,36 @@ module.exports = {
       indexName: 'vitepress'
     },
 
-
     nav: [
       {
-        text: 'Release Notes',
-        link: 'https://github.com/bluepower/rui-next/releases'
+        text: 'RUI Components',
+        link: '/'
+      },
+      {
+        text: 'Changelog',
+        link: 'https://github.com/bluepower/rui-next/blob/main/CHANGELOG.md'
+      },
+      {
+        text: 'Links',
+        items: [
+          {
+            text: 'Vite',
+            link: 'https://vitejs.dev/'
+          },
+          {
+            text: 'Vitepress',
+            link: 'https://vitepress.vuejs.org/'
+          },
+          {
+            text: 'Vitepress-rc',
+            link: 'https://github.com/cvnine/vitepress-rc'
+          }
+        ]
       }
     ],
 
     sidebar: {
       // '/guide/': getGuideSidebar(),
-      // '/local/': getLocalSidebar(),
       // '/config/': getConfigSidebar(),
       '/': getLocalSidebar()
     }
@@ -60,6 +79,7 @@ function getLocalSidebar(){
 	]
 }
 
+/*
 function getGuideSidebar() {
   return [
     {
@@ -105,3 +125,4 @@ function getConfigSidebar() {
     }
   ]
 }
+*/
