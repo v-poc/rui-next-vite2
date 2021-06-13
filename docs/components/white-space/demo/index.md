@@ -8,7 +8,7 @@ title: WhiteSpace
 
 ```jsx
 <WhiteSpace size="md" />
-<WhiteSpace vertical={false} size='lg'>...</WhiteSpace>
+<WhiteSpace vertical={false} size="lg">...</WhiteSpace>
 ```
 
 ## Example

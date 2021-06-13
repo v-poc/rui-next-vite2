@@ -76,6 +76,13 @@ function getLocalSidebar(){
         { text: "WhiteSpace", link: "/components/white-space/demo/index" },
 			]
 		},
+		{
+			text: "Feedback",
+			children: [
+				{ text: "ActivityIndicator", link: "/components/activity-indicator/demo/index" },
+			]
+		},
+
 	]
 }
 

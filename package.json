@@ -1,6 +1,6 @@
 {
     "name": "rui-next",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Mobile web UI components based on React and Vite",
     "files": [
       "dist/style.css",
@@ -52,7 +52,7 @@
         "dev-client": "tsc -w -p src/client",
         "dev-node": "tsc -w -p src/node",
         "build": "rimraf -rf dist && tsc -p src/client && tsc -p src/node",
-        "build-lib": "vite build --config lib/vite.config.js",
+        "build-lib": "vite build --config lib/vite.config.ts",
         "docs": "run-p dev docs-dev",
         "docs-dev": "node ./bin/index.js dev docs",
         "docs-build": "yarn build && node ./bin/index build docs",

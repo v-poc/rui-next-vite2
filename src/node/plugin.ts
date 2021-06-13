@@ -30,6 +30,14 @@ export function createVitePlugin(
 				resolve: {
 					alias,
 				},
+				css: {
+					preprocessorOptions: {
+					    less: {
+						    // Inline JavaScript should be enabled.
+						    javascriptEnabled: true,
+					    },
+					},
+				},				
 			}
 		},
 		resolveId(id) {
