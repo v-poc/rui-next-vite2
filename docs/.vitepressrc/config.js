@@ -11,7 +11,7 @@ module.exports = {
 
   md: {
 	  codeScope: {
-		  'rui-next': path.resolve(__dirname, '../components/index.tsx'),
+		  'rui-next': path.resolve(__dirname, '../components/index.ts'),
 	  },
 	  docgen: {
 		  
