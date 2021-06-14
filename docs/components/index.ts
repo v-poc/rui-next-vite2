@@ -6,3 +6,5 @@ export { default as WhiteSpace } from "./white-space/index";
 export { default as ActivityIndicator } from "./activity-indicator/index";
 // Progress
 export { default as Progress } from "./progress/index";
+// QRCode
+export { default as QRCode } from "./qr-code/index";

@@ -1,47 +1,47 @@
 {
     "name": "rui-next",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "Mobile web UI components based on React and Vite",
     "files": [
-      "dist/style.css",
-      "dist/rui-next.es.js",
-      "dist/rui-next.umd.js"
+        "dist/style.css",
+        "dist/rui-next.es.js",
+        "dist/rui-next.umd.js"
     ],
     "main": "dist/rui-next.umd.js",
     "module": "dist/rui-next.es.js",
     "exports": {
-      ".": {
-        "import": "./dist/rui-next.es.js",
-        "require": "./dist/rui-next.umd.js"
-      },
-      "./css": "./dist/style.css"
+        ".": {
+            "import": "./dist/rui-next.es.js",
+            "require": "./dist/rui-next.umd.js"
+        },
+        "./css": "./dist/style.css"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/bluepower/rui-next.git"
+        "type": "git",
+        "url": "git+https://github.com/bluepower/rui-next.git"
     },
     "keywords": [
-      "vite",
-      "react",
-      "react-hooks",
-      "vitepress",
-      "react-components",
-      "react-hooks-components",
-      "rui",
-      "react-ui",
-      "react-hooks-ui",
-      "react-vite",
-      "react-vite-ui",
-      "react-vite-vitepress",
-      "react-vite-vitepress-ui",
-      "vite2",
-      "react-vite2-ui",
-      "react-vite2-vitepress-ui"
+        "vite",
+        "react",
+        "react-hooks",
+        "vitepress",
+        "react-components",
+        "react-hooks-components",
+        "rui",
+        "react-ui",
+        "react-hooks-ui",
+        "react-vite",
+        "react-vite-ui",
+        "react-vite-vitepress",
+        "react-vite-vitepress-ui",
+        "vite2",
+        "react-vite2-ui",
+        "react-vite2-vitepress-ui"
     ],
     "author": "Niko Ni",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/bluepower/rui-next/issues"
+        "url": "https://github.com/bluepower/rui-next/issues"
     },
     "homepage": "https://github.com/bluepower/rui-next/blob/dev/README.md",
     "bin": {
@@ -102,7 +102,8 @@
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "rimraf": "^3.0.2",
-        "rollup": "^2.45.2"
+        "rollup": "^2.45.2",
+        "v-qr-code-next": "^0.1.6"
     },
     "dependencies": {
         "@mdx-js/mdx": "^2.0.0-next.9",

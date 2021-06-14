@@ -1,6 +1,7 @@
-# 0.0.8 (2021-06-14)
+# 0.0.9 (2021-06-14)
 
-Added Progress demo.
+- Added Progress demo.
+- Added QRCode demo.
 
 # 0.0.7 (2021-06-13)
 

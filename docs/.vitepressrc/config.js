@@ -83,7 +83,12 @@ function getLocalSidebar(){
         { text: "Progress", link: "/components/progress/demo/index" },
 			]
 		},
-
+		{
+			text: "Misc",
+			children: [
+        { text: "QRCode", link: "/components/qr-code/demo/index" },
+			]
+		},
 	]
 }
 
