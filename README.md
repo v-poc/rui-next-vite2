@@ -1,6 +1,6 @@
 # rui-next (aka RUI.next)
 
-[![npm](https://img.shields.io/npm/v/rui-next)](https://www.npmjs.com/package/rui-next) <img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" />
+[![npm](https://img.shields.io/npm/v/rui-next)](https://www.npmjs.com/package/rui-next) <a href="https://www.npmjs.com/package/rui-next" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" /></a>
 
 React with Vite Playground - Mobile web UI components - (react-hooks+vite2).
 
@@ -47,7 +47,7 @@ $ npm run docs-build
 
 ## Customize configuration
 
-About vite and vitepress, please check Configuration Reference - [vite](https://vitejs.dev/config/), [vitepress](https://vitepress.vuejs.org), [vitepress-rc](https://github.com/cvnine/vitepress-rc).
+About vite and vitepress(-rc), please check Configuration Reference - [vite](https://vitejs.dev/config/), [vitepress](https://vitepress.vuejs.org), [vitepress-rc](https://github.com/cvnine/vitepress-rc).
 
 ## License
 
