@@ -80,6 +80,7 @@ function getLocalSidebar(){
 			text: "Feedback",
 			children: [
 				{ text: "ActivityIndicator", link: "/components/activity-indicator/demo/index" },
+        { text: "Progress", link: "/components/progress/demo/index" },
 			]
 		},
 
