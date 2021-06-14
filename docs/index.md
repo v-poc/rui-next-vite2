@@ -8,7 +8,7 @@ Thanks to [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) that could su
 
 ## Preview
 
-Try [QR code playground](/components/qr-code/demo/index) to scan to access the examples on mobile/tablet device.
+Try [QR code playground](https://nikoni.top/rui-next/docs/components/qr-code/demo/index.html) to scan to access the examples on mobile/tablet device.
 
 ## Project setup
 
