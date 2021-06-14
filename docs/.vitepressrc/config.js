@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  base: '/rui-next',
+  base: '/rui-next/docs',
   lang: 'en-US',
   title: 'RUI.next',
   description: 'The demo+docs of RUI.next',
