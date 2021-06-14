@@ -34,12 +34,12 @@ const ExampleContainer = styled.div`
 // Example FC
 const Example = () => (
   <ExampleContainer>
-    <h1>VUI.next</h1>
+    <h1>RUI.next</h1>
     <h3>scan the QR code to access the examples on mobile/tablet device:</h3>
     <br />
     <QRCode
       className="qr-code-container"
-      value="https://nikoni.top/vui-vc-next/"
+      value="https://nikoni.top/rui-next/docs/"
     />
   </ExampleContainer>
 );
