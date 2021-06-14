@@ -8,3 +8,5 @@ export { default as ActivityIndicator } from "./activity-indicator/index";
 export { default as Progress } from "./progress/index";
 // QRCode
 export { default as QRCode } from "./qr-code/index";
+// Card
+export { default as Card } from "./card/index";

@@ -77,6 +77,12 @@ function getLocalSidebar(){
 			]
 		},
 		{
+			text: "Data-Display",
+			children: [
+        { text: "Card", link: "/components/card/demo/index" },
+			]
+		},
+		{
 			text: "Feedback",
 			children: [
 				{ text: "ActivityIndicator", link: "/components/activity-indicator/demo/index" },

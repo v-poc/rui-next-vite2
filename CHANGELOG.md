@@ -1,5 +1,6 @@
 # 0.0.9 (2021-06-14)
 
+- Added Card demo.
 - Added Progress demo.
 - Added QRCode demo.
 

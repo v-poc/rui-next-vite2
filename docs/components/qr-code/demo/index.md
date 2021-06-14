@@ -25,8 +25,9 @@ const ExampleContainer = styled.div`
   .qr-code-container {
     display: inline-block;
     border: 1px solid #999;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px;
     box-shadow: 3px 3px 6px #CCC;
+    overflow: hidden;
   }
 `;
 
@@ -52,6 +53,6 @@ export default Example;
 
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
-| value | the value of qr-code, mandatory | string | "" |
+| value | the value of qr-code, mandatory | string | |
 | num | the type number, optional | number | 8 |
 | level | the error Correction Level, optional value: `L` `M` `Q` `H` | string | `L` |
