@@ -10,7 +10,7 @@ This is just one kind of playground to dev `react-hooks` based UI components bas
 
 ## Preview
 
-Try [QR code SFC playground](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8aDE+UlVJLm5leHQ8L2gxPlxuICA8aDM+c2NhbiB0aGUgUVIgY29kZSB0byBhY2Nlc3MgdGhlIGV4YW1wbGVzIG9uIG1vYmlsZS90YWJsZXQgZGV2aWNlOjwvaDM+XG4gIDxkaXYgdi1odG1sPVwiaW1nXCI+PC9kaXY+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0IHNldHVwPlxuaW1wb3J0IHFyY29kZSBmcm9tICd2LXFyLWNvZGUtbmV4dCdcblxuY29uc3QgdHlwZU51bWJlciA9IDgsIGVycm9yQ29ycmVjdGlvbkxldmVsID0gJ0wnXG5jb25zdCBxciA9IHFyY29kZSh0eXBlTnVtYmVyLCBlcnJvckNvcnJlY3Rpb25MZXZlbClcbnFyLmFkZERhdGEoJ2h0dHBzOi8vbmlrb25pLnRvcC9ydWktbmV4dC9kb2NzLycpLm1ha2UoKVxuXG5jb25zdCBpbWcgPSBxci5jcmVhdGVJbWdUYWcoKVxuPC9zY3JpcHQ+XG4iLCJpbXBvcnQtbWFwLmpzb24iOiJ7XG4gIFwiaW1wb3J0c1wiOiB7XG4gICAgXCJ2LXFyLWNvZGUtbmV4dFwiOiBcImh0dHBzOi8vdW5wa2cuY29tL3YtcXItY29kZS1uZXh0QDAuMS42L2Rpc3Qvdi1xci1jb2RlLW5leHQuZXMuanNcIlxuICB9XG59In0=) to scan to access the examples on mobile/tablet device.
+Try [QR code playground](https://nikoni.top/rui-next/docs/components/qr-code/demo/index.html) to scan to access the examples on mobile/tablet device.
 
 ## Status
 
@@ -31,7 +31,7 @@ Prepare for docs-dev
 $ npm run dev
 ```
 
-Start the dev server for docs-dev
+Start the dev server for [docs-dev](http://localhost:3000/rui-next/)
 
 ```bash
 $ npm start

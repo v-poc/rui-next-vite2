@@ -6,6 +6,10 @@ Thanks to [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) that could su
 
 > react-hooks `demo+docs` playground based on [vitepress-rc](https://github.com/cvnine/vitepress-rc).
 
+## Preview
+
+Try [QR code playground](/components/qr-code/demo/index) to scan to access the examples on mobile/tablet device.
+
 ## Project setup
 
 Install dependencies
