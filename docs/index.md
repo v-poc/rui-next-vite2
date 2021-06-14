@@ -1,5 +1,9 @@
 # Getting Started
 
+## Overview
+
+Thanks to [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) that could support `React demo+docs` well to run with `vitepress+vite`. I tried [`dumi`](https://github.com/bluepower/dumi-react-hooks-poc) but it is coupled with webpack, and tried [`vuepress 2`](https://github.com/bluepower/vuepress-react-hooks-poc) with `vite bundler` but it seems not good enough to support `React demo`. For now, it seems `vitepress-rc` could meet my personal requirement for `React demo+docs` + `vitepress+vite`.
+
 > react-hooks `demo+docs` playground based on [vitepress-rc](https://github.com/cvnine/vitepress-rc).
 
 ## Project setup
