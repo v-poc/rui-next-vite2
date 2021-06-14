@@ -55,10 +55,10 @@
         "build-lib": "vite build --config lib/vite.config.ts",
         "docs": "run-p dev docs-dev",
         "docs-dev": "node ./bin/index.js dev docs",
-        "docs-build": "yarn build && node ./bin/index build docs",
+        "docs-build": "npm run build && node ./bin/index build docs",
         "docs-serve": "node ./bin/index serve docs",
         "lint": "prettier --write ./src/**/* && eslint --fix",
-        "deploy": "yarn docs-build && node scripts/deploy.js",
+        "deploy": "npm run docs-build && node scripts/deploy.js",
         "start": "run-p dev docs-dev"
     },
     "engines": {
