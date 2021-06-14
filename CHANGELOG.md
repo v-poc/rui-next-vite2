@@ -1,3 +1,7 @@
+# 0.1.1 (2021-06-15)
+
+Removed `gh-pages` as it may introduce early unsafe version of `normalize-url`.
+
 # 0.1.0 (2021-06-14)
 
 Updated QRCode demo.
