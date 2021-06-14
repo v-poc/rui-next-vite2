@@ -33,7 +33,7 @@ module.exports = {
 
     nav: [
       {
-        text: 'RUI Components',
+        text: 'IndexPage',
         link: '/'
       },
       {
