@@ -43,7 +43,7 @@
     "bugs": {
         "url": "https://github.com/bluepower/rui-next/issues"
     },
-    "homepage": "https://github.com/bluepower/rui-next/blob/dev/README.md",
+    "homepage": "https://github.com/bluepower/rui-next/blob/main/README.md",
     "bin": {
         "vitepress-rc": "bin/index.js"
     },

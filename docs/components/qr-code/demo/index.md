@@ -15,7 +15,7 @@ title: QRCode
 Basic usage of QRCode component.
 
 ```jsx live=local
-import React from "react";
+import React, { useState } from "react";
 import { QRCode } from "rui-next";
 
 // Example Styles
@@ -29,20 +29,44 @@ const ExampleContainer = styled.div`
     box-shadow: 3px 3px 6px #CCC;
     overflow: hidden;
   }
+
+  input[type="text"] {
+    margin-top: 15px;
+    width: 100%;
+    height: 24px;
+    border: 1px solid #000;
+  }
 `;
 
 // Example FC
-const Example = () => (
-  <ExampleContainer>
-    <h1>RUI.next</h1>
-    <h3>scan the QR code to access the examples on mobile/tablet device:</h3>
-    <br />
-    <QRCode
-      className="qr-code-container"
-      value="https://nikoni.top/rui-next/docs/"
-    />
-  </ExampleContainer>
-);
+const Example = () => {
+  const [content, setContent] = useState("Hello RUI!");
+  const onInputContent = (e) => setContent(e.target.value.trim());
+
+  return (
+    <ExampleContainer>
+      <h1>RUI.next</h1>
+      <h3>scan the QR code to access the examples on mobile/tablet device:</h3>
+      <br />
+      <QRCode
+        className="qr-code-container"
+        value="https://nikoni.top/rui-next/docs/"
+      />
+      <br />
+      <br />
+      <br />
+      <h4>Simple qr-code generator</h4>
+      <input
+        type="text"
+        placeholder="Please input content"
+        onChange={(e) => onInputContent(e)}
+      />
+      <QRCode
+        value={content}
+      />
+    </ExampleContainer>
+  )
+};
 
 export default Example;
 ```
