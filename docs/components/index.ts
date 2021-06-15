@@ -10,3 +10,5 @@ export { default as Progress } from "./progress/index";
 export { default as QRCode } from "./qr-code/index";
 // Card
 export { default as Card } from "./card/index";
+// OnePiece
+export { default as OnePiece } from "./one-piece/index";

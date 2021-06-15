@@ -93,6 +93,7 @@ function getLocalSidebar(){
 			text: "Misc",
 			children: [
         { text: "QRCode", link: "/components/qr-code/demo/index" },
+        { text: "OnePiece", link: "/components/one-piece/demo/index" },
 			]
 		},
 	]
