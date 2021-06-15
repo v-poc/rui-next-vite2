@@ -28,18 +28,19 @@ Basic usage of Card component.
 
 ```jsx live=local
 import React from "react";
-import { Card } from "rui-next";
+import { Card, OnePiece } from "rui-next";
 
 // Example Styles
 import styled from "styled-components";
 
 const ExampleContainer = styled.div`
   .default-card {
-    margin: 0 5rem;
+    margin: 0 2rem;
   }
 
   .full-card {
-    background-color: #EFEFEF;
+    background-color: rgba(0, 0, 0, .02);
+    border: 1px solid #EEE;
   }
 `;
 
@@ -56,7 +57,7 @@ const Example = () => {
           extra={<span>extra header</span>}
         />
         <Card.Body>
-          <div>This is content of `Default Card`</div>
+          <OnePiece scale={0.7} />
         </Card.Body>
         <Card.Footer
           content="footer content"
