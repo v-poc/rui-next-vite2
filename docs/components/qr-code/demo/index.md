@@ -40,7 +40,7 @@ const ExampleContainer = styled.div`
 
 // Example FC
 const Example = () => {
-  const [content, setContent] = useState("Hello RUI!");
+  const [content, setContent] = useState("");
   const onInputContent = (e) => setContent(e.target.value.trim());
 
   return (
@@ -61,9 +61,9 @@ const Example = () => {
         placeholder="Please input content"
         onChange={(e) => onInputContent(e)}
       />
-      <QRCode
+      {content && (<QRCode
         value={content}
-      />
+      />)}
     </ExampleContainer>
   )
 };
@@ -79,4 +79,4 @@ Properties | Descrition | Type | Default
 -----------|------------|------|--------
 | value | the value of qr-code, mandatory | string | |
 | num | the type number, optional | number | 8 |
-| level | the error Correction Level, optional value: `L` `M` `Q` `H` | string | `L` |
+| level | the error Correction Level, optional value: `L`, `M`, `Q`, `H` | string | `L` |

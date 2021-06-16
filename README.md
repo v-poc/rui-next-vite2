@@ -25,7 +25,7 @@ Install dependencies
 $ npm install
 ```
 
-Prepare for docs-dev
+Prepare for docs-dev (mandatory step)
 
 ```bash
 $ npm run dev

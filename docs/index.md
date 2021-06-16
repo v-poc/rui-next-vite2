@@ -1,8 +1,10 @@
 # Getting Started
 
+[![npm](https://img.shields.io/npm/v/rui-next)](https://www.npmjs.com/package/rui-next) <a href="https://nikoni.top/rui-next/docs/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" /></a>
+
 ## Overview
 
-Thanks to [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) that could support `React demo+docs` well to run with `vitepress+vite`. I tried [`dumi`](https://github.com/bluepower/dumi-react-hooks-poc) but it is coupled with webpack, and tried [`vuepress 2`](https://github.com/bluepower/vuepress-react-hooks-poc) with `vite bundler` but it seems not good enough to support `React demo`. For now, it seems `vitepress-rc` could meet my personal requirement for `React demo+docs` + `vitepress+vite`.
+Thanks to [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) that could support `React demo+docs` well to run with `vitepress+vite`. I tried [`dumi`](https://d.umijs.org/) but it is coupled with webpack, and tried [`vuepress 2`](https://github.com/vuepress/vuepress-next) with `vite bundler` but it seems not good enough to support `React demo`. For now, it seems `vitepress-rc` could meet my personal requirement for `React demo+docs` + `vitepress+vite`.
 
 > react-hooks `demo+docs` playground based on [vitepress-rc](https://github.com/cvnine/vitepress-rc).
 
@@ -18,7 +20,7 @@ Install dependencies
 $ npm install
 ```
 
-Prepare for docs-dev
+Prepare for docs-dev (mandatory step)
 
 ```bash
 $ npm run dev
