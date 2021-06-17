@@ -7,6 +7,7 @@ export interface QRCodeProps {
   value: string;                 // the value of qr-code
   num?: number;                  // the type number
   level?: "L" | "M" | "Q" | "H"; // the error Correction Level
+  mode?: "image" | "svg" | "table" | "dataurl";
   prefixCls?: string;
   className?: string;
 }
@@ -17,6 +18,7 @@ const QRCode = (props: QRCodeProps) => {
     value,
     num = 8,
     level = "L",
+    mode,
     prefixCls,
     className,
   } = props;
@@ -27,7 +29,18 @@ const QRCode = (props: QRCodeProps) => {
   );
   qr.addData(value).make();
 
-  const content = { __html: qr.createImgTag() };
+  let res = "";
+  if (mode === "svg") {
+    res = qr.createSvgTag();
+  } else if (mode === "table") {
+    res = qr.createTableTag();
+  } else if (mode === "dataurl") {
+    res = `<img src="${qr.createDataURL()}" />`;
+  } else {
+    res = qr.createImgTag();
+  }
+
+  const content = { __html: res };
 
   const wrapCls = classnames(
     prefixCls,
@@ -44,6 +57,9 @@ const QRCode = (props: QRCodeProps) => {
 
 QRCode.defaultProps = {
   prefixCls: "r-qr-code",
+  num: 8,
+  level: "L",
+  mode: "image",
 };
 
 export default QRCode;

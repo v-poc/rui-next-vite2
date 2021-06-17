@@ -7,7 +7,7 @@ title: QRCode
 `QRCode` is the qr-code generator.
 
 ```jsx
-<QRCode value="Hello RUI!" />
+<QRCode mode="image" value="Hello RUI!" />
 ```
 
 ## Example
@@ -41,7 +41,15 @@ const ExampleContainer = styled.div`
 // Example FC
 const Example = () => {
   const [content, setContent] = useState("");
+  const [mode, setMode] = useState("image");
   const onInputContent = (e) => setContent(e.target.value.trim());
+  const handleSelect = () => {
+    const el = document.querySelector("select");
+    console.log("handleSelect", el.value);
+    if (el) {
+      setMode(el.value);
+    }
+  };
 
   return (
     <ExampleContainer>
@@ -56,12 +64,20 @@ const Example = () => {
       <br />
       <br />
       <h4>Simple qr-code generator</h4>
+      <br />
+      Mode:<select onChange={() => handleSelect()}>
+        <option value="image">Image</option>
+        <option value="svg">SVG</option>
+        <option value="table">Table</option>
+        <option value="dataurl">DataURL</option>
+      </select>
       <input
         type="text"
         placeholder="Please input content"
         onChange={(e) => onInputContent(e)}
       />
       {content && (<QRCode
+        mode={mode}
         value={content}
       />)}
     </ExampleContainer>
