@@ -15,7 +15,7 @@ title: QRCode
 Basic usage of QRCode component.
 
 ```jsx live=local
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { QRCode } from "rui-next";
 
 // Example Styles
@@ -42,10 +42,12 @@ const ExampleContainer = styled.div`
 const Example = () => {
   const [content, setContent] = useState("");
   const [mode, setMode] = useState("image");
+  const selectRef = useRef();
+
   const onInputContent = (e) => setContent(e.target.value.trim());
   const handleSelect = () => {
-    const el = document.querySelector("select");
-    console.log("handleSelect", el.value);
+    const el = selectRef.current;
+    // console.log("handleSelect", el.value);
     if (el) {
       setMode(el.value);
     }
@@ -65,7 +67,10 @@ const Example = () => {
       <br />
       <h4>Simple qr-code generator</h4>
       <br />
-      Mode:<select onChange={() => handleSelect()}>
+      Mode:<select
+          ref={selectRef}
+          onChange={() => handleSelect()}
+        >
         <option value="image">Image</option>
         <option value="svg">SVG</option>
         <option value="table">Table</option>
@@ -96,3 +101,4 @@ Properties | Descrition | Type | Default
 | value | the value of qr-code, mandatory | string | |
 | num | the type number, optional | number | 8 |
 | level | the error Correction Level, optional value: `L`, `M`, `Q`, `H` | string | `L` |
+| mode | the render mode of qr-code, optional value: `image`, `svg`, `table`, `dataurl` | string | `image` |
