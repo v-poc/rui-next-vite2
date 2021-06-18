@@ -12,3 +12,5 @@ export { default as QRCode } from "./qr-code/index";
 export { default as Card } from "./card/index";
 // OnePiece
 export { default as OnePiece } from "./one-piece/index";
+// Badge
+export { default as Badge } from "./badge/index";

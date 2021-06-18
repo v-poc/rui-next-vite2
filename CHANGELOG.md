@@ -1,3 +1,7 @@
+# 0.3.0 (2021-06-18)
+
+Added Badge demo.
+
 # 0.2.0 (2021-06-15)
 
 Added OnePiece demo.

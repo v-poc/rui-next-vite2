@@ -80,6 +80,7 @@ function getLocalSidebar(){
 			text: "Data-Display",
 			children: [
         { text: "Card", link: "/components/card/demo/index" },
+        { text: "Badge", link: "/components/badge/demo/index" },
 			]
 		},
 		{
