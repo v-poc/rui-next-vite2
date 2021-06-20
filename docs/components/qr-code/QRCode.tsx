@@ -8,6 +8,7 @@ export interface QRCodeProps {
   num?: number;                  // the type number
   level?: "L" | "M" | "Q" | "H"; // the error Correction Level
   mode?: "image" | "svg" | "table" | "dataurl";
+  border: boolean;
   prefixCls?: string;
   className?: string;
 }
@@ -16,9 +17,10 @@ export interface QRCodeProps {
 const QRCode = (props: QRCodeProps) => {
   const {
     value,
-    num = 8,
-    level = "L",
+    num,
+    level,
     mode,
+    border,
     prefixCls,
     className,
   } = props;
@@ -45,6 +47,9 @@ const QRCode = (props: QRCodeProps) => {
   const wrapCls = classnames(
     prefixCls,
     className,
+    {
+      [`${prefixCls}-wrapper`]: !!border,
+    }
   );
 
   return (
@@ -60,6 +65,7 @@ QRCode.defaultProps = {
   num: 8,
   level: "L",
   mode: "image",
+  border: false,
 };
 
 export default QRCode;

@@ -51,15 +51,19 @@ const Badge = (props: BadgeProps) => {
     [`${prefixCls}-corner-large`]: corner && size === "large",
   });
 
-  const badgeCls = classnames(prefixCls, className, {
-    [`${prefixCls}-not-a-wrapper`]: !children,
-    [`${prefixCls}-corner-wrapper`]: corner,
-    [`${prefixCls}-hot`]: !!hot,
-    [`${prefixCls}-corner-wrapper-large`]: corner && size === "large",
-  });
+  const wrapCls = classnames(
+    prefixCls,
+    className,
+    {
+      [`${prefixCls}-not-a-wrapper`]: !children,
+      [`${prefixCls}-corner-wrapper`]: corner,
+      [`${prefixCls}-hot`]: !!hot,
+      [`${prefixCls}-corner-wrapper-large`]: corner && size === "large",
+    }
+  );
 
   return (
-    <span className={badgeCls}>
+    <span className={wrapCls}>
       {children}
       {(text || dot) && (
         <sup

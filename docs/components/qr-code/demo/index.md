@@ -22,16 +22,8 @@ import { QRCode } from "rui-next";
 import styled from "styled-components";
 
 const ExampleContainer = styled.div`
-  .qr-code-container {
-    display: inline-block;
-    border: 1px solid #999;
-    border-radius: 5px;
-    box-shadow: 3px 3px 6px #CCC;
-    overflow: hidden;
-  }
-
   input[type="text"] {
-    margin-top: 15px;
+    margin: 15px 0;
     width: 100%;
     height: 24px;
     border: 1px solid #000;
@@ -42,16 +34,13 @@ const ExampleContainer = styled.div`
 const Example = () => {
   const [content, setContent] = useState("");
   const [mode, setMode] = useState("image");
-  const selectRef = useRef();
+  const [wrapper, setWrapper] = useState(false);
+  const selectModeRef = useRef();
+  const selectWrapperRef = useRef();
 
-  const onInputContent = (e) => setContent(e.target.value.trim());
-  const handleSelect = () => {
-    const el = selectRef.current;
-    // console.log("handleSelect", el.value);
-    if (el) {
-      setMode(el.value);
-    }
-  };
+  const handleInputContent = (e) => setContent(e.target.value.trim());
+  const handleSelectMode = () => setMode(selectModeRef.current!.value);
+  const handleSelectWrapper = () => setWrapper(selectWrapperRef.current!.value === "1");
 
   return (
     <ExampleContainer>
@@ -59,8 +48,8 @@ const Example = () => {
       <h3>scan the QR code to access the examples on mobile/tablet device:</h3>
       <br />
       <QRCode
-        className="qr-code-container"
         value="https://nikoni.top/rui-next/docs/"
+        border
       />
       <br />
       <br />
@@ -68,22 +57,32 @@ const Example = () => {
       <h4>Simple qr-code generator</h4>
       <br />
       Mode:<select
-          ref={selectRef}
-          onChange={() => handleSelect()}
+          ref={selectModeRef}
+          onChange={() => handleSelectMode()}
         >
         <option value="image">Image</option>
         <option value="svg">SVG</option>
         <option value="table">Table</option>
         <option value="dataurl">DataURL</option>
       </select>
+      <br />
+      <br />
+      Wrapper:<select
+          ref={selectWrapperRef}
+          onChange={() => handleSelectWrapper()}
+        >
+        <option value="0">Without Border</option>
+        <option value="1">With Border</option>
+      </select>
       <input
         type="text"
         placeholder="Please input content"
-        onChange={(e) => onInputContent(e)}
+        onChange={(e) => handleInputContent(e)}
       />
       {content && (<QRCode
         mode={mode}
         value={content}
+        border={wrapper}
       />)}
     </ExampleContainer>
   )
@@ -102,3 +101,4 @@ Properties | Descrition | Type | Default
 | num | the type number, optional | number | 8 |
 | level | the error Correction Level, optional value: `L`, `M`, `Q`, `H` | string | `L` |
 | mode | the render mode of qr-code, optional value: `image`, `svg`, `table`, `dataurl` | string | `image` |
+| border | whether to show the border wrapper, optional | boolean | `false` |
