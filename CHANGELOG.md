@@ -1,3 +1,9 @@
+# 0.3.1 (2021-06-20)
+
+- Updated scripts `start` and `build-docs`.
+- Updated QRCode demo for border wrapper.
+- Updated Badge demo.
+
 # 0.3.0 (2021-06-18)
 
 Added Badge demo.
