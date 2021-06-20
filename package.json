@@ -1,6 +1,6 @@
 {
     "name": "rui-next",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "Mobile web UI components based on React and Vite",
     "files": [
         "dist/style.css",
@@ -26,7 +26,9 @@
         "react-hooks",
         "vitepress",
         "react-components",
+        "react-vitepress",
         "react-hooks-components",
+        "react-hooks-vitepress",
         "rui",
         "react-ui",
         "react-hooks-ui",
@@ -52,13 +54,14 @@
         "dev-client": "tsc -w -p src/client",
         "dev-node": "tsc -w -p src/node",
         "build": "rimraf -rf dist && tsc -p src/client && tsc -p src/node",
-        "build-lib": "vite build --config lib/vite.config.ts",
         "docs": "run-p dev docs-dev",
         "docs-dev": "node ./bin/index.js dev docs",
         "docs-build": "npm run build && node ./bin/index build docs",
         "docs-serve": "node ./bin/index serve docs",
         "lint": "prettier --write ./src/**/* && eslint --fix",
-        "start": "run-p dev docs-dev"
+        "start": "npm run build && npm run docs-dev",
+        "build-lib": "vite build --config lib/vite.config.ts",
+        "build-docs": "npm run build && node ./bin/index build docs"
     },
     "engines": {
         "node": ">=12.0.0"
@@ -136,6 +139,6 @@
         "unified": "^9.2.1",
         "unist-util-find": "^1.0.2",
         "unist-util-visit": "^2.0.3",
-        "vite": "^2.3.7"
+        "vite": "^2.3.8"
     }
 }

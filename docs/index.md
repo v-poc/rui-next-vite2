@@ -20,12 +20,6 @@ Install dependencies
 $ npm install
 ```
 
-Prepare for docs-dev (mandatory step)
-
-```bash
-$ npm run dev
-```
-
 Start the dev server for [docs-dev](http://localhost:3000/rui-next/docs/)
 
 ```bash
@@ -41,7 +35,7 @@ $ npm run build-lib
 Build documentation
 
 ```bash
-$ npm run docs-build
+$ npm run build-docs
 ```
 
 ## License
