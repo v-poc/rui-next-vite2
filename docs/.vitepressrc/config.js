@@ -81,6 +81,7 @@ function getLocalSidebar(){
 			children: [
         { text: "Card", link: "/components/card/demo/index" },
         { text: "Badge", link: "/components/badge/demo/index" },
+        { text: "Icon", link: "/components/icon/demo/index" },
 			]
 		},
 		{

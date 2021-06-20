@@ -14,3 +14,5 @@ export { default as Card } from "./card/index";
 export { default as OnePiece } from "./one-piece/index";
 // Badge
 export { default as Badge } from "./badge/index";
+// Icon
+export { default as Icon } from "./icon/index";

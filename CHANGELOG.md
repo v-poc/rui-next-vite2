@@ -1,3 +1,7 @@
+# 0.4.0 (2021-06-20)
+
+Added Icon demo.
+
 # 0.3.1 (2021-06-20)
 
 - Updated scripts `start` and `build-docs`.
