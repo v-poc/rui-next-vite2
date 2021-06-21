@@ -65,7 +65,7 @@ const Example = () => (
     <p className="sub-title">Basic Icons</p>
     <div className="wrapper">
       {defaultList.map((type, index) => (
-        <div className="item-wrapper">
+        <div key={`iconWrapper${index}`} className="item-wrapper">
           <Icon key={`icon${index}`} type={type} size="lg" />
           <div key={`iconText${index}`}>{type}</div>
         </div>
@@ -74,7 +74,7 @@ const Example = () => (
     <p className="sub-title">Icon Size</p>
     <div className="wrapper">
       {sizeList.map((size, i) => (
-        <div className="item-wrapper">
+        <div key={`sizeWrapper${i}`} className="item-wrapper">
           <Icon key={`size${i}`} type="search" color="orange" size={size} />
           <div key={`sizeText${i}`}>{size}</div>
         </div>
