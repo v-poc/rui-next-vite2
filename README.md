@@ -2,11 +2,13 @@
 
 [![npm](https://img.shields.io/npm/v/rui-next)](https://www.npmjs.com/package/rui-next) <a href="https://nikoni.top/rui-next/docs/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" /></a>
 
-React with Vite Playground - Mobile web UI components - (react-hooks+vite2).
-
 > Yet another **lightweight** and **Vite-powered** Mobile web UI components based on **React hooks** and **Vite 2**.
 
-This is just one kind of playground to dev `react-hooks` based UI components based on `vitepress+vite`. Thanks to [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) that could support `React demo+docs` well to run with `vitepress+vite`.
+## Features
+
+- 📦 **Out of the box** - focus on component development and documentation
+- 🧑‍💻 **Developer Friendly** - built-in syntax highlighting, embedding React components seamlessly
+- ⚡️ **Fast** - instant reloading powered by [Vite](https://vitejs.dev), faster dev server start, hot updates and build
 
 ## Preview
 
