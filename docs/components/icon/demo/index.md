@@ -6,7 +6,7 @@ title: Icon
 
 `Icon` UI display.
 
-Support the built-in 'check-circle', 'check', 'check-circle-o', 'cross-circle', 'cross', 'cross-circle-o', 'up' , 'left', 'right', 'ellipsis', 'loading' icon types.
+Support the built-in `check-circle`, `check`, `check-circle-o`, `cross-circle`, `cross`, `cross-circle-o`, `up`, `left`, `right`, `ellipsis`, `loading` icon types, etc.
 
 ```jsx
 <Icon type="check" />
@@ -44,15 +44,42 @@ const ExampleContainer = styled.div`
   .sub-title:first-child {
     padding-top: 0;
   }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0 15px 15px;
+    }
+  }
 `;
 
 // Example FC
 const Example = () => (
   <ExampleContainer>
     <p className="sub-title">Basic Icons</p>
-    {defaultList.map((type, index) => <Icon key={`icon${index}`} type={type} size="lg" />)}
+    <div className="wrapper">
+      {defaultList.map((type, index) => (
+        <div className="item-wrapper">
+          <Icon key={`icon${index}`} type={type} size="lg" />
+          <div key={`iconText${index}`}>{type}</div>
+        </div>
+      ))}
+    </div>
     <p className="sub-title">Icon Size</p>
-    {sizeList.map((size, i) => <Icon key={`size${i}`} type="search" color="orange" size={size} />)}
+    <div className="wrapper">
+      {sizeList.map((size, i) => (
+        <div className="item-wrapper">
+          <Icon key={`size${i}`} type="search" color="orange" size={size} />
+          <div key={`sizeText${i}`}>{size}</div>
+        </div>
+      ))}
+    </div>
   </ExampleContainer>
 );
 
