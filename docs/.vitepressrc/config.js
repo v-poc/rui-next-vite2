@@ -84,6 +84,12 @@ function getLocalSidebar(){
         { text: "Icon", link: "/components/icon/demo/index" },
 			]
 		},
+    {
+      text: "Data-Entry",
+      children: [
+        { text: "Button", link: "/components/button/demo/index" },
+      ]
+    },
 		{
 			text: "Feedback",
 			children: [

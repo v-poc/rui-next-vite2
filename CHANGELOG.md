@@ -1,3 +1,7 @@
+# 0.5.0 (2021-06-21)
+
+Added Button demo.
+
 # 0.4.0 (2021-06-20)
 
 Added Icon demo.

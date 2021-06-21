@@ -16,3 +16,5 @@ export { default as OnePiece } from "./one-piece/index";
 export { default as Badge } from "./badge/index";
 // Icon
 export { default as Icon } from "./icon/index";
+// Button
+export { default as Button } from "./button/index";

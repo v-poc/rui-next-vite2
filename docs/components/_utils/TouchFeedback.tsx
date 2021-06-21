@@ -26,6 +26,7 @@ const TouchFeedback = (props: TouchFeedbackProps) => {
     }
   }, [disabled, active]);
 
+  // trigger event
   const triggerEvent = (
     type: string,
     isActive: boolean,
@@ -42,33 +43,19 @@ const TouchFeedback = (props: TouchFeedbackProps) => {
     }
   };
 
-  const onTouchStart = (e) => {
-    triggerEvent('TouchStart', true, e);
-  };
+  const onTouchStart = (e) => triggerEvent('TouchStart', true, e);
 
-  const onTouchMove = (e) => {
-    triggerEvent('TouchMove', false, e);
-  };
+  const onTouchMove = (e) => triggerEvent('TouchMove', false, e);
 
-  const onTouchEnd = (e) => {
-    triggerEvent('TouchEnd', false, e);
-  };
+  const onTouchEnd = (e) => triggerEvent('TouchEnd', false, e);
 
-  const onTouchCancel = (e) => {
-    triggerEvent('TouchCancel', false, e);
-  };
+  const onTouchCancel = (e) => triggerEvent('TouchCancel', false, e);
 
-  const onMouseDown = (e) => {
-    triggerEvent('MouseDown', true, e);
-  }
+  const onMouseDown = (e) => triggerEvent('MouseDown', true, e);
 
-  const onMouseUp = (e) => {
-    triggerEvent('MouseUp', false, e);
-  };
+  const onMouseUp = (e) => triggerEvent('MouseUp', false, e);
 
-  const onMouseLeave = (e) => {
-    triggerEvent('MouseLeave', false, e);
-  };
+  const onMouseLeave = (e) => triggerEvent('MouseLeave', false, e);
 
   const events = disabled ? {} : {
     onTouchStart,
@@ -107,4 +94,4 @@ TouchFeedback.defaultProps = {
   disabled: false,
 };
 
-export default TouchFeedbackProps;
+export default TouchFeedback;
