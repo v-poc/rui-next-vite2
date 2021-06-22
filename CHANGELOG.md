@@ -1,3 +1,7 @@
+# 0.6.0 (2021-06-22)
+
+Added Result demo.
+
 # 0.5.0 (2021-06-21)
 
 Added Button demo.

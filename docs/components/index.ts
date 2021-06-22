@@ -18,3 +18,5 @@ export { default as Badge } from "./badge/index";
 export { default as Icon } from "./icon/index";
 // Button
 export { default as Button } from "./button/index";
+// Result
+export { default as Result } from "./result/index";
