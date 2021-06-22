@@ -7,9 +7,9 @@
 ## Overview
 
 This is just one kind of playground to dev `react-hooks` based UI components based on `vitepress+vite`. Thanks to [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) that could support `React demo+docs` well to run with `vitepress+vite`.
-- 📦 **Out of the box** - focus on component development and documentation
-- 🧑‍💻 **Developer Friendly** - built-in syntax highlighting, embedding React components seamlessly by [Vitepress](https://vitepress.vuejs.org)
-- ⚡️ **Fast** - instant reloading powered by [Vite](https://vitejs.dev), faster dev server start, hot updates and build
+- 📦  **Out of the box** - focus on component development and documentation
+- 🧑‍💻  **Developer Friendly** - built-in syntax highlighting, embedding React components seamlessly by [Vitepress](https://vitepress.vuejs.org)
+- ⚡️  **Fast** - instant reloading powered by [Vite](https://vitejs.dev), faster dev server start, hot updates and build
 
 ## Preview
 

@@ -104,10 +104,10 @@ Properties | Descrition | Type | Default
 
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
-| title | title for `Card.Header` | React.Element/String | |
-| thumb | thumb to render in the left of  `Card.Header`  | React.Element/String | |
+| title | title for `Card.Header` | `React.Element`/`String` | |
+| thumb | thumb to render in the left of  `Card.Header`  | `React.Element`/`String` | |
 | thumbStyle | style of thumb | Object | {} |
-| extra | extra content to render in the right of `Card.Header` | React.Element/String | |
+| extra | extra content to render in the right of `Card.Header` | `React.Element`/`String` | |
 
 ### Card.Body
 
@@ -119,5 +119,5 @@ Properties | Descrition | Type | Default
 
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
-| content | content of `Card.Footer` | React.Element/String | |
-| extra | extra content of `Card.Footer` | React.Element/String | |
+| content | content of `Card.Footer` | `React.Element`/`String` | |
+| extra | extra content of `Card.Footer` | `React.Element`/`String` | |

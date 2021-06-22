@@ -120,6 +120,6 @@ export default Example;
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
 |  animating  | Whether to show the indicator (true by default) or hide it (false). | boolean | true |
-|  size  | Size of the indicator (`small`/`large`) | string | small |
+|  size  | Size of the indicator, optional value: `small`, `large` | string | small |
 |  toast  | Whether to use toast style | boolean  | false |
 |  text  | loading text behind the indicator | string | - |

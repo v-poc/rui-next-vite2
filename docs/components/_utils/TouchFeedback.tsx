@@ -20,6 +20,7 @@ const TouchFeedback = (props: TouchFeedbackProps) => {
     children,
   } = props;
 
+  // useEffect hook
   useEffect(() => {
     if (disabled && active) {
       setActive(false);
@@ -43,20 +44,21 @@ const TouchFeedback = (props: TouchFeedbackProps) => {
     }
   };
 
-  const onTouchStart = (e) => triggerEvent('TouchStart', true, e);
+  const onTouchStart = (e) => triggerEvent('TouchStart', true, e); // onTouchStart
 
-  const onTouchMove = (e) => triggerEvent('TouchMove', false, e);
+  const onTouchMove = (e) => triggerEvent('TouchMove', false, e); // onTouchMove
 
-  const onTouchEnd = (e) => triggerEvent('TouchEnd', false, e);
+  const onTouchEnd = (e) => triggerEvent('TouchEnd', false, e); // onTouchEnd
 
-  const onTouchCancel = (e) => triggerEvent('TouchCancel', false, e);
+  const onTouchCancel = (e) => triggerEvent('TouchCancel', false, e); // onTouchCancel
 
-  const onMouseDown = (e) => triggerEvent('MouseDown', true, e);
+  const onMouseDown = (e) => triggerEvent('MouseDown', true, e); // onMouseDown
 
-  const onMouseUp = (e) => triggerEvent('MouseUp', false, e);
+  const onMouseUp = (e) => triggerEvent('MouseUp', false, e); // onMouseUp
 
-  const onMouseLeave = (e) => triggerEvent('MouseLeave', false, e);
+  const onMouseLeave = (e) => triggerEvent('MouseLeave', false, e); // onMouseLeave
 
+  // events
   const events = disabled ? {} : {
     onTouchStart,
     onTouchMove,

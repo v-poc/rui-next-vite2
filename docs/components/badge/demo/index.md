@@ -119,7 +119,7 @@ export default Example;
 
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
-| size | the size of badge, optional: `large`, `small` | string | `small` |
+| size | the size of badge, optional value: `large`, `small` | string | `small` |
 | text | the text or number inside badge | string\|number | - |
 | corner | whether the badge is at the corner position | boolean | `false` |
 | dot | show badge as a red dot | boolean | `false` |

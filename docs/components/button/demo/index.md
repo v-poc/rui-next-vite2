@@ -67,9 +67,9 @@ export default Example;
 
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
-| type | it could be set to `primary`/`ghost`/`warning` or omitted | string | - |
+| type | it could be set to `primary`, `ghost`, `warning` or omitted | string | - |
 | size | it could be set to `large`、`small` or omitted | string | `large`|
-| activeStyle | the feedback's custom style (set to false to disable click feedback) | {}/false | {} |
+| activeStyle | the feedback's custom style (set to false to disable click feedback) | {}/boolean | {} |
 | activeClassName | the feedback's custom class name | string |  |
 | disabled | set disabled state | boolean | false |
 | onClick | set the handler to handle `click` event | (e: Object): void | - |

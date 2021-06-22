@@ -144,11 +144,11 @@ export default Example;
 
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
-| direction | how flex items are placed in the flex container，value could be `row`,`row-reverse`,`column`,`column-reverse`, RN only support `row`,`column`  | String  | `row` |
-| wrap     | the wrap way of sub-elements，option `nowrap`,`wrap`,`wrap-reverse`,RN only support `nowrap`,`wrap`  | String  | `nowrap` |
-| justify  | the way of alignment for sub-elements of main axis, option `start`,`end`,`center`,`between`,`around`    | String   | `start` |
-| align    | the way of alignment for sub-elements of cross-axis, option `start`,`center`,`end`,`baseline`,`stretch` RN only support `start`,`end`,`center`,`stretch`  | String   | `center` |
-| alignContent | the way of alignment when have multiple axes,  option `start`,`end`,`center`,`between`,`around`,`stretch`    | String  | `stretch` |
+| direction | how flex items are placed in the flex container，value could be `row`,`row-reverse`,`column`,`column-reverse` | string  | `row` |
+| wrap | the wrap way of sub-elements，option `nowrap`,`wrap`,`wrap-reverse` | string | `nowrap` |
+| justify | the way of alignment for sub-elements of main axis, option `start`,`end`,`center`,`between`,`around` | string | `start` |
+| align | the way of alignment for sub-elements of cross-axis, option `start`,`center`,`end`,`baseline`,`stretch` | string | `center` |
+| alignContent | the way of alignment when have multiple axes,  option `start`,`end`,`center`,`between`,`around`,`stretch` | string | `stretch` |
 
 ### Flex.Item
 

@@ -92,6 +92,6 @@ export default Example;
 
 Properties | Description | Type | Default
 -----------|-------------|------|--------
-| type | string name of built-in icon | String | |
-| size | icon size | 'xxs', 'xs', 'sm', 'md', 'lg' | `md` |
-| color | icon color | Color | `#000` |
+| type | string name of built-in icon | string | |
+| size | icon size, optional value: `xxs`, `xs`, `sm`, `md`, `lg` | string | `md` |
+| color | icon color | string | `#000` |

@@ -47,6 +47,7 @@ const PlaceHolder = ({
 const Example = () => (
   <ExampleContainer>
     <p>WhiteSpace vertical</p>
+    <br />
     <WhiteSpace size="xs" />
     <PlaceHolder />
 
@@ -82,12 +83,12 @@ export default Example;
 
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
-| size | up and down margins, optional values: `xs`,`sm`,`md`,`lg`,`xl` | string | `md` |
+| size | up and down margins, optional value: `xs`,`sm`,`md`,`lg`,`xl` | string | `md` |
 | vertical | whether vertical or hozirontal | boolean | `true` |
 
 ### WhiteSpace horizontal
 
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
-| size | left and right blank space, optional values:`sm`,`md`,`lg` | string | `lg` |
+| size | left and right blank space, optional value: `sm`,`md`,`lg` | string | `lg` |
 | vertical | whether vertical or hozirontal | boolean | `false` |
