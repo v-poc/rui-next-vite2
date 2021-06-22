@@ -21,7 +21,7 @@ Basic usage of ActivityIndicator component.
 
 ```jsx live=local
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator } from "rui-next";
+import { ActivityIndicator, Button } from "rui-next";
 
 // Example Styles
 import styled from "styled-components";
@@ -93,9 +93,14 @@ const Example = () => {
 
       <br />
       <br />
-      <button onClick={() => showToast()}>
-        click to show Toast
-      </button>
+      <Button
+        type="primary"
+        size="small"
+        inline
+        onClick={() => showToast()}
+      >
+        Click to show Toast
+      </Button>
       <ActivityIndicator
         toast
         text="Loading..."

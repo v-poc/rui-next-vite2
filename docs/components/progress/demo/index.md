@@ -18,7 +18,7 @@ Basic usage of Progress component.
 
 ```jsx live=local
 import React, { useState } from "react";
-import { Progress } from "rui-next";
+import { Button, Progress } from "rui-next";
 
 // Example Styles
 import styled from "styled-components";
@@ -72,7 +72,14 @@ const Example = () => {
         </div>
         <br />
         <br />
-        <button onClick={() => add()}>Test add percent</button>
+        <Button
+          type="primary"
+          size="small"
+          inline
+          onClick={() => add()}
+        >
+          Click to add percent
+        </Button>
     </ExampleContainer>
   );
 };
