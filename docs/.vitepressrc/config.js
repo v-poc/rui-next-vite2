@@ -4,7 +4,7 @@ module.exports = {
   base: '/rui-next/docs',
   lang: 'en-US',
   title: 'RUI.next',
-  description: 'The demo+docs of RUI.next',
+  description: 'The docs+demos of RUI.next',
   alias: {
     'root': path.resolve(__dirname, '../')
   },
