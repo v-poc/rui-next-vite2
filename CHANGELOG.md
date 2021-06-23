@@ -1,3 +1,7 @@
+# 0.6.2 (2021-06-23)
+
+Updated Result demo.
+
 # 0.6.0 (2021-06-22)
 
 Added Result demo.

@@ -16,7 +16,7 @@ Basic usage of Result component.
 
 ```jsx live=local
 import React from "react";
-import { Result, Icon } from "rui-next";
+import { useNetwork, Result, Icon } from "rui-next";
 
 // Example Styles
 import styled from "styled-components";
@@ -35,9 +35,17 @@ const ExampleContainer = styled.div`
 
 // Example FC
 const Example = () => {
+  const networkState = useNetwork();
+  const isOnline = networkState.online;
+
+  const imgEl = isOnline
+    ? <Icon type="check-circle-o" size="lg" />
+    : <Icon type="exclamation-circle" size="lg" />;
+
   const handleBtnClick = () => {
     location.href = "https://nikoni.top/rui-next/docs/";
   };
+
   return (
     <ExampleContainer>
       <p className="sub-title">Result with image url</p>
@@ -49,9 +57,9 @@ const Example = () => {
       <br /><br />
       <p className="sub-title">Result with icon</p>
       <Result
-        img={<Icon type="exclamation-circle" size="lg" />}
-        title="404 Lost"
-        message="The page you visited does not exist."
+        img={imgEl}
+        title="Network state"
+        message={`Detect current state: ${isOnline ? "online" : "offline"}`}
         buttonType="ghost"
         buttonText="Go back to homepage"
         onButtonClick={() => handleBtnClick()}
