@@ -1,7 +1,8 @@
 # 0.7.0 (2021-06-23)
 
 - Added NavBar demo.
-- Updated Result demo.
+- Add `useNetwork` hook.
+- Updated Result demo for network detection.
 
 # 0.6.0 (2021-06-22)
 

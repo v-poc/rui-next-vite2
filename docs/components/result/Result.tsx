@@ -77,6 +77,8 @@ const Result = (props: ResultProps) => {
         <div className={`${prefixCls}-button`}>
           <Button
             type={buttonType}
+            size="small"
+            inline
             onClick={onButtonClick}
           >
             {buttonText}

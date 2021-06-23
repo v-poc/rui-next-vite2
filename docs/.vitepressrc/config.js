@@ -111,6 +111,12 @@ function getLocalSidebar(){
         { text: "Result", link: "/components/result/demo/index" },
 			]
 		},
+    {
+      text: "Hooks",
+      children: [
+        { text: "useNetwork", link: "/components/_hooks/useNetwork/index" },
+      ]
+    },
 	]
 }
 

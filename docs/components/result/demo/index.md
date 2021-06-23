@@ -39,8 +39,8 @@ const Example = () => {
   const isOnline = networkState.online;
 
   const imgEl = isOnline
-    ? <Icon type="check-circle-o" size="lg" />
-    : <Icon type="exclamation-circle" size="lg" />;
+    ? <Icon type="check-circle-o" size="lg" color="green" />
+    : <Icon type="exclamation-circle" size="lg" color="red" />;
 
   const handleBtnClick = () => {
     location.href = "https://nikoni.top/rui-next/docs/";

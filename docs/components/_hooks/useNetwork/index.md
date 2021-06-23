@@ -6,8 +6,6 @@ title: useNetwork
 
 A hook that can manage the state of network.
 
-## API
-
 ```ts
 interface NetworkState {
   online?: boolean;
@@ -23,7 +21,55 @@ interface NetworkState {
 const result: NetworkState = useNetwork();
 ```
 
-### Result
+## Example
+
+Basic usage of useNetwork hook.
+
+```jsx live=local
+import React from "react";
+import { useNetwork, Result, Icon } from "rui-next";
+
+// Example Styles
+import styled from "styled-components";
+
+const ExampleContainer = styled.div`
+  .sub-title {
+    color: #888;
+    font-size: 14px;
+    padding: 30px 0 18px 0;
+  }
+
+  .sub-title:first-child {
+    padding-top: 0;
+  }
+`;
+
+// Example FC
+const Example = () => {
+  const networkState = useNetwork();
+  const isOnline = networkState.online;
+
+  const imgEl = isOnline
+    ? <Icon type="check-circle-o" size="lg" color="green" />
+    : <Icon type="exclamation-circle" size="lg" color="red" />;
+
+  return (
+    <ExampleContainer>
+      <Result
+        img={imgEl}
+        title="Network state"
+        message={`Detect current state: ${isOnline ? "online" : "offline"}`}
+      />
+    </ExampleContainer>
+  );
+};
+
+export default Example;
+```
+
+## API
+
+### useNetwork
 
 | Property      | Description                                                               | Type                                                                                           |
 | ------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
