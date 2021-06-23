@@ -20,6 +20,9 @@ export { default as Icon } from "./icon/index";
 export { default as Button } from "./button/index";
 // Result
 export { default as Result } from "./result/index";
+// NavBar
+export { default as NavBar } from "./nav-bar/index";
+
 
 /**
  * hooks

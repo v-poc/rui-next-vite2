@@ -76,6 +76,12 @@ function getLocalSidebar(){
         { text: "WhiteSpace", link: "/components/white-space/demo/index" },
 			]
 		},
+    {
+      text: "Navigation",
+      children: [
+        { text: "NavBar", link: "/components/nav-bar/demo/index" },
+      ]
+    },
 		{
 			text: "Data-Display",
 			children: [

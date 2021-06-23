@@ -1,6 +1,7 @@
-# 0.6.2 (2021-06-23)
+# 0.7.0 (2021-06-23)
 
-Updated Result demo.
+- Added NavBar demo.
+- Updated Result demo.
 
 # 0.6.0 (2021-06-22)
 
