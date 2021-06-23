@@ -40,13 +40,20 @@ const Example = () => {
   };
   return (
     <ExampleContainer>
-      <p className="sub-title">Result page with icon</p>
+      <p className="sub-title">Result with image url</p>
+      <Result
+        imgUrl="https://vitejs.dev/logo.svg"
+        title="Vite"
+        message="Next Generation Frontend Tooling"
+      />
+      <br /><br />
+      <p className="sub-title">Result with icon</p>
       <Result
         img={<Icon type="exclamation-circle" size="lg" />}
         title="404 Lost"
         message="The page you visited does not exist."
         buttonType="ghost"
-        buttonText="Primary button"
+        buttonText="Go back to homepage"
         onButtonClick={() => handleBtnClick()}
       />
     </ExampleContainer>
@@ -66,6 +73,6 @@ Properties | Descrition | Type | Default
 | img | image node (could be `<img src="" />` or `<Icon type="" />`), which will override `imgUrl` | `ReactNode` | - |
 | title | title of result page | `ReactNode` | - |
 | message | message text of result page | `ReactNode` | - |
-| buttonText | text of built-in button | string | - |
 | buttonType | type of built-in button | string | - |
+| buttonText | text of built-in button | string | - |
 | onButtonClick | callback of clicking built-in button | (e: Object): void | - |
