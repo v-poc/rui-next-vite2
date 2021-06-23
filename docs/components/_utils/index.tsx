@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MutableRefObject } from "react";
 
 // Check whether it is string
 const isString = (str: any) => {
@@ -28,3 +28,40 @@ export const insertSpace = (child: any) => {
   
   return child;
 }
+
+type TargetElement = HTMLElement | Element | Document | Window;
+
+// BasicTarget Type
+export type BasicTarget<T = HTMLElement> =
+  | (() => T | null)
+  | T
+  | null
+  | MutableRefObject<T | null | undefined>;
+
+// Get target element
+export const getTargetElement = (
+  target?: BasicTarget<TargetElement>,
+  defaultElement?: TargetElement,
+): TargetElement | null | undefined => {
+  if (!target) {
+    return defaultElement;
+  }
+
+  let targetElement: TargetElement | null | undefined;
+
+  if (typeof target === "function") {
+    targetElement = target();
+  } else if ("current" in target) {
+    targetElement = target.current;
+  } else {
+    targetElement = target;
+  }
+
+  return targetElement;
+};
+
+// Log info
+export const logInfo = (content: any, type: string = 'info'): void => {
+  console[type] &&
+    console[type]('[RUI-log] %c%s', 'background: #69C;color: #FFF', content);
+};

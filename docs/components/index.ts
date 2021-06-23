@@ -29,3 +29,5 @@ export { default as NavBar } from "./nav-bar/index";
  */
 // useNetwork
 export { default as useNetwork } from "./_hooks/useNetwork/index";
+// useFullscreen
+export { default as useFullscreen } from "./_hooks/useFullscreen/index";

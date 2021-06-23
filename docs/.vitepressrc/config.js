@@ -115,6 +115,7 @@ function getLocalSidebar(){
       text: "Hooks",
       children: [
         { text: "useNetwork", link: "/components/_hooks/useNetwork/index" },
+        { text: "useFullscreen", link: "/components/_hooks/useFullscreen/index" },
       ]
     },
 	]

@@ -1,3 +1,7 @@
+# 0.8.0 (2021-06-23)
+
+Added `useFullscreen` hook.
+
 # 0.7.0 (2021-06-23)
 
 - Added `NavBar` demo.
