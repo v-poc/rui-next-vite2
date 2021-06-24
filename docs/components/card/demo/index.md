@@ -34,6 +34,16 @@ import { Card, OnePiece } from "rui-next";
 import styled from "styled-components";
 
 const ExampleContainer = styled.div`
+  .sub-title {
+    color: #888;
+    font-size: 14px;
+    padding: 30px 0 18px 0;
+  }
+
+  .sub-title:first-child {
+    padding-top: 0;
+  }
+
   .default-card {
     margin: 0 2rem;
   }
@@ -66,8 +76,7 @@ const Example = () => {
       </Card>
       <br />
       <br />
-      <p>Full-width Card example</p>
-      <br />
+      <p className="sub-title">Full-width Card example</p>
       <Card
         className="full-card"
         full

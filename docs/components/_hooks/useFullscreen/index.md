@@ -37,6 +37,10 @@ const ExampleContainer = styled.div`
   .sub-title:first-child {
     padding-top: 0;
   }
+
+  img {
+    width: 20%;
+  }
 `;
 
 // Example FC
@@ -97,7 +101,7 @@ const Example = () => {
       <div>
         <img
           ref={imgRef}
-          src="https://nikoni.top/images/others/kongfu.png"
+          src="https://vitejs.dev/logo.svg"
         />
         <br /><br />
         <Button

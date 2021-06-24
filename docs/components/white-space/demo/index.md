@@ -23,6 +23,16 @@ import { WhiteSpace } from "rui-next";
 import styled from "styled-components";
 
 const ExampleContainer = styled.div`
+  .sub-title {
+    color: #888;
+    font-size: 14px;
+    padding: 30px 0 18px 0;
+  }
+
+  .sub-title:first-child {
+    padding-top: 0;
+  }
+
   .placeholder {
     background-color: #ebebef;
     color: #bbb;
@@ -46,8 +56,7 @@ const PlaceHolder = ({
 // Example FC
 const Example = () => (
   <ExampleContainer>
-    <p>WhiteSpace vertical</p>
-    <br />
+    <p className="sub-title">WhiteSpace vertical</p>
     <WhiteSpace size="xs" />
     <PlaceHolder />
 
@@ -64,8 +73,7 @@ const Example = () => (
     <PlaceHolder />
 
     <br />
-    <p>WhiteSpace horizontal</p>
-    <br />
+    <p className="sub-title">WhiteSpace horizontal</p>
     <WhiteSpace vertical={false}><PlaceHolder /></WhiteSpace>
     <br />
     <WhiteSpace vertical={false} size="md"><PlaceHolder /></WhiteSpace>
