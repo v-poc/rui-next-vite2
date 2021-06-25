@@ -50,7 +50,7 @@ const Example = () => {
   const isOnline = networkState.online;
 
   const imgEl = isOnline
-    ? <Icon type="check-circle-o" size="lg" color="green" />
+    ? <Icon type="check-circle" size="lg" color="green" />
     : <Icon type="exclamation-circle" size="lg" color="red" />;
 
   return (

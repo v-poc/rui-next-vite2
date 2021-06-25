@@ -18,7 +18,7 @@ Basic usage of Icon component.
 
 ```jsx live=local
 import React from "react";
-import { Icon } from "rui-next";
+import { Icon, Flex } from "rui-next";
 
 const defaultList = [
   'check-circle', 'check', 'check-circle-o',
@@ -45,16 +45,15 @@ const ExampleContainer = styled.div`
     padding-top: 0;
   }
 
-  .wrapper {
+  .item-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 15px 15px;
 
-    .item-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 10px 0 15px 15px;
+    p {
+      padding-top: 8px;
     }
   }
 `;
@@ -63,23 +62,23 @@ const ExampleContainer = styled.div`
 const Example = () => (
   <ExampleContainer>
     <p className="sub-title">Basic Icons</p>
-    <div className="wrapper">
+    <Flex wrap="wrap">
       {defaultList.map((type, index) => (
         <div key={`iconWrapper${index}`} className="item-wrapper">
           <Icon key={`icon${index}`} type={type} size="lg" />
-          <div key={`iconText${index}`}>{type}</div>
+          <p key={`iconText${index}`}>{type}</p>
         </div>
       ))}
-    </div>
+    </Flex>
     <p className="sub-title">Icon Size</p>
-    <div className="wrapper">
+    <Flex wrap="wrap">
       {sizeList.map((size, i) => (
         <div key={`sizeWrapper${i}`} className="item-wrapper">
           <Icon key={`size${i}`} type="search" color="orange" size={size} />
-          <div key={`sizeText${i}`}>{size}</div>
+          <p key={`sizeText${i}`}>{size}</p>
         </div>
       ))}
-    </div>
+    </Flex>
   </ExampleContainer>
 );
 
