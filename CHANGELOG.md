@@ -1,3 +1,7 @@
+# 0.8.1 (2021-06-25)
+
+Refactor: styles.
+
 # 0.8.0 (2021-06-23)
 
 Added `useFullscreen` hook.

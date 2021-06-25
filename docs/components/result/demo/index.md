@@ -42,8 +42,12 @@ const Example = () => {
     ? <Icon type="check-circle-o" size="lg" color="green" />
     : <Icon type="exclamation-circle" size="lg" color="red" />;
 
-  const handleBtnClick = () => {
-    location.href = "https://nikoni.top/rui-next/docs/";
+  const handlePrimaryBtnClick = () => {
+    location.href = "https://vitejs.dev/guide/";
+  };
+
+  const handleGhostBtnClick = () => {
+    location.href = "https://vitejs.dev/guide/why.html";
   };
 
   return (
@@ -53,6 +57,10 @@ const Example = () => {
         imgUrl="https://vitejs.dev/logo.svg"
         title="Vite"
         message="Next Generation Frontend Tooling"
+        buttonType="primary"
+        buttonText="Get Started"
+        onButtonClick={() => handlePrimaryBtnClick()}
+
       />
       <br /><br />
       <p className="sub-title">Result with icon</p>
@@ -61,8 +69,8 @@ const Example = () => {
         title="Network state"
         message={`Detect current state: ${isOnline ? "online" : "offline"}`}
         buttonType="ghost"
-        buttonText="Go back to homepage"
-        onButtonClick={() => handleBtnClick()}
+        buttonText="Learn More"
+        onButtonClick={() => handleGhostBtnClick()}
       />
     </ExampleContainer>
   );

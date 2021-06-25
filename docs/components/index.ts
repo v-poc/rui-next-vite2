@@ -1,3 +1,6 @@
+/**
+ * Components
+ */
 // Flex
 export { default as Flex } from "./flex/index";
 // WhiteSpace
@@ -22,7 +25,6 @@ export { default as Button } from "./button/index";
 export { default as Result } from "./result/index";
 // NavBar
 export { default as NavBar } from "./nav-bar/index";
-
 
 /**
  * hooks

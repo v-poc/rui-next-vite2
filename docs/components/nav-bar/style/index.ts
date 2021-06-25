@@ -1,2 +1,2 @@
-import '../../style/';
+import '../../_styles/';
 import './index.less';
