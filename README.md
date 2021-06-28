@@ -52,4 +52,8 @@ About vite and vitepress(-rc), please check Configuration Reference - [vite](htt
 
 ## License
 
+<a href="https://www.npmjs.com/package/rui-next" target="_blank">
+    <img alt="license" src="https://img.shields.io/npm/l/rui-next.svg" />
+</a>
+<br />
 <img src="https://nikoni.top/images/niko-mit-react.png" alt="MIT License" width="396" height="250"/>
