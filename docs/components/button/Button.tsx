@@ -16,6 +16,7 @@ export interface ButtonPropsType {
 export interface ButtonProps extends ButtonPropsType {
   role?: string;
   inline?: boolean;
+  round?: boolean;
   icon?: ReactNode;
   activeClassName?: string;
   activeStyle?: boolean | CSSProperties;
@@ -31,6 +32,7 @@ const Button = (props: ButtonProps) => {
     type,
     size,
     inline,
+    round,
     disabled,
     icon,
     loading,
@@ -54,6 +56,7 @@ const Button = (props: ButtonProps) => {
       [`${prefixCls}-warning`]: type === "warning",
       [`${prefixCls}-small`]: size === "small",
       [`${prefixCls}-inline`]: inline,
+      [`${prefixCls}-round`]: round,
       [`${prefixCls}-disabled`]: disabled,
       [`${prefixCls}-loading`]: loading,
       [`${prefixCls}-icon`]: !!iconType,
@@ -110,6 +113,7 @@ Button.defaultProps = {
   prefixCls: "r-button",
   size: "large",
   inline: false,
+  round: false,
   disabled: false,
   loading: false,
   activeStyle: {},

@@ -47,11 +47,11 @@ const Example = () => (
     <Button type="warning">warning state</Button><br />
     <Button type="warning" disabled>warning disabled</Button><br />
     <br />
-    <Button type="primary">primary state</Button><br />
+    <Button type="primary" round>primary state</Button><br />
     <Button type="primary" disabled>primary disabled</Button><br />
     <Button type="primary" inline>button inline primary</Button>
     <Button type="ghost" inline className="space">button inline ghost</Button>
-    <Button type="primary" inline size="small" className="space">inline primary small button</Button><br />
+    <Button type="primary" inline round size="small" className="space">inline primary small button</Button><br />
     <br />
     <Button loading>loading state</Button><br />
     <Button icon="search">button with icon</Button>
@@ -75,6 +75,7 @@ Properties | Descrition | Type | Default
 | onClick | set the handler to handle `click` event | (e: Object): void | - |
 | style | custom style | Object | - |
 | inline | whether set as an inline button | boolean | false |
+| round | whether set as a round button | boolean | false |
 | loading	| whether set loading state  | boolean | false |
 | icon | it could be one type value of the `Icon Component` or any valid React.Element. (Note: It will be overwritten by the `loading` config setting) | `string`/`React.Element` | - |
 | prefixCls | the prefix class | string | `r-button` |
