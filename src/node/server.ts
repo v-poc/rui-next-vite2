@@ -9,7 +9,15 @@ export async function createServer(root: string = process.cwd(), serverOptions: 
 		root,
 		base: config.siteData.base,
 		plugins: createVitePlugin(root, config),
-		server: serverOptions,
+		// server: serverOptions,
+		server: {
+			...serverOptions,
+			fs: {
+				allow: [
+					'..'
+				]
+			}
+		},
 		optimizeDeps: {
 			include: [
 				'react/jsx-runtime',

@@ -96,8 +96,8 @@
         "lint-staged": "^10.5.4",
         "npm-run-all": "^4.1.5",
         "prettier": "^2.2.1",
-        "react": "^17.0.2 || ^16.0.0",
-        "react-dom": "^17.0.2 || ^16.0.0",
+        "react": "^17.0.2 || ^16.14.0",
+        "react-dom": "^17.0.2 || ^16.14.0",
         "react-is": "^17.0.2",
         "rimraf": "^3.0.2",
         "rollup": "^2.45.2",
@@ -125,7 +125,7 @@
         "normalize.css": "^8.0.1",
         "ora": "^5.4.0",
         "polka": "^0.5.2",
-        "prism-react-renderer": "^1.2.0",
+        "prism-react-renderer": "^1.2.1",
         "react-docgen-typescript": "^1.21.0",
         "react-simple-code-editor": "^0.11.0",
         "remark-emoji": "^2.1.0",
@@ -140,6 +140,6 @@
         "unified": "^9.2.1",
         "unist-util-find": "^1.0.2",
         "unist-util-visit": "^2.0.3",
-        "vite": "^2.3.8"
+        "vite": "^2.4.0-beta.3"
     }
 }
