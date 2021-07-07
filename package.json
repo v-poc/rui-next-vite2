@@ -106,7 +106,7 @@
     "dependencies": {
         "@mdx-js/mdx": "^2.0.0-next.9",
         "@mdx-js/react": "^2.0.0-next.9",
-        "@vitejs/plugin-react-refresh": "^1.3.4",
+        "@vitejs/plugin-react-refresh": "^1.3.5",
         "chalk": "^4.1.0",
         "chokidar": "^3.5.1",
         "classnames": "^2.3.1",
@@ -140,6 +140,6 @@
         "unified": "^9.2.1",
         "unist-util-find": "^1.0.2",
         "unist-util-visit": "^2.0.3",
-        "vite": "^2.4.0-beta.3"
+        "vite": "^2.4.1"
     }
 }
