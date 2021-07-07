@@ -58,7 +58,7 @@ function getChildrenNode({ type, title, children }: { type: TYPE; title: string;
 
 export default function plugin(): IPluginTransformer {
 	return (tree, vfile) => {
-		visit(tree, 'root', function visitor(node: NodeWithChildren) {
+		visit(tree, 'root', function visitor(node: any) {
 			if (node.children) {
 				let i = 0
 				while (i < node.children.length) {
