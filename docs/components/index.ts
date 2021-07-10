@@ -25,6 +25,9 @@ export { default as Button } from "./button/index";
 export { default as Result } from "./result/index";
 // NavBar
 export { default as NavBar } from "./nav-bar/index";
+// Tag
+export { default as Tag } from "./tag/index";
+
 
 /**
  * hooks

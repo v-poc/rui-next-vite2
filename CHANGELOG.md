@@ -1,3 +1,7 @@
+# 0.9.0 (2021-07-09)
+
+Added `Tag` demo.
+
 # 0.8.3 (2021-06-29)
 
 Updated `Button` demo for round state.

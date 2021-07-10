@@ -65,3 +65,14 @@ export const logInfo = (content: any, type: string = 'info'): void => {
   console[type] &&
     console[type]('[RUI-log] %c%s', 'background: #69C;color: #FFF', content);
 };
+
+// Get Data Attributes
+export const getDataAttr = (props: { [key: string]: any }) => {
+  return Object.keys(props).reduce<{ [key: string]: string }>((prev, key) => {
+    const prefix = key.substr(0, 5);
+    if (prefix === 'aria-' || prefix === 'data-' || key === 'role') {
+      prev[key] = props[key];
+    }
+    return prev;
+  }, {});
+};
