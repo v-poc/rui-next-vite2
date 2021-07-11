@@ -27,6 +27,8 @@ export { default as Result } from "./result/index";
 export { default as NavBar } from "./nav-bar/index";
 // Tag
 export { default as Tag } from "./tag/index";
+// Clamp
+export { default as Clamp } from "./clamp/index";
 
 
 /**

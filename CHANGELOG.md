@@ -1,3 +1,7 @@
+# 0.10.0 (2021-07-11)
+
+Added `Clamp` demo.
+
 # 0.9.0 (2021-07-09)
 
 Added `Tag` demo.

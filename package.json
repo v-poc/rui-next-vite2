@@ -1,6 +1,6 @@
 {
     "name": "rui-next",
-    "version": "0.9.0",
+    "version": "0.10.0",
     "description": "Mobile web UI components based on React and Vite",
     "files": [
         "dist/style.css",
@@ -18,7 +18,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/bluepower/rui-next.git"
+        "url": "git+https://github.com/v-poc/rui-next.git"
     },
     "keywords": [
         "vite",
@@ -43,9 +43,9 @@
     "author": "Niko Ni",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/bluepower/rui-next/issues"
+        "url": "https://github.com/v-poc/rui-next/issues"
     },
-    "homepage": "https://github.com/bluepower/rui-next/blob/main/README.md",
+    "homepage": "https://github.com/v-poc/rui-next/blob/main/README.md",
     "bin": {
         "vitepress-rc": "bin/index.js"
     },

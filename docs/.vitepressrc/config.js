@@ -110,6 +110,7 @@ function getLocalSidebar(){
         { text: "QRCode", link: "/components/qr-code/demo/index" },
         { text: "OnePiece", link: "/components/one-piece/demo/index" },
         { text: "Result", link: "/components/result/demo/index" },
+        { text: "Clamp", link: "/components/clamp/demo/index" },
 			]
 		},
     {
