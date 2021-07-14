@@ -29,6 +29,8 @@ export { default as NavBar } from "./nav-bar/index";
 export { default as Tag } from "./tag/index";
 // Clamp
 export { default as Clamp } from "./clamp/index";
+// Switch
+export { default as Switch } from "./switch/index";
 
 
 /**

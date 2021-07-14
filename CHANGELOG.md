@@ -1,3 +1,7 @@
+# 0.11.0 (2021-07-14)
+
+Added `Switch` demo.
+
 # 0.10.0 (2021-07-11)
 
 Added `Clamp` demo.

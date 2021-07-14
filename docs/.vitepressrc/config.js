@@ -95,6 +95,7 @@ function getLocalSidebar(){
       text: "Data-Entry",
       children: [
         { text: "Button", link: "/components/button/demo/index" },
+        { text: "Switch", link: "/components/switch/demo/index" },
       ]
     },
 		{
