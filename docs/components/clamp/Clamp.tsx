@@ -1,9 +1,11 @@
 import React from "react";
+import classnames from "classnames";
 
 // ClampProps interface
 export interface ClampProps {
   maxLines?: number;
   prefixCls?: string;
+  className?: string;
 }
 
 // Clamp FC
@@ -12,12 +14,18 @@ const Clamp = (props: ClampProps) => {
     maxLines,
     children,
     prefixCls,
+    className,
   } = props;
 
   const checkboxId = `exp${(Math.random() + "").replace(".", "")}`;
 
+  const wrapCls = classnames(
+    `${prefixCls}-wrapper`,
+    className,
+  );
+
   return (
-    <div className={`${prefixCls}-wrapper`}>
+    <div className={wrapCls}>
       <input
         type="checkbox"
         id={checkboxId}

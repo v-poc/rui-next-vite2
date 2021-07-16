@@ -55,14 +55,14 @@
 
       &:checked+.text {
         -webkit-line-clamp: 999 !important;
-      }
-    
-      &:checked+.text::after {
-        visibility: hidden;
-      }
-      
-      &:checked+.text .btn::before {
-        content: '∧';
+
+        &::after {
+          visibility: hidden;
+        }
+
+        .btn::before {
+          content: '∧';
+        }
       }  
     }  
   }
