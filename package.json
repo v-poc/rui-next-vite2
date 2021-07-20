@@ -140,6 +140,6 @@
         "unified": "^9.2.1",
         "unist-util-find": "^1.0.2",
         "unist-util-visit": "^2.0.3",
-        "vite": "^2.4.2"
+        "vite": "^2.4.3"
     }
 }
