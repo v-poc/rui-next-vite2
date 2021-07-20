@@ -53,9 +53,9 @@ const Example = () => {
       <Tag selected>Selected</Tag>
       <p className="sub-title">Disabled tag</p>
       <Tag disabled>Disabled</Tag>
-      <p className="sub-title">Tag with Callback function (Console log)</p>
+      <p className="sub-title">Tag with Callback function (`RUI-log` in Console log)</p>
       <Tag onChange={handleChange}>Callback</Tag>
-      <p className="sub-title">Closable tag (Console log)</p>
+      <p className="sub-title">Closable tag with Callback function (`RUI-log` in Console log)</p>
       <Tag
         closable
         onClose={() => logInfo("onClose")}
