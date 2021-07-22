@@ -18,6 +18,12 @@ Basic usage of useVisibilityChange hook.
 import React, { useEffect, useState } from "react";
 import { useVisibilityChange, Result, Icon } from "rui-next";
 
+// Log info
+const logInfo = (content: any, type: string = 'info'): void => {
+  console[type] &&
+    console[type]('[RUI-log] %c%s', 'background: #69C;color: #FFF', content);
+};
+
 // Example Styles
 import styled from "styled-components";
 
@@ -36,30 +42,38 @@ const ExampleContainer = styled.div`
 // Example FC
 const Example = () => {
   const [visibility, setVisibility] = useState(false);
+
+  const deferSetVisibility = () => {
+    setTimeout(() => setVisibility(true), 800);
+  };
   
   // useVisibilityChange hook
   useVisibilityChange((visible) => {
-    console.log("useVisibilityChange: ", visible);
+    logInfo(`visibilityChange: ${visible}`);
+
     if (visible) {
-      setTimeout(() => setVisibility(true), 800);
+      deferSetVisibility();
     } else {
       setVisibility(false);
     }
   });
 
   // useEffect hook
-  useEffect(() => setTimeout(() => setVisibility(true), 800), []);
+  useEffect(() => {
+    deferSetVisibility();
+  }, []);
 
   const imgEl = visibility
     ? <Icon type="check-circle" size="lg" color="green" />
-    : <Icon type="exclamation-circle" size="lg" color="red" />;
+    : <Icon type="ellipsis-circle" size="lg" color="grey" />;
 
   return (
     <ExampleContainer>
+      <p className="sub-title">Visibility change detection</p>
       <Result
         img={imgEl}
         title="Document visibility state"
-        message={`Detect current state: ${visibility ? "visible" : "hidden"}`}
+        message={`Detect current state: ${visibility ? "visible" : "-"}`}
       />
     </ExampleContainer>
   );

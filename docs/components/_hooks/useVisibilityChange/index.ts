@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-// import useEventListener from '../useEventListener/index';
+import { useRef } from 'react';
+import useEventListener from '../useEventListener/index';
 import { canUseDOM } from '../../_utils/index';
 
 // useVisibilityChange hook
@@ -35,46 +35,37 @@ const useVisibilityChange = function (
   // clean-up timeout timer
 	const cleanupTimeout = () => clearTimeout(timeoutId.current);
 
-  // useEffect hook
-	useEffect(() => {
-		const {
-      hidden,
-      visibilityChange
-    } = browserCompatApi();
+  const {
+    hidden,
+    visibilityChange
+  } = browserCompatApi();
 
-		if (typeof callback !== 'function') {
-			throw new Error('callback must be a function');
-		}
+  // handle visibility change
+  const handleVisibilityChange = () => {
+    if (typeof callback !== 'function') {
+      throw new Error('callback must be a function');
+    }
 
-    // handle visibility change
-		const handleVisibilityChange = () => {
-			const res = canUseDOM() ? document[hidden] : false;
-			if (delay) {
-				if (typeof delay !== 'number' || delay < 0) {
-					throw new Error('delay must be a positive integer');
-				}
+    const res = canUseDOM() ? document[hidden] : false;
+    if (delay) {
+      if (typeof delay !== 'number' || delay < 0) {
+        throw new Error('delay must be a positive integer');
+      }
 
-				if (timeoutId.current) cleanupTimeout();
-				timeoutId.current = setTimeout(() => callback(!res), delay);
-			} else {
-				callback(!res);
-			}
-		};
+      if (timeoutId.current) cleanupTimeout();
+      timeoutId.current = setTimeout(() => callback(!res), delay);
+    } else {
+      callback(!res);
+    }
+  };
 
-    document.addEventListener(visibilityChange, handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener(visibilityChange, handleVisibilityChange);
-    };
-
-		// useEventListener(
-    //   visibilityChange,
-    //   handleVisibilityChange,
-    //   {
-    //     target: () => document,
-    //   }
-    // );
-	}, [callback]);
+  useEventListener(
+    visibilityChange,
+    handleVisibilityChange,
+    {
+      target: () => document,
+    }
+  );
 }
 
 export default useVisibilityChange;

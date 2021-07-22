@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { BasicTarget, getTargetElement } from "../../_utils/index";
 
 // Target type
