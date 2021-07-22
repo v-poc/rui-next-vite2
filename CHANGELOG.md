@@ -1,3 +1,7 @@
+# 0.12.0 (2021-07-22)
+
+Added `useVisibilityChange` hook.
+
 # 0.11.0 (2021-07-14)
 
 Added `Switch` demo.

@@ -40,3 +40,5 @@ export { default as Switch } from "./switch/index";
 export { default as useNetwork } from "./_hooks/useNetwork/index";
 // useFullscreen
 export { default as useFullscreen } from "./_hooks/useFullscreen/index";
+// useVisibilityChange
+export { default as useVisibilityChange } from "./_hooks/useVisibilityChange/index";
