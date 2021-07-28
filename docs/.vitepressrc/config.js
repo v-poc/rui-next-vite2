@@ -19,7 +19,7 @@ module.exports = {
   },
 
   themeConfig: {
-    repo: 'bluepower/rui-next',
+    repo: 'v-poc/rui-next',
     docsDir: 'docs',
 
     editLinks: true,
@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         text: 'Changelog',
-        link: 'https://github.com/bluepower/rui-next/blob/main/CHANGELOG.md'
+        link: 'https://github.com/v-poc/rui-next/blob/main/CHANGELOG.md'
       },
       {
         text: 'Links',
@@ -72,46 +72,46 @@ function getLocalSidebar(){
 		{
 			text: "Layout",
 			children: [
-				{ text: "Flex", link: "/components/flex/demo/index" },
-        { text: "WhiteSpace", link: "/components/white-space/demo/index" },
+				{ text: "Flex", link: "/components/flex/index" },
+        { text: "WhiteSpace", link: "/components/white-space/index" },
 			]
 		},
     {
       text: "Navigation",
       children: [
-        { text: "NavBar", link: "/components/nav-bar/demo/index" },
+        { text: "NavBar", link: "/components/nav-bar/index" },
       ]
     },
 		{
 			text: "Data-Display",
 			children: [
-        { text: "Card", link: "/components/card/demo/index" },
-        { text: "Badge", link: "/components/badge/demo/index" },
-        { text: "Icon", link: "/components/icon/demo/index" },
-        { text: "Tag", link: "/components/tag/demo/index" },
+        { text: "Card", link: "/components/card/index" },
+        { text: "Badge", link: "/components/badge/index" },
+        { text: "Icon", link: "/components/icon/index" },
+        { text: "Tag", link: "/components/tag/index" },
 			]
 		},
     {
       text: "Data-Entry",
       children: [
-        { text: "Button", link: "/components/button/demo/index" },
-        { text: "Switch", link: "/components/switch/demo/index" },
+        { text: "Button", link: "/components/button/index" },
+        { text: "Switch", link: "/components/switch/index" },
       ]
     },
 		{
 			text: "Feedback",
 			children: [
-				{ text: "ActivityIndicator", link: "/components/activity-indicator/demo/index" },
-        { text: "Progress", link: "/components/progress/demo/index" },
+				{ text: "ActivityIndicator", link: "/components/activity-indicator/index" },
+        { text: "Progress", link: "/components/progress/index" },
 			]
 		},
 		{
 			text: "Misc",
 			children: [
-        { text: "QRCode", link: "/components/qr-code/demo/index" },
-        { text: "OnePiece", link: "/components/one-piece/demo/index" },
-        { text: "Result", link: "/components/result/demo/index" },
-        { text: "Clamp", link: "/components/clamp/demo/index" },
+        { text: "QRCode", link: "/components/qr-code/index" },
+        { text: "OnePiece", link: "/components/one-piece/index" },
+        { text: "Result", link: "/components/result/index" },
+        { text: "Clamp", link: "/components/clamp/index" },
 			]
 		},
     {
