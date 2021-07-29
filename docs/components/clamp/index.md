@@ -6,7 +6,7 @@ title: Clamp
 
 `Clamp` is able to clamp multiline text content.
 
-> This is the pure CSS solution.
+> This is the pure CSS solution (**experimental status**).
 
 ```jsx
 <Clamp>some content might be very long</Clamp>
