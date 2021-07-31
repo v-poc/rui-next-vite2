@@ -1,3 +1,7 @@
+# 0.13.0 (2021-07-31)
+
+Added `useClickAway` hook.
+
 # 0.12.0 (2021-07-22)
 
 Added `useVisibilityChange` hook.
