@@ -31,6 +31,8 @@ export { default as Tag } from "./tag/index";
 export { default as Clamp } from "./clamp/index";
 // Switch
 export { default as Switch } from "./switch/index";
+// Skeleton
+export { default as Skeleton } from "./skeleton/index";
 
 
 /**

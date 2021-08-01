@@ -111,6 +111,7 @@ function getLocalSidebar(){
         { text: "QRCode", link: "/components/qr-code/index" },
         { text: "OnePiece", link: "/components/one-piece/index" },
         { text: "Result", link: "/components/result/index" },
+        { text: "Skeleton", link: "/components/skeleton/index" },
         { text: "Clamp", link: "/components/clamp/index" },
 			]
 		},

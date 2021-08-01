@@ -1,3 +1,7 @@
+# 0.14.0 (2021-08-01)
+
+Added `Skeleton` demo.
+
 # 0.13.0 (2021-07-31)
 
 Added `useClickAway` hook.
