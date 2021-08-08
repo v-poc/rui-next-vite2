@@ -33,6 +33,8 @@ export { default as Clamp } from "./clamp/index";
 export { default as Switch } from "./switch/index";
 // Skeleton
 export { default as Skeleton } from "./skeleton/index";
+// Chart
+export { default as Chart } from "./chart/index";
 
 
 /**

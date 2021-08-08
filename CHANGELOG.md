@@ -1,3 +1,7 @@
+# 0.15.0 (2021-08-08)
+
+Added `Chart` demo.
+
 # 0.14.0 (2021-08-01)
 
 Added `Skeleton` demo.

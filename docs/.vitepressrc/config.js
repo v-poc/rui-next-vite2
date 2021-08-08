@@ -112,6 +112,7 @@ function getLocalSidebar(){
         { text: "OnePiece", link: "/components/one-piece/index" },
         { text: "Result", link: "/components/result/index" },
         { text: "Skeleton", link: "/components/skeleton/index" },
+        { text: "Chart", link: "/components/chart/index" },
         { text: "Clamp", link: "/components/clamp/index" },
 			]
 		},
