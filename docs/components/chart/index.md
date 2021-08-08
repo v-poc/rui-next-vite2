@@ -38,25 +38,41 @@ const Example = () => (
   <ExampleContainer>
     <p className="sub-title">Line and Area-fill Chart</p>
     <Chart
-      size={['8rem', '5rem']}
+      size={["8rem", "5rem"]}
       max={60}
       min={0}
       step={10}
       format={(val) => `${val}%`}
-      labels={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
+      labels={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
       datasets={[
         {
           width: 0.2,
-          values: [9, 16, 21, 24, 21, 31, 33, 39, 37, 41, 51, 56, 53]
+          values: [9, 16, 21, 24, 21, 31, 33, 39, 37, 41, 51, 56, 53],
         },
         {
-          color: '#5e64ff',
+          color: "#5e64ff",
           width: 0.5,
-          theme: 'region',
-          values: [4, 11, 16, 13, 16, 26, 22, 34, 32, 30, 46, 51, 55]
+          theme: "region",
+          values: [4, 11, 16, 13, 16, 26, 22, 34, 32, 30, 46, 51, 55],
         }        
       ]}
     />
+    <p className="sub-title">Gradient-line Chart</p>
+      <Chart
+        size={["8rem", "5rem"]}
+        max={60}
+        min={0}
+        step={10}
+        labels={["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]}
+        datasets={[
+          {
+            color: "#3366cc",
+            width: 1,
+            theme: "heat",
+            values: [3, 10, 15, 12, 15, 25, 21, 33, 31, 29, 45, 50, 54],
+          }        
+        ]}
+      />
   </ExampleContainer>
 );
 
