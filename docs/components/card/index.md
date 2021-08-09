@@ -105,13 +105,13 @@ export default Example;
 
 ### Card
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | full | whether is full width | boolean | `false` |
 
 ### Card.Header
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | title | title for `Card.Header` | `React.Element`/`String` | |
 | thumb | thumb to render in the left of  `Card.Header`  | `React.Element`/`String` | |
@@ -120,13 +120,13 @@ Properties | Descrition | Type | Default
 
 ### Card.Body
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | - | - | - | - |
 
 ### Card.Footer
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | content | content of `Card.Footer` | `React.Element`/`String` | |
 | extra | extra content of `Card.Footer` | `React.Element`/`String` | |

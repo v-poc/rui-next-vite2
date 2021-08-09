@@ -65,7 +65,7 @@ export default Example;
 
 ### Button
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | type | it could be set to `primary`, `ghost`, `warning` or omitted | string | - |
 | size | it could be set to `large`、`small` or omitted | string | `large`|

@@ -83,7 +83,7 @@ export default Example;
 
 ### Result
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | imgUrl | image url | string | - |
 | img | image node (could be `<img src="" />` or `<Icon type="" />`), which will override `imgUrl` | `ReactNode` | - |

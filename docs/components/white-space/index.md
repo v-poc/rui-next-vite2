@@ -89,14 +89,14 @@ export default Example;
 
 ### WhiteSpace vertical
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | size | up and down margins, optional value: `xs`,`sm`,`md`,`lg`,`xl` | string | `md` |
 | vertical | whether vertical or hozirontal | boolean | `true` |
 
 ### WhiteSpace horizontal
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | size | left and right blank space, optional value: `sm`,`md`,`lg` | string | `lg` |
 | vertical | whether vertical or hozirontal | boolean | `false` |

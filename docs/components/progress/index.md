@@ -91,7 +91,7 @@ export default Example;
 
 ### Progress
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | percent | percent value of progress | number | 0 |
 | position | position of progress bar, optional: `fixed` `normal` | string | `fixed` |

@@ -74,7 +74,7 @@ export default Example;
 
 ### Tag
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | small | Whether to show a smaller size. | Boolean | `false` |
 | disabled | Whether is disabled. | Boolean | `false` |

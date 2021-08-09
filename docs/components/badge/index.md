@@ -117,7 +117,7 @@ export default Example;
 
 ### Badge
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | size | the size of badge, optional value: `large`, `small` | string | `small` |
 | text | the text or number inside badge | string\|number | - |

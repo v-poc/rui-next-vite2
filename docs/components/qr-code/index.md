@@ -95,7 +95,7 @@ export default Example;
 
 ### QRCode
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | value | the value of qr-code, mandatory | string | |
 | num | the type number, optional | number | 8 |

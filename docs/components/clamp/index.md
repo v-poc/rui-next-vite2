@@ -91,7 +91,7 @@ export default Example;
 
 ### Clamp
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | maxLines | The max number of lines that could be displayed, optional | number | 3 |
 | prefixCls | the prefix class | string | `r-clamp` |

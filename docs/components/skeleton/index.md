@@ -56,7 +56,7 @@ export default Example;
 
 ### Skeleton
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | loading | Whether display the skeleton placeholders loading | `Boolean` | `true` |
 | avatar | Whether display avatar placeholders | `Boolean` | `false` |

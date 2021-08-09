@@ -142,7 +142,7 @@ export default Example;
 
 ### Flex
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | direction | how flex items are placed in the flex container，value could be `row`,`row-reverse`,`column`,`column-reverse` | string  | `row` |
 | wrap | the wrap way of sub-elements，option `nowrap`,`wrap`,`wrap-reverse` | string | `nowrap` |

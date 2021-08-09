@@ -49,6 +49,6 @@ export default Example;
 
 ### OnePiece
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | scale | the scale number, optional | number | 1 |

@@ -83,7 +83,7 @@ export default Example;
 
 ### Switch
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 | checked | Whether is checked by default | Boolean | false |
 | disabled | whether is disabled | Boolean | false |

@@ -117,7 +117,7 @@ export default Example;
 
 ### ActivityIndicator
 
-Properties | Descrition | Type | Default
+Properties | Description | Type | Default
 -----------|------------|------|--------
 |  animating  | Whether to show the indicator (true by default) or hide it (false). | boolean | true |
 |  size  | Size of the indicator, optional value: `small`, `large` | string | small |
