@@ -1,3 +1,7 @@
+# 0.16.0 (2021-08-09)
+
+Added `Divider` demo.
+
 # 0.15.0 (2021-08-08)
 
 Added `Chart` demo.

@@ -35,6 +35,8 @@ export { default as Switch } from "./switch/index";
 export { default as Skeleton } from "./skeleton/index";
 // Chart
 export { default as Chart } from "./chart/index";
+// Divider
+export { default as Divider } from "./divider/index";
 
 
 /**

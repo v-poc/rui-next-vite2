@@ -74,6 +74,7 @@ function getLocalSidebar(){
 			children: [
 				{ text: "Flex", link: "/components/flex/index" },
         { text: "WhiteSpace", link: "/components/white-space/index" },
+        { text: "Divider", link: "/components/divider/index" },
 			]
 		},
     {
