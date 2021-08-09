@@ -298,7 +298,6 @@ const Chart = (props: ChartProps) => {
         ))}
       </defs>
       <g
-        className={`${prefixCls}-graph`}
         transform={`translate(${getOffset().left}, ${getOffset().top})`}
       >
         <g className={`${prefixCls}-axis-y`}>
@@ -349,19 +348,17 @@ const Chart = (props: ChartProps) => {
             </g>
           ))}
         </g>
-        <g className={`${prefixCls}-paths`}>
+        <g>
           {getPaths().map((path, index) => (
             <Fragment
               key={`${path.area ? 'area' : 'line'}-${index}`}
             >
               <path
-                className={`${prefixCls}-path`}
                 style={path.style}
                 d={path.value}
               />
               {path.area && (
                 <path
-                  className={`${prefixCls}-path-area`}
                   style={path.area.style}
                   d={path.area.value}
                 />
