@@ -13,6 +13,7 @@ title: ActivityIndicator
 <ActivityIndicator text="Loading..." />
 <ActivityIndicator toast />
 <ActivityIndicator toast text="Loading..." />
+<ActivityIndicator carousel />
 ```
 
 ## Example
@@ -69,6 +70,14 @@ const Example = () => {
 
   return (
     <ExampleContainer>
+      <p className="sub-title">Carousel loading style</p>
+      <div className="loading-example">
+        <ActivityIndicator
+          carousel
+          sizeNum={16}
+        />
+      </div>
+
       <p className="sub-title">Without text</p>
       <div className="loading-example">
         <ActivityIndicator
@@ -121,5 +130,6 @@ Properties | Description | Type | Default
 -----------|------------|------|--------
 |  animating  | Whether to show the indicator (true by default) or hide it (false). | boolean | true |
 |  size  | Size of the indicator, optional value: `small`, `large` | string | small |
-|  toast  | Whether to use toast style | boolean  | false |
+|  toast  | Whether to use toast style | boolean | false |
+|  carousel | Whether to use carousel style | boolean | false |
 |  text  | loading text behind the indicator | string | - |

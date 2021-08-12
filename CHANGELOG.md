@@ -1,3 +1,7 @@
+# 0.17.0 (2021-08-12)
+
+Added `CarouselCircle` example for `ActivityIndicator` demo.
+
 # 0.16.0 (2021-08-09)
 
 Added `Divider` demo.

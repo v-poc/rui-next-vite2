@@ -1,12 +1,16 @@
 import React from "react";
 import classnames from "classnames";
+import CarouselCircle from "./CarouselCircle";
 
 // ActivityIndicatorPropTypes interface
 export interface ActivityIndicatorPropTypes {
   animating?: boolean;
+  carousel?: boolean;
   toast?: boolean;
   size?: "large" | "small";
+  sizeNum?: number;
   text?: string;
+  color?: string;
 }
 
 // ActivityIndicatorProps interface
@@ -21,9 +25,12 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
     prefixCls,
     className,
     animating,
+    carousel,
     toast,
     size,
-    text
+    sizeNum,
+    text,
+    color,
   } = props;
 
   const wrapCls = classnames(
@@ -42,6 +49,15 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
       [`${prefixCls}-spinner-lg`]: !!toast || size === 'large',
     }
   );
+
+  if (carousel) {
+    return (
+      <CarouselCircle
+        size={sizeNum}
+        color={color}
+      />
+    );
+  }
 
   if (!animating) {
     return null;
@@ -79,7 +95,9 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
 ActivityIndicator.defaultProps = {
   prefixCls: "r-activity-indicator",
   animating: true,
+  carousel: false,
   size: "small",
+  sizeNum: 30,
   panelColor: "rgba(34, 34, 34, .6)",
   toast: false,
 };
