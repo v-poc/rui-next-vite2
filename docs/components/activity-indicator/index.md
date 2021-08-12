@@ -9,7 +9,7 @@ title: ActivityIndicator
 ```jsx
 <ActivityIndicator />
 <ActivityIndicator color="blue" />
-<ActivityIndicator size="large" />
+<ActivityIndicator sizeType="large" />
 <ActivityIndicator text="Loading..." />
 <ActivityIndicator toast />
 <ActivityIndicator toast text="Loading..." />
@@ -74,7 +74,7 @@ const Example = () => {
       <div className="loading-example">
         <ActivityIndicator
           carousel
-          sizeNum={16}
+          size={16}
         />
       </div>
 
@@ -95,7 +95,7 @@ const Example = () => {
       <p className="sub-title">With large size and customized text alignment</p>
       <div className="loading-example">
         <div className="alignment">
-          <ActivityIndicator size="large" />
+          <ActivityIndicator sizeType="large" />
           <span>Loading content</span>
         </div>
       </div>
@@ -128,8 +128,9 @@ export default Example;
 
 Properties | Description | Type | Default
 -----------|------------|------|--------
-|  animating  | Whether to show the indicator (true by default) or hide it (false). | boolean | true |
-|  size  | Size of the indicator, optional value: `small`, `large` | string | small |
-|  toast  | Whether to use toast style | boolean | false |
-|  carousel | Whether to use carousel style | boolean | false |
-|  text  | loading text behind the indicator | string | - |
+| animating | Whether to show the indicator (true by default) or hide it (false). | boolean | `true` |
+| sizeType | Size type of the indicator, optional value: `small`, `large` | string | `small` |
+| toast | Whether to use toast style | boolean | `false` |
+| carousel | Whether to use carousel style | boolean | `false` |
+| size | The size for carousel style | number | `30` |
+| text | loading text behind the indicator | string | - |

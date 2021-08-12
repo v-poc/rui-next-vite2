@@ -7,8 +7,8 @@ export interface ActivityIndicatorPropTypes {
   animating?: boolean;
   carousel?: boolean;
   toast?: boolean;
-  size?: "large" | "small";
-  sizeNum?: number;
+  sizeType?: "large" | "small";
+  size?: number;
   text?: string;
   color?: string;
 }
@@ -27,8 +27,8 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
     animating,
     carousel,
     toast,
+    sizeType,
     size,
-    sizeNum,
     text,
     color,
   } = props;
@@ -37,8 +37,8 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
     prefixCls,
     className,
     {
-      [`${prefixCls}-lg`]: size === 'large',
-      [`${prefixCls}-sm`]: size === 'small',
+      [`${prefixCls}-lg`]: sizeType === 'large',
+      [`${prefixCls}-sm`]: sizeType === 'small',
       [`${prefixCls}-toast`]: !!toast,
     }
   );
@@ -46,14 +46,14 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
   const spinnerCls = classnames(
     `${prefixCls}-spinner`,
     {
-      [`${prefixCls}-spinner-lg`]: !!toast || size === 'large',
+      [`${prefixCls}-spinner-lg`]: !!toast || sizeType === 'large',
     }
   );
 
   if (carousel) {
     return (
       <CarouselCircle
-        size={sizeNum}
+        size={size}
         color={color}
       />
     );
@@ -96,8 +96,8 @@ ActivityIndicator.defaultProps = {
   prefixCls: "r-activity-indicator",
   animating: true,
   carousel: false,
-  size: "small",
-  sizeNum: 30,
+  sizeType: "small",
+  size: 30,
   panelColor: "rgba(34, 34, 34, .6)",
   toast: false,
 };
