@@ -1,3 +1,7 @@
+# 0.18.0 (2021-08-19)
+
+Added `Rate` demo.
+
 # 0.17.0 (2021-08-12)
 
 Added `CarouselCircle` example for `ActivityIndicator` demo.

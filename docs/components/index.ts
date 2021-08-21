@@ -37,6 +37,8 @@ export { default as Skeleton } from "./skeleton/index";
 export { default as Chart } from "./chart/index";
 // Divider
 export { default as Divider } from "./divider/index";
+// Rate
+export { default as Rate } from "./rate/index";
 
 
 /**

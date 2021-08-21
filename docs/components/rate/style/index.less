@@ -1,0 +1,38 @@
+// @import '../../_styles/mixins';
+// @import '../../_styles/themes/default';
+
+@ratePrefixClass: r-rate;
+
+.@{ratePrefixClass} {
+  display: inline-flex;
+
+  &-box {
+    position: relative;
+  }
+
+  &-star {
+    padding: 3px;
+    line-height: 24px;
+    font-size: 24px;
+    color: #ccc;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+
+    &-half {
+      padding-right: 0;
+      width: calc(50% - 3px);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &-active {
+      color: #ffd21e;
+    }
+
+    &-readonly {
+      cursor: unset;
+    }
+  }
+}
