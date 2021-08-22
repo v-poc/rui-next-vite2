@@ -12,7 +12,8 @@ export interface RateProps {
   readonly?: boolean;
   value?: number;
   onChange?: (value: number) => void;
-  style?: React.CSSProperties;
+  activeColor?: string;
+  size?: number;
   prefixCls?: string;
   className?: string;
 }
@@ -30,7 +31,8 @@ const Rate = (props: RateProps) => {
     defaultValue,
     value,
     onChange,
-    style,
+    activeColor,
+    size,
   } = props;
 
   const [val, setVal] = useState(() => {
@@ -65,14 +67,23 @@ const Rate = (props: RateProps) => {
     }
   };
 
-  const renderStar = (
+  const renderStarItem = (
     v: number,
     isHalf: boolean
   ) => {
+    const itemStyle = {
+      fontSize: `${size}px`,
+      lineHeight: `${size}px`,
+    };
+
+    if (v <= val) {
+      itemStyle["color"] = activeColor;
+    }
+
     const itemCls = classnames(
       `${prefixCls}-star`,
       {
-        [`${prefixCls}-star-active`]: val >= v,
+        [`${prefixCls}-star-active`]: v <= val,
         [`${prefixCls}-star-half`]: isHalf,
         [`${prefixCls}-star-readonly`]: readonly,
       }
@@ -81,6 +92,7 @@ const Rate = (props: RateProps) => {
     return (
       <div
         className={itemCls}
+        style={itemStyle}
         onClick={() => handleClick(v)}
       >
         {character}
@@ -98,15 +110,14 @@ const Rate = (props: RateProps) => {
   return (
     <div
       className={wrapCls}
-      style={style}
     >
       {starList.map((_, i) => (
         <div
           key={`starItem${i}`}
           className={boxCls}
         >
-          {allowHalf && renderStar(i + 0.5, true)}
-          {renderStar(i + 1, false)}
+          {allowHalf && renderStarItem(i + 0.5, true)}
+          {renderStarItem(i + 1, false)}
         </div>
       ))}
     </div>
@@ -121,6 +132,8 @@ Rate.defaultProps = {
   defaultValue: 0,
   readonly: false,
   allowClear: true,
+  activeColor: "#FFD21E",
+  size: 24,
 };
 
 export default Rate;

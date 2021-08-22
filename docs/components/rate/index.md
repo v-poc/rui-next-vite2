@@ -50,6 +50,7 @@ const Example = () => (
     <Rate
       readonly
       value={3}
+      count={10}
     />
     <p className="sub-title">Allow half-star</p>
     <Rate
@@ -57,16 +58,20 @@ const Example = () => (
       defaultValue={3.5}
       character={<Icon type="star" size="lg" />}
     />
-    <p className="sub-title">Customized character</p>
+    <p className="sub-title">Customized character and styles</p>
     <Rate
-      defaultValue={2}
+      defaultValue={3}
       character="R"
+      activeColor="red"
     />
     <br /><br />
     <Rate
       allowHalf
-      defaultValue={4}
-      character="中"
+      defaultValue={2.5}
+      character="加"
+      activeColor="#36C"
+      size={48}
+      onChange={(v) => logInfo(`rate-content: ${v}`)}
     />
   </ExampleContainer>
 );
@@ -82,9 +87,11 @@ Properties | Description | Type | Default
 -----------|------------|------|--------
 | allowClear   | Whether allow to clear once click again | boolean | `true` |
 | allowHalf    | Whether allow to show half star | boolean | `false` |
-| character    | Customized character | ReactNode | \<Icon type="star" \/> |
+| character    | Customized character | ReactNode | `<Icon type="star" />` |
 | count        | The total count of star(s) | number | `5` |
 | defaultValue | The default value | number | `0` |
 | readonly     | The readonly mode | boolean | `false` |
 | value        | The current value | number | - |
 | onChange     | The callback function when the star is selected | (value: number) => void | - |
+| activeColor  | The active color | string | `#FFD21E` |
+| size         | The size of rate item | number | `24` |
