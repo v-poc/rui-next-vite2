@@ -1,7 +1,7 @@
 import { getReact, getReactDom, getStyleSheetManager } from './render'
 import React from 'react'
 
-export type ErrorCallback = (err: Error) => void
+export type ErrorCallback = (err: Error | unknown) => void
 
 interface IErrorBoundary {
 	Element: React.ReactNode

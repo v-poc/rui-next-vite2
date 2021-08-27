@@ -172,7 +172,7 @@ async function transform({ code, local, scope }: ITransform): Promise<TransformR
 		})
 
 		return { result: babelResult.code, imports: importJs, cssText }
-	} catch (error) {
+	} catch (error: any) {
 		return {
 			result: '',
 			imports: {},

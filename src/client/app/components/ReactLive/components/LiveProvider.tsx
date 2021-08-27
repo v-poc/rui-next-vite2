@@ -36,8 +36,8 @@ export default function LiveProvider({
 			scope,
 			local,
 		}
-		const errorCallback = async (err: Error) => {
-			setError(err.toString())
+		const errorCallback = async (err: Error | unknown) => {
+			err instanceof Error && setError(err.toString())
 			if (shadowRoot.current) {
 				const ReactDom_P = await getReactDom(local)
 				RemoveShadowRootSkeleton(shadowRoot.current)

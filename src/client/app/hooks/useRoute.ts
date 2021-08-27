@@ -85,7 +85,7 @@ export function useRoute(fallbackComponent?: ComponentType<any>, ssrHref?: strin
 					}
 				}
 			} catch (err) {
-				if (!err.message.match(/fetch/)) {
+				if (err instanceof Error && !err.message.match(/fetch/)) {
 					console.error(err)
 				}
 				if (latestPendingPathRef.current === pendingPath) {
@@ -135,7 +135,7 @@ export function useRoute(fallbackComponent?: ComponentType<any>, ssrHref?: strin
 			loadPage(window.location.href, (e.state && e.state.scrollPosition) || 0)
 		}
 
-		function hashchangeHandler(e: HashChangeEvent) {
+		function hashchangeHandler(e: HashChangeEvent | Event) {
 			e.preventDefault()
 		}
 
