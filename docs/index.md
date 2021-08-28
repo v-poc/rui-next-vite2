@@ -19,7 +19,7 @@ Try [QR code playground](https://nikoni.top/rui-next/docs/components/qr-code/dem
 Install dependencies
 
 ```bash
-$ npm install
+$ npm i
 ```
 
 Start the dev server for [docs-dev](http://localhost:3000/rui-next/docs/)
@@ -34,7 +34,7 @@ Build lib
 $ npm run build-lib
 ```
 
-Build documentation
+Build documentation (docs+demos)
 
 ```bash
 $ npm run build-docs
