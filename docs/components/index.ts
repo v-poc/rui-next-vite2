@@ -52,3 +52,5 @@ export { default as useFullscreen } from "./_hooks/useFullscreen/index";
 export { default as useVisibilityChange } from "./_hooks/useVisibilityChange/index";
 // useClickAway
 export { default as useClickAway } from "./_hooks/useClickAway/index";
+// useLazyload
+export { default as useLazyload } from "./_hooks/useLazyload/index";

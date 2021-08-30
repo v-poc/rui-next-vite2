@@ -1,3 +1,7 @@
+# 0.19.0 (2021-08-30)
+
+Added `useLazyload` hook.
+
 # 0.18.0 (2021-08-19)
 
 Added `Rate` demo.

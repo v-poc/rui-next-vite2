@@ -125,6 +125,7 @@ function getLocalSidebar(){
         { text: "useFullscreen", link: "/components/_hooks/useFullscreen/index" },
         { text: "useVisibilityChange", link: "/components/_hooks/useVisibilityChange/index" },
         { text: "useClickAway", link: "/components/_hooks/useClickAway/index" },
+        { text: "useLazyload", link: "/components/_hooks/useLazyload/index" },
       ]
     },
 	]
