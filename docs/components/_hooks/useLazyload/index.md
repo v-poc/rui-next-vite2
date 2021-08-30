@@ -66,5 +66,5 @@ export default Example;
 
 | Property | Description                                 | Type                   | Default |
 |----------|---------------------------------------------|------------------------|---------|
-| callbackRef | The callback function for Ref | `(el: HTMLElement | null) => void` | - |
+| callbackRef | The callback function for Ref | `(el: HTMLElement \| null) => void` | - |
 | isLoaded | Whether the resource is loaded | `boolean` | `false` |
