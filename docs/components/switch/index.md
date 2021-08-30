@@ -85,9 +85,9 @@ export default Example;
 
 Properties | Description | Type | Default
 -----------|------------|------|--------
-| checked | Whether is checked by default | Boolean | false |
-| disabled | whether is disabled | Boolean | false |
+| checked | Whether is checked by default | Boolean | `false` |
+| disabled | whether is disabled | Boolean | `false` |
 | color | Background color when the switch is turned on. | String | `#4dd865` |
-| onChange | The callback function that is triggered when the selected state changes. | (checked: boolean) => void | - |
+| onChange | The callback function that is triggered when the selected state changes. | `(checked: boolean) => void` | - |
 | name | name of `switch` | String | - |
 | platform | set the special style depends on platform, Options `android`, `ios` (by default) | String | `ios`|
