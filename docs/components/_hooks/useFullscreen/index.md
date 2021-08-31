@@ -126,21 +126,21 @@ export default Example;
 
 | Property | Description               | Type                                                             | Default |
 | -------- | ------------------------- | ---------------------------------------------------------------- | ------- |
-| target   | DOM element or Ref Object | `HTMLElement` \| `() => HTMLElement` \| `React.MutableRefObject` | -       |
-| options  | setting(optional)         | `Options`                                                        | -       |
+| target   | DOM element or Ref Object | `HTMLElement` \| `() => HTMLElement` \| `React.MutableRefObject` | - |
+| options  | setting(optional)         | `Options`                                                        | - |
 
 ### useFullscreen - Options
 
 | Property   | Description                        | Type         | Default |
 | ---------- | ---------------------------------- | ------------ | ------- |
-| onExitFull | listen for exit full screen events | `() => void` | -       |
-| onFull     | listen for full screen events      | `() => void` | -       |
+| onExitFull | listen for exit full screen events | `() => void` | - |
+| onFull     | listen for full screen events      | `() => void` | - |
 
 ### useFullscreen - Result
 
 | Property     | Description        | Type         |
 | ------------ | ------------------ | ------------ |
-| isFullscreen | is full screen     | `boolean`    |
+| isFullscreen | Whether it is the full screen state | `boolean` |
 | setFull      | set full screen    | `() => void` |
 | exitFull     | exit full screen   | `() => void` |
 | toggleFull   | toggle full screen | `() => void` |

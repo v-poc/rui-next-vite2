@@ -119,9 +119,9 @@ export default Example;
 
 Properties | Description | Type | Default
 -----------|------------|------|--------
-| size | the size of badge, optional value: `large`, `small` | string | `small` |
-| text | the text or number inside badge | string\|number | - |
-| corner | whether the badge is at the corner position | boolean | `false` |
-| dot | show badge as a red dot | boolean | `false` |
-| overflowCount | the max count to show | number | `99` |
-| hot | the hot commercial style | boolean | `false` |
+| size | the size of badge, optional value: `large`, `small` | `string` | `small` |
+| text | the text or number inside badge | `string\|number` | - |
+| corner | whether the badge is at the corner position | `boolean` | `false` |
+| dot | show badge as a red dot | `boolean` | `false` |
+| overflowCount | the max count to show | `number` | `99` |
+| hot | the hot commercial style | `boolean` | `false` |

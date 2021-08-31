@@ -107,7 +107,7 @@ export default Example;
 
 Properties | Description | Type | Default
 -----------|------------|------|--------
-| full | whether is full width | boolean | `false` |
+| full | whether is full width | `boolean` | `false` |
 
 ### Card.Header
 
@@ -115,7 +115,7 @@ Properties | Description | Type | Default
 -----------|------------|------|--------
 | title | title for `Card.Header` | `React.Element`/`String` | |
 | thumb | thumb to render in the left of  `Card.Header`  | `React.Element`/`String` | |
-| thumbStyle | style of thumb | Object | {} |
+| thumbStyle | style of thumb | `Object` | `{}` |
 | extra | extra content to render in the right of `Card.Header` | `React.Element`/`String` | |
 
 ### Card.Body
