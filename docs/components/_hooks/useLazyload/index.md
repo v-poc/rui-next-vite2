@@ -31,10 +31,6 @@ const ExampleContainer = styled.div`
   .sub-title:first-child {
     padding-top: 0;
   }
-
-  button {
-    user-select: none;
-  }
 `;
 
 // Example FC
