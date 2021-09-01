@@ -36,17 +36,9 @@ const ExampleContainer = styled.div`
 // Example FC
 const Example = () => {
   const [showContent, setShowContent] = useState(false);
-  const [contentLoading, setContentLoading] = useState(false);
   const [callbackRef, isLoaded] = useLazyload();
 
-  const startContentLoading = () => {
-    setShowContent(true);
-    setContentLoading(true);
-
-    setTimeout(() => {
-      setContentLoading(false);
-    }, 2000);
-  };
+  const startContentLoading = () => setShowContent(true);
 
   return (
     <ExampleContainer>
@@ -56,24 +48,23 @@ const Example = () => {
         size="small"
         inline
         round
-        disabled={contentLoading}
+        disabled={showContent && !isLoaded}
         onClick={startContentLoading}
       >
-        Test Content loading (delay 2s)
+        Test Content loading
       </Button>
-      {showContent && (
+      {showContent && (<>
         <Skeleton
           title
           titleWidth="80%"
           row={4}
-          loading={contentLoading}
-        >
-          <img
-            ref={callbackRef}
-            data-src="https://nikoni.top/images/niko-mit-react.png"
-          />
-        </Skeleton>
-      )}
+          loading={!isLoaded}
+        />
+        <img
+          ref={callbackRef}
+          data-src="https://vitejs.dev/logo.svg"
+        />
+      </>)}
     </ExampleContainer>
   );
 };
