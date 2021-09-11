@@ -39,6 +39,8 @@ export { default as Chart } from "./chart/index";
 export { default as Divider } from "./divider/index";
 // Rate
 export { default as Rate } from "./rate/index";
+// Watermark
+export { default as Watermark } from "./watermark/index";
 
 
 /**

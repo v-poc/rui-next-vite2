@@ -1,3 +1,7 @@
+# 0.20.0 (2021-09-11)
+
+Added `Watermark` demo.
+
 # 0.19.0 (2021-08-30)
 
 Added `useLazyload` hook.

@@ -90,6 +90,7 @@ function getLocalSidebar(){
         { text: "Badge", link: "/components/badge/index" },
         { text: "Icon", link: "/components/icon/index" },
         { text: "Tag", link: "/components/tag/index" },
+        { text: "Watermark", link: "/components/watermark/index" },
 			]
 		},
     {
