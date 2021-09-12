@@ -106,6 +106,8 @@ function getLocalSidebar(){
 			children: [
 				{ text: "ActivityIndicator", link: "/components/activity-indicator/index" },
         { text: "Progress", link: "/components/progress/index" },
+        { text: "Result", link: "/components/result/index" },
+        { text: "Skeleton", link: "/components/skeleton/index" },
 			]
 		},
 		{
@@ -113,8 +115,6 @@ function getLocalSidebar(){
 			children: [
         { text: "QRCode", link: "/components/qr-code/index" },
         { text: "OnePiece", link: "/components/one-piece/index" },
-        { text: "Result", link: "/components/result/index" },
-        { text: "Skeleton", link: "/components/skeleton/index" },
         { text: "Chart", link: "/components/chart/index" },
         { text: "Clamp", link: "/components/clamp/index" },
 			]
