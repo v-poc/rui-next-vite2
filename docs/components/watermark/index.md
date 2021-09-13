@@ -23,8 +23,20 @@ import styled from "styled-components";
 
 const ExampleContainer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
+  .watermark-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 1px dashed #DDD;
+
+    .r-watermark {
+      position: absolute;
+    }
+  }
 `;
 
 // Example FC
@@ -55,6 +67,7 @@ const Example = () => {
       >
         Test Text Watermark
       </Button>
+      <br />
       <Button
         type="primary"
         size="small"
@@ -63,9 +76,12 @@ const Example = () => {
       >
         Test Image Watermark
       </Button>
-      <Watermark
-        {...props}
-      />
+      <br />
+      <div className="watermark-wrapper">
+        <Watermark
+          {...props}
+        />
+      </div>
     </ExampleContainer>
   )
 };
