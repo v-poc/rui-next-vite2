@@ -1,5 +1,6 @@
 import ActivityIndicator from "./ActivityIndicator";
 
-import "./style/index";
+import "../_styles/index";
+import "./index.less";
 
 export default ActivityIndicator;

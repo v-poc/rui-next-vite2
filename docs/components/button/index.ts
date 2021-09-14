@@ -1,5 +1,7 @@
 import Button from "./Button";
 
-import "./style/index";
+import "../_styles/index";
+// import "../icon/index.less";
+import "./index.less";
 
 export default Button;

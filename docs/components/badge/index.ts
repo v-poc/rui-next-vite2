@@ -1,5 +1,6 @@
 import Badge from "./Badge";
 
-import "./style/index";
+import "../_styles/index";
+import "./index.less";
 
 export default Badge;

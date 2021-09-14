@@ -1,5 +1,6 @@
 import Divider from "./Divider";
 
-import "./style/index";
+// import "../_styles/index";
+import "./index.less";
 
 export default Divider;

@@ -1,5 +1,6 @@
 import Icon from "./Icon";
 
-import "./style/index";
+// import "../_styles/index";
+import "./index.less";
 
 export default Icon;

@@ -1,7 +1,8 @@
 import Flex from "./Flex";
 import FlexItem from "./FlexItem";
 
-import "./style/index";
+import "../_styles/index";
+import "./index.less";
 
 Flex.Item = FlexItem;
 

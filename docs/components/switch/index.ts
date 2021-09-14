@@ -1,5 +1,6 @@
 import Switch from "./Switch";
 
-import "./style/index";
+import "../_styles/index";
+import "./index.less";
 
 export default Switch;

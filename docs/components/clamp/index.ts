@@ -1,5 +1,6 @@
 import Clamp from "./Clamp";
 
-import "./style/index";
+// import "../_styles/index";
+import "./index.less";
 
 export default Clamp;

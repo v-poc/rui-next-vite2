@@ -1,3 +1,7 @@
+# 0.20.1 (2021-09-14)
+
+Refactor: styles.
+
 # 0.20.0 (2021-09-11)
 
 Added `Watermark` demo.

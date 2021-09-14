@@ -1,5 +1,6 @@
 import Card from "./Card";
 
-import "./style/index";
+import "../_styles/index";
+import "./index.less";
 
 export default Card;

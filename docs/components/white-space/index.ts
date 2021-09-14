@@ -1,5 +1,6 @@
 import WhiteSpace from "./WhiteSpace";
 
-import "./style/index";
+import "../_styles/index";
+import "./index.less";
 
 export default WhiteSpace;
