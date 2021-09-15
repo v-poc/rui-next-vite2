@@ -1,3 +1,7 @@
+# 0.20.2 (2021-09-15)
+
+Updated to move deps to devDependencies.
+
 # 0.20.1 (2021-09-14)
 
 Refactor: styles.
