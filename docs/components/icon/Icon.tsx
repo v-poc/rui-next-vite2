@@ -2,12 +2,6 @@ import React, { useEffect, HTMLProps, MouseEventHandler } from "react";
 import classnames from "classnames";
 import loadSprite from "../_utils/loadSprite";
 
-// IconPropsType interface
-export interface IconPropsType {
-  type: string;
-  color?: string;
-}
-
 // SvgProps
 export type SvgProps = Omit<
   HTMLProps<SVGSVGElement>,
@@ -15,12 +9,14 @@ export type SvgProps = Omit<
 >;
 
 // IconProps interface
-export interface IconProps extends IconPropsType, SvgProps {
-  size?: "xxs" | "xs" | "sm" | "md" | "lg";
-  onClick?: MouseEventHandler<SVGSVGElement>;
+export interface IconProps extends SvgProps {
   prefixCls?: string;
   className?: string;
-}
+  size?: "xxs" | "xs" | "sm" | "md" | "lg";
+  type: string;
+  color?: string;
+  onClick?: MouseEventHandler<SVGSVGElement>;
+};
 
 // Icon FC
 const Icon = (props: IconProps) => {

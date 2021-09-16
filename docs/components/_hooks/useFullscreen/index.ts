@@ -6,7 +6,7 @@ import screenfull from "../../_utils/screenfull";
 export interface Options {
   onExitFull?: () => void;
   onFull?: () => void;
-}
+};
 
 const useFullscreen = (target: BasicTarget, options?: Options) => {
   const [isFullscreen, setIsFullscreen] = useState(false);

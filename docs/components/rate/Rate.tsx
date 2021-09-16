@@ -4,6 +4,8 @@ import Icon from "../icon/index";
 
 // RateProps interface
 export interface RateProps {
+  prefixCls?: string;
+  className?: string;
   allowClear?: boolean;
   allowHalf?: boolean;
   character?: React.ReactNode;
@@ -14,9 +16,7 @@ export interface RateProps {
   onChange?: (value: number) => void;
   activeColor?: string;
   size?: number;
-  prefixCls?: string;
-  className?: string;
-}
+};
 
 // Rate FC
 const Rate = (props: RateProps) => {

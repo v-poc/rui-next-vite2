@@ -1,20 +1,16 @@
 import React, { ReactNode, CSSProperties } from "react";
 import classnames from "classnames";
 
-// CardHeaderPropsType interface
-export interface CardHeaderPropsType {
-  title?: ReactNode;
-  thumb?: ReactNode; // needs img url if thumb is string
-  extra?: ReactNode;
-}
-
 // CardHeaderProps interface
-export interface CardHeaderProps extends CardHeaderPropsType {
+export interface CardHeaderProps {
   prefixCls?: string;
   className?: string;
   style?: CSSProperties;
   thumbStyle?: CSSProperties;
-}
+  title?: ReactNode;
+  thumb?: ReactNode; // needs img url if thumb is string
+  extra?: ReactNode;
+};
 
 // CardHeader FC
 const CardHeader = (props: CardHeaderProps) => {

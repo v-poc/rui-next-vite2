@@ -4,27 +4,23 @@ import Icon from "../icon/index";
 import TouchFeedback from "../_utils/TouchFeedback";
 import { insertSpace } from "../_utils/index";
 
-// ButtonPropsType interface
-export interface ButtonPropsType {
-  type?: "primary" | "warning" | "ghost";
-  size?: "large" | "small";
-  disabled?: boolean;
-  loading?: boolean;
-}
-
 // ButtonProps interface
-export interface ButtonProps extends ButtonPropsType {
+export interface ButtonProps {
+  prefixCls?: string;
+  className?: string;
+  style?: CSSProperties;
   role?: string;
   inline?: boolean;
   round?: boolean;
   icon?: ReactNode;
   activeClassName?: string;
   activeStyle?: boolean | CSSProperties;
-  style?: CSSProperties;
+  type?: "primary" | "warning" | "ghost";
+  size?: "large" | "small";
+  disabled?: boolean;
+  loading?: boolean;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
-  prefixCls?: string;
-  className?: string;
-}
+};
 
 // Button FC
 const Button = (props: ButtonProps) => {

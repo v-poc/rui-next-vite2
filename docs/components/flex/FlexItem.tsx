@@ -1,25 +1,21 @@
 import React from 'react';
 import classnames from 'classnames';
 
-// FlexItemPropsType interface
-export interface FlexItemPropsType {
-  disabled?: boolean;
-}
-
 // FlexItemProps interface
-export interface FlexItemProps extends FlexItemPropsType {
+export interface FlexItemProps {
   prefixCls?: string;
   className?: string;
   style?: React.CSSProperties;
-}
+  disabled?: boolean;
+};
 
 // FlexItem FC
 const FlexItem = (props: FlexItemProps) => {
   const {
-    children,
-    className,
     prefixCls = 'r-flexbox',
+    className,
     style,
+    children,
     ...restProps
   } = props;
 

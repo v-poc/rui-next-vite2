@@ -2,8 +2,10 @@ import React from "react";
 import classnames from "classnames";
 import CarouselCircle from "./CarouselCircle";
 
-// ActivityIndicatorPropTypes interface
-export interface ActivityIndicatorPropTypes {
+// ActivityIndicatorProps interface
+export interface ActivityIndicatorProps {
+  prefixCls?: string;
+  className?: string;
   animating?: boolean;
   carousel?: boolean;
   toast?: boolean;
@@ -11,13 +13,7 @@ export interface ActivityIndicatorPropTypes {
   size?: number;
   text?: string;
   color?: string;
-}
-
-// ActivityIndicatorProps interface
-export interface ActivityIndicatorProps extends ActivityIndicatorPropTypes {
-  prefixCls?: string;
-  className?: string;
-}
+};
 
 // ActivityIndicator FC
 const ActivityIndicator = (props: ActivityIndicatorProps) => {

@@ -1,20 +1,16 @@
 import React, { ReactNode } from "react";
 import classnames from "classnames";
 
-// NavBarPropsType interface
-export interface NavBarPropsType {
+// NavBarProps interface
+export interface NavBarProps {
+  prefixCls?: string;
+  className?: string;
   mode?: "dark" | "light";
   icon?: ReactNode;
   leftContent?: ReactNode;
   rightContent?: ReactNode;
   onLeftClick?: () => void;
-}
-
-// NavBarProps interface
-export interface NavBarProps extends NavBarPropsType {
-  prefixCls?: string;
-  className?: string;
-}
+};
 
 // NavBar FC
 const NavBar = (props: NavBarProps) => {

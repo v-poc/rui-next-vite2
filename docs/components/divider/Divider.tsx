@@ -1,17 +1,13 @@
 import React, { CSSProperties } from "react";
 import classnames from "classnames";
 
-// DividerPropsType interface
-export interface DividerPropsType {
-  contentAlign?: "center" | "left" | "right";
-}
-
 // DividerProps interface
-export interface DividerProps extends DividerPropsType {
-  style?: CSSProperties;
+export interface DividerProps {
   prefixCls?: string;
   className?: string;
-}
+  style?: CSSProperties;
+  contentAlign?: "center" | "left" | "right";
+};
 
 // Divider FC
 const Divider = (props: DividerProps) => {

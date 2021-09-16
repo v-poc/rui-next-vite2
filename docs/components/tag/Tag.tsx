@@ -4,8 +4,11 @@ import Icon from "../icon/index";
 import TouchFeedback from "../_utils/TouchFeedback";
 import { getDataAttr } from "../_utils/index";
 
-// TagPropsType interface
-export interface TagPropsType {
+// TagProps interface
+export interface TagProps {
+  prefixCls?: string;
+  className?: string;
+  style?: CSSProperties;
   disabled?: boolean;
   selected?: boolean;
   closable?: boolean;
@@ -13,14 +16,7 @@ export interface TagPropsType {
   onChange?: (selected: boolean) => void;
   onClose?: () => void;
   afterClose?: () => void;
-}
-
-// TagProps interface
-export interface TagProps extends TagPropsType {
-  prefixCls?: string;
-  className?: string;
-  style?: CSSProperties;
-}
+};
 
 // Tag FC
 const Tag = (props: TagProps) => {

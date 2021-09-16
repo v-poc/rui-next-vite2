@@ -7,8 +7,9 @@ const SKELETON_WIDTH = {
   LAST_ROW: "60%",
 };
 
-// SkeletonPropsType interface
-export interface SkeletonPropsType {
+// SkeletonProps interface
+export interface SkeletonProps {
+  prefixCls?: string;
   loading: boolean;
   avatar?: boolean;
   avatarSize?: string;
@@ -16,12 +17,7 @@ export interface SkeletonPropsType {
   titleWidth?: number | string;
   row?: number;
   rowWidth: number | string | number[] | string[];
-}
-
-// SkeletonProps interface
-export interface SkeletonProps extends SkeletonPropsType {
-  prefixCls?: string;
-}
+};
 
 // Skeleton FC
 const Skeleton = (props: SkeletonProps) => {

@@ -1,20 +1,16 @@
 import React from "react";
 import classnames from "classnames";
 
-// WhiteSpacePropsType interface
-export interface WhiteSpacePropsType {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-}
-
 // WhiteSpaceProps interface
-export interface WhiteSpaceProps extends WhiteSpacePropsType {
+export interface WhiteSpaceProps {
   prefixCls?: string;
   className?: string;
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   style?: React.CSSProperties;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
   children?: any;
   vertical?: boolean; // vertical or horizontal
-}
+};
 
 // WhiteSpace FC
 const WhiteSpace = (props: WhiteSpaceProps) => {

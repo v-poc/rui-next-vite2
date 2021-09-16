@@ -4,9 +4,9 @@ import { canUseDOM } from '../_utils/index';
 
 // WatermarkProps interface
 export interface WatermarkProps {
-  style?: CSSProperties;
   prefixCls?: string;
   className?: string;
+  style?: CSSProperties;
   gapX?: number;
   gapY?: number;
   zIndex?: number;
@@ -22,7 +22,7 @@ export interface WatermarkProps {
   fontSize?: number | string;
   fontStyle?: "none" | "normal" | "italic" | "oblique";
   fontWeight?: "normal" | "light" | "bold" | number;
-}
+};
 
 // Watermark FC
 const Watermark = (props: WatermarkProps) => {

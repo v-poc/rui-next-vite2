@@ -1,3 +1,7 @@
+# 0.20.3 (2021-09-16)
+
+Refactor: types.
+
 # 0.20.2 (2021-09-15)
 
 Updated to move deps to devDependencies.

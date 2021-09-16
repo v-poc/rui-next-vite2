@@ -9,7 +9,7 @@ export interface NetworkState {
   downlinkMax?: number; // The maximum downlink speed
   saveData?: boolean; // Whether the user agent has set the option to reduce data usage
   effectiveType?: string; // The effective type of the connection
-}
+};
 
 const getConnection = () => {
   const nav = navigator as any;

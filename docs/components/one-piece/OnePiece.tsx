@@ -2,15 +2,15 @@ import React from "react";
 
 // OnePieceProps interface
 export interface OnePieceProps {
-  scale?: number;
   prefixCls?: string;
-}
+  scale?: number;
+};
 
 // OnePiece FC
 const OnePiece = (props: OnePieceProps) => {
   const {
-    scale = 1,
     prefixCls,
+    scale = 1,
   } = props;
 
   return (

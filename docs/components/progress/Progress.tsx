@@ -1,22 +1,18 @@
 import React, { CSSProperties, useCallback, useEffect, useRef } from "react";
 import classnames from "classnames";
 
-// ProgressPropsType interface
-export interface ProgressPropsType {
+// ProgressProps interface
+export interface ProgressProps {
+  prefixCls?: string;
+  className?: string;
+  style?: CSSProperties;         // the style of container
+  barStyle?: CSSProperties;      // the style of bar
   percent?: number;              // the percent value of progress
   position?: "fixed" | "normal"; // the position of progress bar
   unfilled?: boolean;            // whether to fill unfinished part of progress
   appearTransition?: boolean;
   mode?: "bar" | "circular";
-}
-
-// ProgressProps interface
-export interface ProgressProps extends ProgressPropsType {
-  prefixCls?: string;
-  className?: string;
-  style?: CSSProperties;    // the style of container
-  barStyle?: CSSProperties; // the style of bar
-}
+};
 
 // Progress FC
 const Progress = (props: ProgressProps) => {

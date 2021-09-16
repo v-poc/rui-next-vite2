@@ -4,7 +4,7 @@ import classnames from "classnames";
 // CardBodyProps interface
 export interface CardBodyProps extends React.HTMLProps<HTMLDivElement> {
   prefixCls?: string;
-}
+};
 
 // CardBody FC
 const CardBody = (props: CardBodyProps) => {

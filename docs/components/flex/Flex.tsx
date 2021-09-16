@@ -1,24 +1,20 @@
 import React from 'react';
 import classnames from 'classnames';
 
-// BasePropsType interface
-export interface BasePropsType {
+// FlexProps interface
+export interface FlexProps {
+  prefixCls?: string;
+  className?: string;
+  style?: React.CSSProperties;
+  alignContent?: 'start' | 'end' | 'center' | 'between' | 'around' | 'stretch';
+  role?: string;
   direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
   wrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
   justify?: 'start' | 'end' | 'center' | 'between' | 'around';
   align?: 'start' | 'center' | 'end' | 'baseline' | 'stretch';
   disabled?: boolean;
-}
-
-// FlexProps interface
-export interface FlexProps extends BasePropsType {
-  alignContent?: 'start' | 'end' | 'center' | 'between' | 'around' | 'stretch';
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
-  prefixCls?: string;
-  className?: string;
-  role?: string;
-  style?: React.CSSProperties;
-}
+};
 
 // Flex FC
 const Flex = (props: FlexProps) => {

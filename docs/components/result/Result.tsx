@@ -2,8 +2,11 @@ import React, { CSSProperties, ReactNode } from "react";
 import classnames from "classnames";
 import Button from "../button/index";
 
-// ResultPropsType interface
-export interface ResultPropsType {
+// ResultProps interface
+export interface ResultProps {
+  prefixCls?: string;
+  className?: string;
+  style?: CSSProperties;
   img?: ReactNode;
   imgUrl?: string;
   title?: ReactNode;
@@ -11,14 +14,7 @@ export interface ResultPropsType {
   buttonText?: string;
   buttonType?: "primary" | "ghost";
   onButtonClick?: () => void;
-}
-
-// ResultProps interface
-export interface ResultProps extends ResultPropsType {
-  style?: CSSProperties;
-  prefixCls?: string;
-  className?: string;
-}
+};
 
 // Result FC
 const Result = (props: ResultProps) => {

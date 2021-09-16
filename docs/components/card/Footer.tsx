@@ -1,17 +1,13 @@
 import React, { ReactNode } from "react";
 import classnames from "classnames";
 
-// CardFooterPropsType interface
-export interface CardFooterPropsType {
-  content?: ReactNode;
-  extra?: ReactNode;
-}
-
 // CardFooterProps interface
-export interface CardFooterProps extends CardFooterPropsType {
+export interface CardFooterProps {
   prefixCls?: string;
   className?: string;
-}
+  content?: ReactNode;
+  extra?: ReactNode;
+};
 
 // CardFooter FC
 const CardFooter = (props: CardFooterProps) => {

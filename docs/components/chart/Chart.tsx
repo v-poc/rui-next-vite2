@@ -1,8 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
 import useEventListener from '../_hooks/useEventListener/index';
 
-// ChartPropsType interface
-export interface ChartPropsType {
+// ChartProps interface
+export interface ChartProps {
+  prefixCls?: string;
   labels: any[]; // The labels of X-Axis
   datasets: any[]; // The chart data
   size: number[] | string[]; // The size of chart
@@ -12,12 +13,7 @@ export interface ChartPropsType {
   step: number; // The decreasing step in Y-Axis
   shift: number; // The shift in Y-Axis
   format: (val: any) => any; // The labels formatting function in Y-Axis
-}
-
-// ChartProps interface
-export interface ChartProps extends ChartPropsType {
-  prefixCls?: string;
-}
+};
 
 // Chart FC
 const Chart = (props: ChartProps) => {

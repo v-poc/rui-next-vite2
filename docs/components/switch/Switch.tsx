@@ -2,23 +2,19 @@ import React, { CSSProperties } from "react";
 import classnames from "classnames";
 import { getDataAttr } from "../_utils/index";
 
-// SwitchPropsType interface
-export interface SwitchPropsType {
+// SwitchProps interface
+export interface SwitchProps {
+  prefixCls?: string;
+  className?: string;
+  platform?: string;
+  style?: CSSProperties;
   checked?: boolean;
   disabled?: boolean;
   color?: string;
   name?: string;
   onChange?: (checked: boolean) => void;
   onClick?: (checked?: boolean) => void;
-}
-
-// SwitchProps interface
-export interface SwitchProps extends SwitchPropsType {
-  prefixCls?: string;
-  className?: string;
-  platform?: string;
-  style?: CSSProperties;
-}
+};
 
 // Switch FC
 const Switch = (props: SwitchProps) => {

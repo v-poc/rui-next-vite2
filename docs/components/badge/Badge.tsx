@@ -1,22 +1,18 @@
 import React, { CSSProperties } from "react";
 import classnames from "classnames";
 
-// BadgePropsType interface
-export interface BadgePropsType {
+// BadgeProps interface
+export interface BadgeProps {
+  prefixCls?: string;
+  className?: string;
+  style?: CSSProperties;
+  hot?: boolean;
   size?: "large" | "small";
   overflowCount?: number;
   corner?: boolean;
   dot?: boolean;
   text?: any;
-}
-
-// BadgeProps interface
-export interface BadgeProps extends BadgePropsType {
-  hot?: boolean;
-  style?: CSSProperties;
-  prefixCls?: string;
-  className?: string;
-}
+};
 
 // Badge FC
 const Badge = (props: BadgeProps) => {

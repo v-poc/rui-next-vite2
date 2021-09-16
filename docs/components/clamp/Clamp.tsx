@@ -3,10 +3,10 @@ import classnames from "classnames";
 
 // ClampProps interface
 export interface ClampProps {
-  maxLines?: number;
   prefixCls?: string;
   className?: string;
-}
+  maxLines?: number;
+};
 
 // Clamp FC
 const Clamp = (props: ClampProps) => {

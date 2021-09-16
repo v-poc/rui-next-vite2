@@ -4,14 +4,14 @@ import qrcode from "v-qr-code-next";
 
 // QRCodeProps interface
 export interface QRCodeProps {
+  prefixCls?: string;
+  className?: string;
   value: string;                 // the value of qr-code
   num?: number;                  // the type number
   level?: "L" | "M" | "Q" | "H"; // the error Correction Level
   mode?: "image" | "svg" | "table" | "dataurl";
-  border: boolean;
-  prefixCls?: string;
-  className?: string;
-}
+  border?: boolean;
+};
 
 // QRCode FC
 const QRCode = (props: QRCodeProps) => {

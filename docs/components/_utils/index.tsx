@@ -27,7 +27,7 @@ export const insertSpace = (child: any) => {
   }
   
   return child;
-}
+};
 
 type TargetElement = HTMLElement | Element | Document | Window;
 

@@ -7,7 +7,7 @@ export interface TouchFeedbackProps {
   activeClassName?: string;
   activeStyle?: any;
   children?: any;
-}
+};
 
 // TouchFeedback FC
 const TouchFeedback = (props: TouchFeedbackProps) => {
