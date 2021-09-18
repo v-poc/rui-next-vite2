@@ -26,7 +26,7 @@ Start the dev server for [docs-dev](http://localhost:3000/rui-next/docs/)
 $ npm start
 ```
 
-Build lib
+Build UI library
 
 ```bash
 $ npm run build-lib
