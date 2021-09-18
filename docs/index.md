@@ -8,11 +8,9 @@ Thanks to [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) that could su
 
 React with Vite Playground - Mobile web UI components - (react-hooks+vite2).
 
-> react-hooks `docs+demos` playground based on [vitepress-rc](https://github.com/cvnine/vitepress-rc).
-
 ## Preview
 
-Try [QR code playground](https://nikoni.top/rui-next/docs/components/qr-code/demo/index.html) to scan to access the examples on mobile/tablet device.
+Try [QR code playground](https://nikoni.top/rui-next/docs/components/qr-code/index.html) to scan to access the examples on mobile/tablet device.
 
 ## Project setup
 

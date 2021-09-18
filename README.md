@@ -13,7 +13,9 @@ This is just one kind of playground to dev `react-hooks` based UI components bas
 
 ## Preview
 
-Try [QR code playground](https://nikoni.top/rui-next/docs/components/qr-code/demo/index.html) to scan to access the examples on mobile/tablet device.
+Try [QR code playground](https://nikoni.top/rui-next/docs/components/qr-code/index.html) to scan to access the examples on mobile/tablet device.
+
+> react-hooks `docs+demos` playground based on [vitepress-rc](https://github.com/cvnine/vitepress-rc).
 
 ## Status
 
@@ -34,7 +36,7 @@ Start the dev server for [docs-dev](http://localhost:3000/rui-next/docs/)
 $ npm start
 ```
 
-Build lib
+Build UI library
 
 ```bash
 $ npm run build-lib
