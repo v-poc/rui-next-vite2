@@ -2,7 +2,7 @@
 title: Empty
 ---
 
-# Result
+# Empty
 
 `Empty` contains feedback content about empty status.
 
