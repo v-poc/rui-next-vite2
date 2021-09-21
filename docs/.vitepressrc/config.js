@@ -108,6 +108,7 @@ function getLocalSidebar(){
         { text: "Progress", link: "/components/progress/index" },
         { text: "Result", link: "/components/result/index" },
         { text: "Skeleton", link: "/components/skeleton/index" },
+        { text: "Empty", link: "/components/empty/index" },
 			]
 		},
 		{

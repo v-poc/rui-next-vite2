@@ -41,6 +41,8 @@ export { default as Divider } from "./divider/index";
 export { default as Rate } from "./rate/index";
 // Watermark
 export { default as Watermark } from "./watermark/index";
+// Empty
+export { default as Empty } from "./empty/index";
 
 
 /**
