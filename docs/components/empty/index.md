@@ -56,10 +56,19 @@ const Example = () => {
         message="No result"
       />
       <br /><br />
+      <p className="sub-title">Empty with customized style</p>
+      <Empty
+        img="https://nikoni.top/images/others/mj.png"
+        imgStyle={{
+          width: "100%",
+        }}
+        message="Data Not Found"
+      />
+      <br /><br />
       <p className="sub-title">Empty with customized image</p>
       <Empty
         img={imgEl}
-        message="No result"
+        message="Customize Description"
       />
     </ExampleContainer>
   );
