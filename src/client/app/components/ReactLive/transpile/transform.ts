@@ -45,7 +45,7 @@ function errorReturn(err: string) {
 
 async function transform({ code, local, scope }: ITransform): Promise<TransformReturnType> {
 	try {
-		const url_gogocode = new URL('//jspm.dev/gogocode@0.2.9', fakeHost).href
+		const url_gogocode = new URL('//jspm.dev/gogocode@0.2.4', fakeHost).href
 		const url_babel = new URL('//jspm.dev/@babel/standalone', fakeHost).href
 		const [{ default: $ }, babel] = await Promise.all([
 			import(/* @vite-ignore */ url_gogocode),
