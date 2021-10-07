@@ -8,7 +8,7 @@ export interface ActivityIndicatorProps {
   prefixCls?: string;
   className?: string;
   animating?: boolean;
-  carousel?: boolean;
+  carousel?: "circle" | "dot";
   toast?: boolean;
   sizeType?: "large" | "small";
   size?: number;
@@ -23,7 +23,6 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
     className,
     animating,
     carousel,
-    dot,
     toast,
     sizeType,
     size,
@@ -48,7 +47,7 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
     }
   );
 
-  if (carousel) {
+  if (carousel === "circle") {
     return (
       <CarouselCircle
         size={size}
@@ -57,7 +56,7 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
     );
   }
 
-  if (dot) {
+  if (carousel === "dot") {
     return (
       <CarouselDot
         color={color}
@@ -101,8 +100,6 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
 ActivityIndicator.defaultProps = {
   prefixCls: "r-activity-indicator",
   animating: true,
-  carousel: false,
-  dot: false,
   sizeType: "small",
   size: 30,
   panelColor: "rgba(34, 34, 34, .6)",
