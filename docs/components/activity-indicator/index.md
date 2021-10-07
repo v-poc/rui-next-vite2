@@ -146,5 +146,5 @@ Properties | Description | Type | Default
 | sizeType | Size type of the indicator, optional value: `small`, `large` | string | `small` |
 | toast | Whether to use toast style | boolean | `false` |
 | carousel | The carousel style, optional value: `circle`, `dot` | string | - |
-| size | The size for carousel style | number | `30` |
+| size | The size for carousel-circle style | number | `30` |
 | text | loading text behind the indicator | string | - |
