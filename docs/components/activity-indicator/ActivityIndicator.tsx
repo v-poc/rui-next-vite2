@@ -1,6 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 import CarouselCircle from "./CarouselCircle";
+import CarouselDot from "./CarouselDot";
 
 // ActivityIndicatorProps interface
 export interface ActivityIndicatorProps {
@@ -12,7 +13,7 @@ export interface ActivityIndicatorProps {
   sizeType?: "large" | "small";
   size?: number;
   text?: string;
-  color?: string;
+  color?: "default" | "primary" | "white" | string;
 };
 
 // ActivityIndicator FC
@@ -22,6 +23,7 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
     className,
     animating,
     carousel,
+    dot,
     toast,
     sizeType,
     size,
@@ -50,6 +52,14 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
     return (
       <CarouselCircle
         size={size}
+        color={color}
+      />
+    );
+  }
+
+  if (dot) {
+    return (
+      <CarouselDot
         color={color}
       />
     );
@@ -92,6 +102,7 @@ ActivityIndicator.defaultProps = {
   prefixCls: "r-activity-indicator",
   animating: true,
   carousel: false,
+  dot: false,
   sizeType: "small",
   size: 30,
   panelColor: "rgba(34, 34, 34, .6)",

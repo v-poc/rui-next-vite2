@@ -81,7 +81,7 @@ const CarouselCircle = (props: CarouselCircleProps) => {
 };
 
 CarouselCircle.defaultProps = {
-  prefixCls: "r-activity-indicator-carousel",
+  prefixCls: "r-activity-indicator-carousel-circle",
   size: 30,
   color: "#2F86F6",
 };

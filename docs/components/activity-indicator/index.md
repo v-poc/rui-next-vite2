@@ -14,6 +14,7 @@ title: ActivityIndicator
 <ActivityIndicator toast />
 <ActivityIndicator toast text="Loading..." />
 <ActivityIndicator carousel />
+<ActivityIndicator dot />
 ```
 
 ## Example
@@ -57,7 +58,12 @@ const ExampleContainer = styled.div`
 // Example FC
 const Example = () => {
   let closeTimer;
-  const [animating, setAnimating] = useState(false);  
+  const [animating, setAnimating] = useState(false);
+
+  const wrapperStyle = {
+    color: "orange",
+    fontSize: 36,
+  };
 
   // useEffect hook - clear timer when unmount
   useEffect(() => () => clearTimeout(closeTimer), []);
@@ -75,6 +81,14 @@ const Example = () => {
         <ActivityIndicator
           carousel
           size={16}
+        />
+      </div>
+
+      <p className="sub-title">Dot loading style (auto adapt to the color/font-size of wrapper)</p>
+      <div className="loading-example" style={wrapperStyle}>
+        <ActivityIndicator
+          dot
+          color="currentColor"
         />
       </div>
 
@@ -132,5 +146,6 @@ Properties | Description | Type | Default
 | sizeType | Size type of the indicator, optional value: `small`, `large` | string | `small` |
 | toast | Whether to use toast style | boolean | `false` |
 | carousel | Whether to use carousel style | boolean | `false` |
+| dot | Whether to use dot style | boolean | `false` |
 | size | The size for carousel style | number | `30` |
 | text | loading text behind the indicator | string | - |

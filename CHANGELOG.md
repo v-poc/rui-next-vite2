@@ -1,3 +1,8 @@
+# 0.22.0 (2021-10-07)
+
+- Added `CarouselDot` example for `ActivityIndicator` demo.
+- Refactor: styles of `ActivityIndicator`.
+
 # 0.21.0 (2021-09-20)
 
 Added `Empty` demo.
