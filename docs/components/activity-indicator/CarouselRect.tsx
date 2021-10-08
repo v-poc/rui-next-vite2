@@ -1,13 +1,13 @@
 import React from "react";
 
-// CarouselDotProps interface
-export interface CarouselDotProps {
+// CarouselRectProps interface
+export interface CarouselRectProps {
   prefixCls?: string;
   color?: "default" | "primary" | "white" | string;
 };
 
-// CarouselDot FC
-const CarouselDot = (props: CarouselDotProps) => {
+// CarouselRect FC
+const CarouselRect = (props: CarouselRectProps) => {
   const {
     color,
     prefixCls,
@@ -74,9 +74,9 @@ const CarouselDot = (props: CarouselDotProps) => {
   );
 };
 
-CarouselDot.defaultProps = {
-  prefixCls: "r-activity-indicator-carousel-dot",
+CarouselRect.defaultProps = {
+  prefixCls: "r-activity-indicator-carousel-rect",
   color: "default",
 };
 
-export default CarouselDot;
+export default CarouselRect;

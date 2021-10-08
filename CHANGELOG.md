@@ -1,3 +1,7 @@
+# 0.22.2 (2021-10-08)
+
+Refactor: rename `CarouselRect` to `CarouselDot` for `ActivityIndicator`.
+
 # 0.22.0 (2021-10-07)
 
 - Added `CarouselDot` example for `ActivityIndicator` demo.

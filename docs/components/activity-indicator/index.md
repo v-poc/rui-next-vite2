@@ -14,7 +14,7 @@ title: ActivityIndicator
 <ActivityIndicator toast />
 <ActivityIndicator toast text="Loading..." />
 <ActivityIndicator carousel="circle" />
-<ActivityIndicator carousel="dot" />
+<ActivityIndicator carousel="rect" />
 ```
 
 ## Example
@@ -84,10 +84,10 @@ const Example = () => {
         />
       </div>
 
-      <p className="sub-title">Carousel Dot loading style (auto adapt to the color/font-size of wrapper)</p>
+      <p className="sub-title">Carousel Rect loading style (auto adapt to the color/font-size of wrapper)</p>
       <div className="loading-example" style={wrapperStyle}>
         <ActivityIndicator
-          carousel="dot"
+          carousel="rect"
           color="currentColor"
         />
       </div>
@@ -143,8 +143,8 @@ export default Example;
 Properties | Description | Type | Default
 -----------|------------|------|--------
 | animating | Whether to show the indicator (true by default) or hide it (false). | boolean | `true` |
-| sizeType | Size type of the indicator, optional value: `small`, `large` | string | `small` |
+| sizeType | The size type of the indicator, optional value: `small`, `large` | string | `small` |
 | toast | Whether to use toast style | boolean | `false` |
-| carousel | The carousel style, optional value: `circle`, `dot` | string | - |
+| carousel | The carousel style, optional value: `circle`, `rect` | string | - |
 | size | The size for carousel-circle style | number | `30` |
-| text | loading text behind the indicator | string | - |
+| text | The loading text behind the indicator | string | - |

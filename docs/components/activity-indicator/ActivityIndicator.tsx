@@ -1,14 +1,14 @@
 import React from "react";
 import classnames from "classnames";
 import CarouselCircle from "./CarouselCircle";
-import CarouselDot from "./CarouselDot";
+import CarouselRect from "./CarouselRect";
 
 // ActivityIndicatorProps interface
 export interface ActivityIndicatorProps {
   prefixCls?: string;
   className?: string;
   animating?: boolean;
-  carousel?: "circle" | "dot";
+  carousel?: "circle" | "rect";
   toast?: boolean;
   sizeType?: "large" | "small";
   size?: number;
@@ -56,9 +56,9 @@ const ActivityIndicator = (props: ActivityIndicatorProps) => {
     );
   }
 
-  if (carousel === "dot") {
+  if (carousel === "rect") {
     return (
-      <CarouselDot
+      <CarouselRect
         color={color}
       />
     );
