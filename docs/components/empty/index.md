@@ -56,7 +56,7 @@ const Example = () => {
         message="No result"
       />
       <br /><br />
-      <p className="sub-title">Empty with customized style</p>
+      <p className="sub-title">Empty with customized style and image</p>
       <Empty
         img="https://nikoni.top/images/others/mj.png"
         imgStyle={{
@@ -65,7 +65,7 @@ const Example = () => {
         message="Data Not Found"
       />
       <br /><br />
-      <p className="sub-title">Empty with customized image</p>
+      <p className="sub-title">Empty with customized Icon image</p>
       <Empty
         img={imgEl}
         message="Customize Description"

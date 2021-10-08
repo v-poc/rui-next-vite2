@@ -114,8 +114,7 @@ const Example = () => {
         </div>
       </div>
 
-      <br />
-      <br />
+      <p className="sub-title">Toast mode of activity-indicator</p>
       <Button
         type="primary"
         size="small"
