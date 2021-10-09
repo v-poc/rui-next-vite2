@@ -1,3 +1,7 @@
+# 0.23.0 (2021-10-09)
+
+Removed `Clamp` component due to `experimental status`.
+
 # 0.22.2 (2021-10-08)
 
 Refactor: rename `CarouselDot` to `CarouselRect` for `ActivityIndicator`.
