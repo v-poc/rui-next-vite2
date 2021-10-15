@@ -91,6 +91,7 @@ function getLocalSidebar(){
         { text: "Icon", link: "/components/icon/index" },
         { text: "Tag", link: "/components/tag/index" },
         { text: "Watermark", link: "/components/watermark/index" },
+        { text: "PageIndicator", link: "/components/page-indicator/index" },
 			]
 		},
     {

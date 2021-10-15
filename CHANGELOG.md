@@ -1,3 +1,7 @@
+# 0.24.0 (2021-10-15)
+
+Added `PageIndicator` demo.
+
 # 0.23.0 (2021-10-09)
 
 Removed `Clamp` component due to `experimental status`.

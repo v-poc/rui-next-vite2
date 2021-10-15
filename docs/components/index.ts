@@ -43,6 +43,8 @@ export { default as Rate } from "./rate/index";
 export { default as Watermark } from "./watermark/index";
 // Empty
 export { default as Empty } from "./empty/index";
+// PageIndicator
+export { default as PageIndicator } from "./page-indicator/index";
 
 
 /**
