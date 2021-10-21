@@ -79,5 +79,10 @@ export const getDataAttr = (props: { [key: string]: any }) => {
 
 // Check if we can use DOM
 export const canUseDOM = () => {
-  return !!(typeof window !== "undefined" && window.document && window.document.createElement);
+  return !!(
+    typeof window !== "undefined" &&
+    typeof document !== "undefined" &&
+    window.document &&
+    window.document.createElement
+  );
 };
