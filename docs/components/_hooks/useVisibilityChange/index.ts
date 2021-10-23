@@ -46,7 +46,7 @@ const useVisibilityChange = function (
       throw new Error('callback must be a function');
     }
 
-    const res = canUseDOM() ? document[hidden] : false;
+    const res = canUseDOM ? document[hidden] : false;
     if (delay) {
       if (typeof delay !== 'number' || delay < 0) {
         throw new Error('delay must be a positive integer');

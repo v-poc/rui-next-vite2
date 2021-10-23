@@ -26,7 +26,12 @@ const logInfo = (content: any, type: string = 'info'): void => {
 
 // Get visibility
 const getVisibility = () => {
-  const canUseDOM = !!(typeof window !== "undefined" && window.document && window.document.createElement);
+  const canUseDOM = !!(
+    typeof window !== "undefined" &&
+    typeof document !== "undefined" &&
+    window.document &&
+    window.document.createElement
+  );
   return canUseDOM ? document.visibilityState : "visible";
 };
 

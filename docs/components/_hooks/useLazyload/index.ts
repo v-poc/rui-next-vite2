@@ -8,7 +8,7 @@ const useLazyload = (): [
   const [isLoaded, setIsLoaded] = useState(false);
 
   let param = null;
-  if (canUseDOM()) {
+  if (canUseDOM) {
     param = new IntersectionObserver((
       ioEntries: IntersectionObserverEntry[],
       observer: IntersectionObserver

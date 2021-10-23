@@ -50,7 +50,7 @@ const Watermark = (props: WatermarkProps) => {
   const [base64DataURL, setBase64DataURL] = useState("");
 
   useEffect(() => {
-    const canvas = canUseDOM() && document.createElement("canvas");
+    const canvas = canUseDOM && document.createElement("canvas");
     const ctx = canvas.getContext("2d");
     if (!ctx) {
       throw new Error("Canvas is not supported!");
