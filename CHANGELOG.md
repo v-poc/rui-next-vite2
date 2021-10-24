@@ -1,3 +1,7 @@
+# 0.25.0 (2021-10-23)
+
+Added `NoticeBar` demo.
+
 # 0.24.0 (2021-10-15)
 
 Added `PageIndicator` demo.

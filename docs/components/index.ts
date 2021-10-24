@@ -45,6 +45,8 @@ export { default as Watermark } from "./watermark/index";
 export { default as Empty } from "./empty/index";
 // PageIndicator
 export { default as PageIndicator } from "./page-indicator/index";
+// NoticeBar
+export { default as NoticeBar } from "./notice-bar/index";
 
 
 /**
