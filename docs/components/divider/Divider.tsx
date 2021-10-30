@@ -1,8 +1,8 @@
 import React, { CSSProperties } from "react";
 import classnames from "classnames";
 
-// DividerProps interface
-export interface DividerProps {
+// DividerProps Type
+export type DividerProps = {
   prefixCls?: string;
   className?: string;
   style?: CSSProperties;

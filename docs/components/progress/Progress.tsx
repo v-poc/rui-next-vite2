@@ -1,8 +1,8 @@
 import React, { CSSProperties, useCallback, useEffect, useRef } from "react";
 import classnames from "classnames";
 
-// ProgressProps interface
-export interface ProgressProps {
+// ProgressProps Type
+export type ProgressProps = {
   prefixCls?: string;
   className?: string;
   style?: CSSProperties;         // the style of container

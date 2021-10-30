@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import classnames from "classnames";
 import Icon from "../icon/index";
 
-// RateProps interface
-export interface RateProps {
+// RateProps Type
+export type RateProps = {
   prefixCls?: string;
   className?: string;
   allowClear?: boolean;

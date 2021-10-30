@@ -3,8 +3,8 @@ import classnames from "classnames";
 import CarouselCircle from "./CarouselCircle";
 import CarouselRect from "./CarouselRect";
 
-// ActivityIndicatorProps interface
-export interface ActivityIndicatorProps {
+// ActivityIndicatorProps Type
+export type ActivityIndicatorProps = {
   prefixCls?: string;
   className?: string;
   animating?: boolean;

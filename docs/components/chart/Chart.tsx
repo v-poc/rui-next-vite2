@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import useEventListener from '../_hooks/useEventListener/index';
 
-// ChartProps interface
-export interface ChartProps {
+// ChartProps Type
+export type ChartProps = {
   prefixCls?: string;
   labels: any[]; // The labels of X-Axis
   datasets: any[]; // The chart data

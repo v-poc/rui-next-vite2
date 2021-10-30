@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export interface NetworkState {
+export type NetworkState = {
   since?: Date; // Online/offline last change date
   online?: boolean; // Effective online
   rtt?: number; // Round-trip time

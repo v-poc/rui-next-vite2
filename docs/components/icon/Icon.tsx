@@ -8,8 +8,8 @@ export type SvgProps = Omit<
   "size" | "type"
 >;
 
-// IconProps interface
-export interface IconProps extends SvgProps {
+// IconProps Type
+export type IconProps = {
   prefixCls?: string;
   className?: string;
   size?: "xxs" | "xs" | "sm" | "md" | "lg";
@@ -19,7 +19,7 @@ export interface IconProps extends SvgProps {
 };
 
 // Icon FC
-const Icon = (props: IconProps) => {
+const Icon = <IconProps extends SvgProps>(props) => {
   // useEffect hook
   useEffect(() => loadSprite(), []);
 

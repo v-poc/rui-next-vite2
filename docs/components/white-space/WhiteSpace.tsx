@@ -1,8 +1,8 @@
 import React from "react";
 import classnames from "classnames";
 
-// WhiteSpaceProps interface
-export interface WhiteSpaceProps {
+// WhiteSpaceProps Type
+export type WhiteSpaceProps = {
   prefixCls?: string;
   className?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';

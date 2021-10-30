@@ -4,8 +4,8 @@ import Icon from "../icon/index";
 import TouchFeedback from "../_utils/TouchFeedback";
 import { getDataAttr } from "../_utils/index";
 
-// TagProps interface
-export interface TagProps {
+// TagProps Type
+export type TagProps = {
   prefixCls?: string;
   className?: string;
   style?: CSSProperties;

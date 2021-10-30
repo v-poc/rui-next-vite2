@@ -2,8 +2,8 @@ import React, { CSSProperties, ReactNode } from "react";
 import Result from "../result/index";
 import Icon from "../icon/index";
 
-// EmptyProps interface
-export interface EmptyProps {
+// EmptyProps Type
+export type EmptyProps = {
   prefixCls?: string;
   img?: ReactNode;
   imgStyle?: CSSProperties;

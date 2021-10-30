@@ -3,7 +3,7 @@ import useUnmount from "../useUnmount/index";
 import { BasicTarget, getTargetElement } from "../../_utils/index";
 import screenfull from "../../_utils/screenfull";
 
-export interface Options {
+export type Options = {
   onExitFull?: () => void;
   onFull?: () => void;
 };

@@ -6,8 +6,8 @@ const circleAnimateValues = [
   [0.6, 0.6, 0.6, 0.8, 1, 0.8, 0.6],
 ];
 
-// CarouselCircleProps interface
-export interface CarouselCircleProps {
+// CarouselCircleProps Type
+export type CarouselCircleProps = {
   prefixCls?: string;
   size?: number;
   color?: string;

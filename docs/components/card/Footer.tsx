@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import classnames from "classnames";
 
-// CardFooterProps interface
-export interface CardFooterProps {
+// CardFooterProps Type
+export type CardFooterProps = {
   prefixCls?: string;
   className?: string;
   content?: ReactNode;

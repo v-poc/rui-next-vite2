@@ -4,8 +4,8 @@ import Icon from "../icon/index";
 import TouchFeedback from "../_utils/TouchFeedback";
 import { insertSpace } from "../_utils/index";
 
-// ButtonProps interface
-export interface ButtonProps {
+// ButtonProps Type
+export type ButtonProps = {
   prefixCls?: string;
   className?: string;
   style?: CSSProperties;

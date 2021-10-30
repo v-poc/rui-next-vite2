@@ -1,8 +1,8 @@
 import React, { CSSProperties } from "react";
 import classnames from "classnames";
 
-// BadgeProps interface
-export interface BadgeProps {
+// BadgeProps Type
+export type BadgeProps = {
   prefixCls?: string;
   className?: string;
   style?: CSSProperties;

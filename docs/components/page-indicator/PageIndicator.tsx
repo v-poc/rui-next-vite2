@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 import classnames from "classnames";
 
-// PageIndicatorProps interface
-export interface PageIndicatorProps {
+// PageIndicatorProps Type
+export type PageIndicatorProps = {
   prefixCls?: string;
   className?: string;
   total: number;

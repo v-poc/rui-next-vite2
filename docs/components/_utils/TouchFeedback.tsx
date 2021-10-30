@@ -1,8 +1,8 @@
 import React, { useEffect, useState, cloneElement } from "react";
 import classnames from "classnames";
 
-// TouchFeedbackProps interface
-export interface TouchFeedbackProps {
+// TouchFeedbackProps Type
+export type TouchFeedbackProps = {
   disabled?: boolean;
   activeClassName?: string;
   activeStyle?: any;

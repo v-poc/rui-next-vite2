@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import classnames from "classnames";
 
-// NavBarProps interface
-export interface NavBarProps {
+// NavBarProps Type
+export type NavBarProps = {
   prefixCls?: string;
   className?: string;
   mode?: "dark" | "light";

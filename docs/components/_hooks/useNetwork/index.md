@@ -7,7 +7,7 @@ title: useNetwork
 A hook that can manage the state of network.
 
 ```ts
-interface NetworkState {
+type NetworkState = {
   online?: boolean;
   since?: Date;
   rtt?: number;
@@ -16,7 +16,7 @@ interface NetworkState {
   saveData?: boolean;
   downlinkMax?: number;
   effectiveType?: string;
-}
+};
 
 const result: NetworkState = useNetwork();
 ```

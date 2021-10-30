@@ -1,7 +1,7 @@
 import React from "react";
 
-// CarouselRectProps interface
-export interface CarouselRectProps {
+// CarouselRectProps Type
+export type CarouselRectProps = {
   prefixCls?: string;
   color?: "default" | "primary" | "white" | string;
 };

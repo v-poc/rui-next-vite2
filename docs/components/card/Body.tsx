@@ -1,13 +1,14 @@
 import React from "react";
 import classnames from "classnames";
 
-// CardBodyProps interface
-export interface CardBodyProps extends React.HTMLProps<HTMLDivElement> {
+// CardBodyProps Type
+export type CardBodyProps = {
   prefixCls?: string;
+  className?: string;
 };
 
 // CardBody FC
-const CardBody = (props: CardBodyProps) => {
+const CardBody = <CardBodyProps extends React.HTMLProps<HTMLDivElement>>(props) => {
   const {
     prefixCls,
     className,

@@ -2,8 +2,8 @@ import React from "react";
 import classnames from "classnames";
 import qrcode from "v-qr-code-next";
 
-// QRCodeProps interface
-export interface QRCodeProps {
+// QRCodeProps Type
+export type QRCodeProps = {
   prefixCls?: string;
   className?: string;
   value: string;                 // the value of qr-code

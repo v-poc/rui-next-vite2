@@ -7,8 +7,8 @@ const SKELETON_WIDTH = {
   LAST_ROW: "60%",
 };
 
-// SkeletonProps interface
-export interface SkeletonProps {
+// SkeletonProps Type
+export type SkeletonProps = {
   prefixCls?: string;
   loading: boolean;
   avatar?: boolean;

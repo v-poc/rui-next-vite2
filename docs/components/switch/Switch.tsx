@@ -2,8 +2,8 @@ import React, { CSSProperties } from "react";
 import classnames from "classnames";
 import { getDataAttr } from "../_utils/index";
 
-// SwitchProps interface
-export interface SwitchProps {
+// SwitchProps Type
+export type SwitchProps = {
   prefixCls?: string;
   className?: string;
   platform?: string;

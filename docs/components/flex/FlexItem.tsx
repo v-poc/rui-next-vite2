@@ -1,8 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
 
-// FlexItemProps interface
-export interface FlexItemProps {
+// FlexItemProps Type
+export type FlexItemProps = {
   prefixCls?: string;
   className?: string;
   style?: React.CSSProperties;

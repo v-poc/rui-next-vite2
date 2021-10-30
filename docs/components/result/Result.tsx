@@ -2,8 +2,8 @@ import React, { CSSProperties, ReactNode } from "react";
 import classnames from "classnames";
 import Button from "../button/index";
 
-// ResultProps interface
-export interface ResultProps {
+// ResultProps Type
+export type ResultProps = {
   prefixCls?: string;
   className?: string;
   style?: CSSProperties;

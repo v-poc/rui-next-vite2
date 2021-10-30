@@ -4,14 +4,14 @@ import CardHeader from "./Header";
 import CardBody from "./Body";
 import CardFooter from "./Footer";
 
-// CardProps interface
-export interface CardProps extends React.HTMLProps<HTMLDivElement> {
+// CardProps Type
+export type CardProps = {
   prefixCls?: string;
   full?: boolean;
 };
 
 // Card FC
-const Card = (props: CardProps) => {
+const Card = <CardProps extends React.HTMLProps<HTMLDivElement>>(props) => {
   const {
     prefixCls,
     full,

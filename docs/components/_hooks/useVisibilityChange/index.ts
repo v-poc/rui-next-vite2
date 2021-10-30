@@ -52,7 +52,9 @@ const useVisibilityChange = function (
         throw new Error('delay must be a positive integer');
       }
 
-      if (timeoutId.current) cleanupTimeout();
+      if (timeoutId.current) {
+        cleanupTimeout();
+      }
       timeoutId.current = setTimeout(() => callback(!res), delay);
     } else {
       callback(!res);

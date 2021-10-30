@@ -1,7 +1,7 @@
 import React from "react";
 
-// OnePieceProps interface
-export interface OnePieceProps {
+// OnePieceProps Type
+export type OnePieceProps = {
   prefixCls?: string;
   scale?: number;
 };

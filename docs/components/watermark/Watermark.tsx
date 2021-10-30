@@ -2,8 +2,8 @@ import React, { CSSProperties, useEffect, useState } from "react";
 import classnames from "classnames";
 import { canUseDOM } from '../_utils/index';
 
-// WatermarkProps interface
-export interface WatermarkProps {
+// WatermarkProps Type
+export type WatermarkProps = {
   prefixCls?: string;
   className?: string;
   style?: CSSProperties;

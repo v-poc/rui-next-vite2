@@ -1,8 +1,8 @@
 import React, { ReactNode, CSSProperties } from "react";
 import classnames from "classnames";
 
-// CardHeaderProps interface
-export interface CardHeaderProps {
+// CardHeaderProps Type
+export type CardHeaderProps = {
   prefixCls?: string;
   className?: string;
   style?: CSSProperties;
