@@ -15,7 +15,7 @@ title: QRCode
 Basic usage of QRCode component.
 
 ```jsx live=local
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { QRCode } from "rui-next";
 
 // Example Styles
@@ -53,16 +53,43 @@ const Example = () => {
     if (e.target.value.length >= limitLen) {
       val = e.target.value.substring(0, limitLen - 1);
     }
-    setParams({...params, value: val});
+    setParams({
+      ...params,
+      value: val,
+    });
   };
 
-  const handleSelectTypeNumber = () => setParams({...params, num: parseInt(selectTypeNumberRef.current!.value, 10)});
+  const handleSelectTypeNumber = () => {
+    const valNum = parseInt(selectTypeNumberRef.current!.value, 10);
+    let val = params.value;
+    let limitLen = valNum * 18;
+    if (valNum === 2) {
+      limitLen -= 4;
+    }
+    if (val.length >= limitLen) {
+      val = val.substring(0, limitLen - 1);
+    }
+    setParams({
+      ...params,
+      num: valNum,
+      value: val,
+    });
+  };
 
-  const handleSelectLevel = () => setParams({...params, level: selectLevelRef.current!.value});
+  const handleSelectLevel = () => setParams({
+    ...params,
+    level: selectLevelRef.current!.value,
+  });
 
-  const handleSelectMode = () => setParams({...params, mode: selectModeRef.current!.value});
+  const handleSelectMode = () => setParams({
+    ...params,
+    mode: selectModeRef.current!.value,
+  });
 
-  const handleSelectWrapper = () => setParams({...params, border: selectWrapperRef.current!.value === "1"});
+  const handleSelectWrapper = () => setParams({
+    ...params,
+    border: selectWrapperRef.current!.value === "1",
+  });
 
   return (
     <ExampleContainer>
