@@ -47,6 +47,8 @@ export { default as Empty } from "./empty/index";
 export { default as PageIndicator } from "./page-indicator/index";
 // NoticeBar
 export { default as NoticeBar } from "./notice-bar/index";
+// List
+export { default as List } from "./list/index";
 
 
 /**

@@ -1,3 +1,7 @@
+# 0.26.0 (2021-10-29)
+
+Added `List` demo.
+
 # 0.25.0 (2021-10-23)
 
 Added `NoticeBar` demo.
