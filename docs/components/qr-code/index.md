@@ -44,10 +44,24 @@ const Example = () => {
     border: false,
   });
 
-  const handleInputContent = (e) => setParams({...params, value: e.target.value.trim()});
+  const handleInputContent = (e) => {
+    let val = e.target.value.trim();
+    let limitLen = params.num * 18;
+    if (params.num === 2) {
+      limitLen -= 4;
+    }
+    if (e.target.value.length >= limitLen) {
+      val = e.target.value.substring(0, limitLen - 1);
+    }
+    setParams({...params, value: val});
+  };
+
   const handleSelectTypeNumber = () => setParams({...params, num: parseInt(selectTypeNumberRef.current!.value, 10)});
+
   const handleSelectLevel = () => setParams({...params, level: selectLevelRef.current!.value});
+
   const handleSelectMode = () => setParams({...params, mode: selectModeRef.current!.value});
+
   const handleSelectWrapper = () => setParams({...params, border: selectWrapperRef.current!.value === "1"});
 
   return (
@@ -69,7 +83,7 @@ const Example = () => {
           value={params.num}
           onChange={() => handleSelectTypeNumber()}
         >
-        {new Array(39).fill("").map((item, i) => (
+        {new Array(40).fill("").map((item, i) => (
           <option
             key={`num${i}`}
             value={i + 1}
@@ -113,6 +127,7 @@ const Example = () => {
       <input
         type="text"
         placeholder="Please input content"
+        value={params.value}
         onChange={(e) => handleInputContent(e)}
       />
       {params.value && (<QRCode
