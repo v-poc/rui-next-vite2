@@ -49,7 +49,7 @@ const ExampleContainer = styled.div`
 // Example FC
 const Example = () => (
   <ExampleContainer>
-    <div className="sub-title">Basic usage</div>
+    <div className="sub-title">Default mode</div>
     <List>
       {new Array(4).fill("").map((item, i) => (
         <List.Item

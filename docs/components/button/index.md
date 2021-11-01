@@ -16,7 +16,7 @@ Basic usage of Button component.
 
 ```jsx live=local
 import React from "react";
-import { Button } from "rui-next";
+import { ActivityIndicator, Button } from "rui-next";
 
 // Example Styles
 import styled from "styled-components";
@@ -51,7 +51,10 @@ const Example = () => (
     <Button type="primary" disabled>primary disabled</Button><br />
     <Button type="primary" inline>button inline primary</Button>
     <Button type="ghost" inline className="space">button inline ghost</Button>
-    <Button type="primary" inline round size="small" className="space">inline primary small button</Button><br />
+    <Button type="primary" inline round size="small" className="space">inline primary small button</Button>
+    <Button inline size="small" className="space">
+      <ActivityIndicator carousel="rect" />
+    </Button><br />
     <br />
     <Button loading>loading state</Button><br />
     <Button icon="search">button with icon</Button>
