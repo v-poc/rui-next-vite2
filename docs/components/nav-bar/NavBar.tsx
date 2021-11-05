@@ -13,7 +13,7 @@ export type NavBarProps = {
 };
 
 // NavBar FC
-const NavBar = (props: NavBarProps) => {
+const NavBar: React.FC<NavBarProps> = (props) => {
   const {
     mode,
     icon,

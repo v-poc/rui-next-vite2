@@ -7,7 +7,7 @@ export type OnePieceProps = {
 };
 
 // OnePiece FC
-const OnePiece = (props: OnePieceProps) => {
+const OnePiece: React.FC<OnePieceProps> = (props) => {
   const {
     prefixCls,
     scale = 1,

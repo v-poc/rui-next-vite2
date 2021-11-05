@@ -25,7 +25,7 @@ export type WatermarkProps = {
 };
 
 // Watermark FC
-const Watermark = (props: WatermarkProps) => {
+const Watermark: React.FC<WatermarkProps> = (props) => {
   const {
     prefixCls,
     style,

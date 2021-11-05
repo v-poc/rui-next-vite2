@@ -10,7 +10,7 @@ export type FlexItemProps = {
 };
 
 // FlexItem FC
-const FlexItem = (props: FlexItemProps) => {
+const FlexItem: React.FC<FlexItemProps> = (props) => {
   const {
     prefixCls = 'r-flexbox',
     className,

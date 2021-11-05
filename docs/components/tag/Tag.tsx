@@ -19,7 +19,7 @@ export type TagProps = {
 };
 
 // Tag FC
-const Tag = (props: TagProps) => {
+const Tag: React.FC<TagProps> = (props) => {
   const {
     children,
     className,

@@ -17,7 +17,7 @@ export type SwitchProps = {
 };
 
 // Switch FC
-const Switch = (props: SwitchProps) => {
+const Switch: React.FC<SwitchProps> = (props) => {
   const {
     prefixCls,
     name,

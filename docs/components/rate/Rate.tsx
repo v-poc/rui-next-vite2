@@ -19,7 +19,7 @@ export type RateProps = {
 };
 
 // Rate FC
-const Rate = (props: RateProps) => {
+const Rate: React.FC<RateProps> = (props) => {
   const {
     prefixCls,
     className,

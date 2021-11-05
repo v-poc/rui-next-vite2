@@ -11,7 +11,7 @@ export type EmptyProps = {
 };
 
 // Empty FC
-const Empty = (props: EmptyProps) => {
+const Empty: React.FC<EmptyProps> = (props) => {
   const {
     prefixCls,
     img,

@@ -14,7 +14,7 @@ export type CarouselCircleProps = {
 };
 
 // CarouselCircle FC
-const CarouselCircle = (props: CarouselCircleProps) => {
+const CarouselCircle: React.FC<CarouselCircleProps> = (props) => {
   const {
     size,
     color,

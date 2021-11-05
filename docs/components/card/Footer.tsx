@@ -10,7 +10,7 @@ export type CardFooterProps = {
 };
 
 // CardFooter FC
-const CardFooter = (props: CardFooterProps) => {
+const CardFooter: React.FC<CardFooterProps> = (props) => {
   const {
     prefixCls,
     content,

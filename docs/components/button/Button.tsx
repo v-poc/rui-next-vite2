@@ -23,7 +23,7 @@ export type ButtonProps = {
 };
 
 // Button FC
-const Button = (props: ButtonProps) => {
+const Button: React.FC<ButtonProps> = (props) => {
   const {
     type,
     size,

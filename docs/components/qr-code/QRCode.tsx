@@ -14,7 +14,7 @@ export type QRCodeProps = {
 };
 
 // QRCode FC
-const QRCode = (props: QRCodeProps) => {
+const QRCode: React.FC<QRCodeProps> = (props) => {
   const {
     value,
     num,

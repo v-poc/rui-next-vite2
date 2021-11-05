@@ -8,7 +8,7 @@ export type CardBodyProps = {
 };
 
 // CardBody FC
-const CardBody = <CardBodyProps extends React.HTMLProps<HTMLDivElement>>(props) => {
+const CardBody: React.FC = <CardBodyProps extends React.HTMLProps<HTMLDivElement>>(props) => {
   const {
     prefixCls,
     className,

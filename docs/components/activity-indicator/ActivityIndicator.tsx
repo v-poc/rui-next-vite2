@@ -17,7 +17,7 @@ export type ActivityIndicatorProps = {
 };
 
 // ActivityIndicator FC
-const ActivityIndicator = (props: ActivityIndicatorProps) => {
+const ActivityIndicator: React.FC<ActivityIndicatorProps> = (props) => {
   const {
     prefixCls,
     className,

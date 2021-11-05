@@ -11,7 +11,7 @@ export type CardProps = {
 };
 
 // Card FC
-const Card = <CardProps extends React.HTMLProps<HTMLDivElement>>(props) => {
+const Card: React.FC = <CardProps extends React.HTMLProps<HTMLDivElement>>(props) => {
   const {
     prefixCls,
     full,

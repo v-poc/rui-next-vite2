@@ -13,7 +13,7 @@ export type CardHeaderProps = {
 };
 
 // CardHeader FC
-const CardHeader = (props: CardHeaderProps) => {
+const CardHeader: React.FC<CardHeaderProps> = (props) => {
   const {
     prefixCls,
     className,

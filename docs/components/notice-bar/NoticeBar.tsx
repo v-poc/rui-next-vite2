@@ -17,7 +17,7 @@ export type NoticeBarProps = {
 };
 
 // NoticeBar FC
-const NoticeBar = (props: NoticeBarProps) => {
+const NoticeBar: React.FC<NoticeBarProps> = (props) => {
   const {
     prefixCls,
     className,

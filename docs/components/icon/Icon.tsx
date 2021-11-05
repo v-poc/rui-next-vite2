@@ -19,7 +19,7 @@ export type IconProps = {
 };
 
 // Icon FC
-const Icon = <IconProps extends SvgProps>(props) => {
+const Icon: React.FC = <IconProps extends SvgProps>(props) => {
   // useEffect hook
   useEffect(() => loadSprite(), []);
 

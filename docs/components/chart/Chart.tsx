@@ -16,7 +16,7 @@ export type ChartProps = {
 };
 
 // Chart FC
-const Chart = (props: ChartProps) => {
+const Chart: React.FC<ChartProps> = (props) => {
   const {
     labels,
     datasets,

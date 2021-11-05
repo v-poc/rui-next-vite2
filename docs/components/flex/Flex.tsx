@@ -17,7 +17,7 @@ export type FlexProps = {
 };
 
 // Flex FC
-const Flex = (props: FlexProps) => {
+const Flex: React.FC<FlexProps> = (props) => {
   const {
     direction,
     wrap,

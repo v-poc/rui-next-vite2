@@ -15,7 +15,7 @@ export type ProgressProps = {
 };
 
 // Progress FC
-const Progress = (props: ProgressProps) => {
+const Progress: React.FC<ProgressProps> = (props) => {
   const barRef = useRef();
   let noAppearTransition = false;
 

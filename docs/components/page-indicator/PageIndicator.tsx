@@ -11,7 +11,7 @@ export type PageIndicatorProps = {
 };
 
 // PageIndicator FC
-const PageIndicator = (props: PageIndicatorProps) => {
+const PageIndicator: React.FC<PageIndicatorProps> = (props) => {
   const {
     prefixCls,
     className,

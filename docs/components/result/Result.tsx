@@ -17,7 +17,7 @@ export type ResultProps = {
 };
 
 // Result FC
-const Result = (props: ResultProps) => {
+const Result: React.FC<ResultProps> = (props) => {
   const {
     style,
     img,

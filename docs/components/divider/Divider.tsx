@@ -10,7 +10,7 @@ export type DividerProps = {
 };
 
 // Divider FC
-const Divider = (props: DividerProps) => {
+const Divider: React.FC<DividerProps> = (props) => {
   const {
     contentAlign,
     style,

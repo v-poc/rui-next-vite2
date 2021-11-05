@@ -7,7 +7,7 @@ export type CarouselRectProps = {
 };
 
 // CarouselRect FC
-const CarouselRect = (props: CarouselRectProps) => {
+const CarouselRect: React.FC<CarouselRectProps> = (props) => {
   const {
     color,
     prefixCls,

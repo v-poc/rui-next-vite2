@@ -20,7 +20,7 @@ export type SkeletonProps = {
 };
 
 // Skeleton FC
-const Skeleton = (props: SkeletonProps) => {
+const Skeleton: React.FC<SkeletonProps> = (props) => {
   const {
     prefixCls,
     children,

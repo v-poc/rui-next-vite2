@@ -13,7 +13,7 @@ export type WhiteSpaceProps = {
 };
 
 // WhiteSpace FC
-const WhiteSpace = (props: WhiteSpaceProps) => {
+const WhiteSpace: React.FC<WhiteSpaceProps> = (props) => {
   const {
     prefixCls,
     size,
