@@ -18,7 +18,24 @@ Basic usage of List component.
 
 ```jsx live=local
 import React from "react";
-import { List } from "rui-next";
+import { List, Icon } from "rui-next";
+
+const arrUsers = [
+  {
+    index: 0,
+    avatar:
+      'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9',
+    name: 'Sara Visto',
+    desc: 'Animi eius expedita',
+  },
+  {
+    index: 1,
+    avatar:
+      'https://images.unsplash.com/photo-1546967191-fdfb13ed6b1e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',
+    name: 'Edith Koen',
+    desc: 'Commodi earum exercitationem id numquam visto',
+  },
+];
 
 // Log info
 const logInfo = (content: any, type: string = 'info'): void => {
@@ -43,6 +60,12 @@ const ExampleContainer = styled.div`
   .card-wrapper {
     padding: 10px 0;
     background-color: #EEE;
+  }
+
+  .avatar-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
   }
 `;
 
@@ -76,6 +99,40 @@ const Example = () => (
         ))}
       </List>
     </div>
+
+    <div className="sub-title">With icon and disabled state</div>
+    <List>
+      <List.Item
+        prefix={<Icon type="voice" />}
+        onClick={() => logInfo("Click voice item")}
+      >
+        Voice item
+      </List.Item>
+      <List.Item
+        prefix={<Icon type="info-circle" />}
+        disabled
+      >
+        Info item
+      </List.Item>
+    </List>
+
+    <div className="sub-title">Users list</div>
+    <List>
+      {arrUsers.map((item, i) => {
+        const { index, avatar, name, desc } = item;
+        const renderImage = <img className="avatar-item" src={avatar} />;
+        return (
+          <List.Item
+            key={`user${index}`}
+            prefix={renderImage}
+            description={desc}
+            onClick={() => logInfo(`name: ${name}, description: ${desc}`)}
+          >
+            {name}
+          </List.Item>
+        )
+      })}
+    </List>
   </ExampleContainer>
 );
 
