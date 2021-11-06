@@ -1,3 +1,8 @@
+# 0.26.1 (2021-11-06)
+
+- Updated `List` demo.
+- Refactor: types.
+
 # 0.26.0 (2021-10-29)
 
 Added `List` demo.
