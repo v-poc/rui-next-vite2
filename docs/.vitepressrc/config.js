@@ -12,6 +12,7 @@ module.exports = {
   md: {
 	  codeScope: {
 		  'rui-next': path.resolve(__dirname, '../components/index.ts'),
+      'experimental': path.resolve(__dirname, '../components/experimental.ts'),
 	  },
 	  docgen: {
 		  
@@ -132,6 +133,12 @@ function getLocalSidebar(){
         { text: "useLazyload", link: "/components/_hooks/useLazyload/index" },
       ]
     },
+		{
+			text: "Experimental",
+			children: [
+        { text: "Clamp", link: "/components/clamp/index" },
+			]
+		},
 	]
 }
 

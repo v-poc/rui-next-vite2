@@ -1,3 +1,7 @@
+# 0.26.2 (2021-11-07)
+
+Moved `Clamp` component into `experimental` category.
+
 # 0.26.1 (2021-11-06)
 
 - Updated `List` demo.
