@@ -31,11 +31,11 @@ const NoticeBar: React.FC<NoticeBarProps> = (props) => {
     type,
   } = props;
 
-  const isMounted = useRef<boolean>(false);
-  const wrapperRef = useRef<HTMLSpanElement>(null);
-  const innerRef = useRef<HTMLSpanElement>(null);
-  const [visible, setVisible] = useState<boolean>(true);
-  const [contentKey, setContentKey] = useState<number>(0);
+  const isMounted = useRef<boolean>(false); // Whether the component is mounted
+  const wrapperRef = useRef<HTMLSpanElement>(null); // The wrapper ref
+  const innerRef = useRef<HTMLSpanElement>(null); // The inner ref
+  const [visible, setVisible] = useState<boolean>(true); // Whether to show the NoticeBar
+  const [contentKey, setContentKey] = useState<number>(0); // The content key
 
   // useLayoutEffect hook
   useLayoutEffect(() => {
@@ -112,7 +112,6 @@ const NoticeBar: React.FC<NoticeBarProps> = (props) => {
           ref={innerRef}
           className={`${prefixCls}-content-inner`}
           onTransitionEnd={() => setContentKey((k) => k + 1)}
-
         >
           {content}
         </span>
@@ -137,8 +136,8 @@ const NoticeBar: React.FC<NoticeBarProps> = (props) => {
 NoticeBar.defaultProps = {
   prefixCls: "r-notice-bar",
   type: "default",
-  delay: 2000,
-  speed: 50,
+  delay: 2000, // unit (ms)
+  speed: 50, // unit (px / s)
 };
 
 export default NoticeBar;
