@@ -1,3 +1,7 @@
+# 0.26.3 (2021-11-14)
+
+Added `AutoJustifyContent` demo (`experimental`).
+
 # 0.26.2 (2021-11-07)
 
 Moved `Clamp` component into `experimental` category.
