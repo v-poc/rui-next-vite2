@@ -37,6 +37,10 @@ const ExampleContainer = styled.div`
   .sub-title:first-child {
     padding-top: 0;
   }
+
+  .r-tag {
+    user-select: none;
+  }
 `;
 
 // Example FC

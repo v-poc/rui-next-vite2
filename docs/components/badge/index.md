@@ -46,6 +46,7 @@ const ExampleContainer = styled.div`
   .corner-section {
     width: 80px;
     height: 45px;
+    background: #FEF5F5;
   }
 
   .bg-section {
