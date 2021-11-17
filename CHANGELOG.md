@@ -1,6 +1,7 @@
 # 0.26.3 (2021-11-14)
 
-Added `AutoJustifyContent` demo (`experimental`).
+- Added `AutoJustifyContent` demo (`experimental`).
+- Updated deps.
 
 # 0.26.2 (2021-11-07)
 

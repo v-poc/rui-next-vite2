@@ -14,10 +14,10 @@ declare module 'hast-util-heading' {
 	const fn: (node: any) => boolean
 	export = fn
 }
-declare module 'hast-util-is-element' {
-	const fn: (node: any, name: any) => boolean
-	export = fn
-}
+// declare module 'hast-util-is-element' {
+// 	const fn: (node: any, name: any) => boolean
+// 	export = fn
+// }
 
 declare module 'micromark-extension-mdxjs' {
 	const fn: () => any
