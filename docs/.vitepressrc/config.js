@@ -138,6 +138,7 @@ function getLocalSidebar() {
 			children: [
         { text: "Clamp", link: "/components/clamp/index" },
         { text: "AutoJustifyContent", link: "/components/auto-justify-content/index" },
+        { text: "Playground", link: "/playground" }
 			]
 		},
 	]
