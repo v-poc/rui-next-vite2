@@ -1,11 +1,12 @@
 {
     "name": "rui-next",
-    "version": "0.26.3",
+    "version": "0.26.4",
     "description": "Mobile web UI components based on React and Vite 2",
     "files": [
         "dist/style.css",
         "dist/rui-next.es.js",
-        "dist/rui-next.umd.js"
+        "dist/rui-next.umd.js",
+        "README.md"
     ],
     "main": "dist/rui-next.umd.js",
     "module": "dist/rui-next.es.js",
@@ -109,9 +110,9 @@
         "fs-extra": "^9.1.0",
         "globby": "^11.0.3",
         "less": "^4.1.1",
-        "mdast-util-from-markdown": "^0.8.5",
-        "mdast-util-mdx": "^0.1.1",
-        "micromark-extension-mdxjs": "^0.3.0",
+        "mdast-util-from-markdown": "0.8.5",
+        "mdast-util-mdx": "0.1.1",
+        "micromark-extension-mdxjs": "0.3.0",
         "minimist": "^1.2.5",
         "normalize.css": "^8.0.1",
         "ora": "^5.4.0",
@@ -119,11 +120,11 @@
         "prism-react-renderer": "^1.2.1",
         "react-docgen-typescript": "^1.21.0",
         "react-simple-code-editor": "^0.11.0",
-        "remark-emoji": "^2.1.0",
-        "remark-frontmatter": "^3.0.0",
-        "remark-gfm": "^1.0.0",
+        "remark-emoji": "2.2.0",
+        "remark-frontmatter": "3.0.0",
+        "remark-gfm": "1.0.0",
         "remark-parse-yaml": "^0.0.3",
-        "remark-slug": "^6.0.0",
+        "remark-slug": "6.1.0",
         "sirv": "^1.0.11",
         "slash": "^3.0.0",
         "styled-components": "^5.2.1",
@@ -131,6 +132,6 @@
         "unified": "^9.2.1",
         "unist-util-find": "^1.0.2",
         "unist-util-visit": "^2.0.3",
-        "vite": "^2.7.0-beta.7"
+        "vite": "^2.7.0-beta.8"
     }
 }
