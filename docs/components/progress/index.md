@@ -120,5 +120,5 @@ Properties | Description | Type | Default
 | style | the style of container | `Object` | `{}` |
 | barStyle | the style of bar | `Object` | `{}` |
 | children | the customized information | `React.ReactNode` | - |
-| size | the width and height of the canvas of ProgressCircle | `50px` | - |
-| trackWidth | the width of the track of ProgressCircle | `3px` | - |
+| size | the width and height of the canvas of ProgressCircle | `number` | `50px` |
+| trackWidth | the width of the track of ProgressCircle | `number` | `3px` |
