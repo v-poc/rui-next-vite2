@@ -1,5 +1,6 @@
-import React, { CSSProperties, useCallback, useEffect, useRef } from "react";
-import classnames from "classnames";
+import React, { CSSProperties, ReactNode } from "react";
+import ProgressBar from "./ProgressBar";
+import ProgressCircle from "./ProgressCircle";
 
 // ProgressProps Type
 export type ProgressProps = {
@@ -11,71 +12,52 @@ export type ProgressProps = {
   position?: "fixed" | "normal"; // the position of progress bar
   unfilled?: boolean;            // whether to fill unfinished part of progress
   appearTransition?: boolean;
-  mode?: "bar" | "circular";
+  children?: ReactNode;
+  size?: number;
+  trackWidth?: number;
+  mode?: "bar" | "circle";
 };
 
 // Progress FC
 const Progress: React.FC<ProgressProps> = (props) => {
-  const barRef = useRef();
-  let noAppearTransition = false;
-
   const {
+    prefixCls,
+    className,
+    style = {},
+    barStyle = {},
+    percent,
+    position,
+    unfilled,
+    appearTransition,
+    children,
+    size,
+    trackWidth,
+    mode,
+  } = props;
+
+  const barProps = {
     className,
     prefixCls,
     position,
     unfilled,
-    style = {},
-    barStyle = {},
+    style,
+    barStyle,
     appearTransition,
     percent,
-  } = props;
+  };
 
-  useEffect(() => {
-    noAppearTransition = true;
-
-    if (appearTransition) {
-      setTimeout(() => {
-        if (barRef && barRef.current) {
-          barRef.current.style.width = `${percent}%`;
-        }        
-      }, 10);
-    }
-  }, []);
-
-  // get percent style
-  const percentStyle = useCallback(() => ({
-    width: noAppearTransition || !appearTransition ? `${percent}%` : 0,
-    height: 0,
-  }), [noAppearTransition, appearTransition, percent]);
-
-  const wrapCls = classnames(
-    `${prefixCls}-outer`,
+  const circleProps = {
+    prefixCls,
     className,
-    {
-      [`${prefixCls}-fixed-outer`]: position === 'fixed',
-      [`${prefixCls}-hide-outer`]: !unfilled,
-    }
-  );
+    percent,
+    children,
+    size,
+    trackWidth,
+  };
 
-  return (
-    <div
-      style={style}
-      className={wrapCls}
-      role="progressbar"
-      aria-valuenow={percent}
-      aria-valuemin={0}
-      aria-valuemax={100}
-    >
-      <div
-        ref={barRef}
-        className={`${prefixCls}-bar`}
-        style={{
-          ...barStyle,
-          ...percentStyle()
-        }}
-      />
-    </div>
-  );
+  return (mode === "circle"
+    ? <ProgressCircle {...circleProps} />
+    : <ProgressBar {...barProps} />);
 };
 
 Progress.defaultProps = {
@@ -84,6 +66,8 @@ Progress.defaultProps = {
   position: "fixed",
   unfilled: true,
   appearTransition: false,
+  size: 50,
+  trackWidth: 3,
   mode: "bar",
 };
 

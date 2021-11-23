@@ -1,3 +1,8 @@
+# 0.27.0 (2021-11-23)
+
+- Updated `Progress` demo for `ProgressCircle`.
+- Refactor: the bar/circle mode of `Progress` component.
+
 # 0.26.3 (2021-11-14)
 
 - Added `AutoJustifyContent` demo (`experimental`).
