@@ -6,6 +6,7 @@
         "dist/style.css",
         "dist/rui-next.es.js",
         "dist/rui-next.umd.js",
+        "CHANGELOG.md",
         "README.md"
     ],
     "main": "dist/rui-next.umd.js",
