@@ -59,7 +59,7 @@ const Example = () => {
 
   return (
     <ExampleContainer>
-      <p className="sub-title">ProgressCircle style</p>
+      <p className="sub-title">ProgressCircle mode</p>
       <Progress
         mode="circle"
         percent={60}
@@ -69,7 +69,7 @@ const Example = () => {
         60%
       </Progress>
 
-      <p className="sub-title">ProgressBar style</p>
+      <p className="sub-title">ProgressBar mode</p>
       <Progress
         percent={30}
         position="fixed"
