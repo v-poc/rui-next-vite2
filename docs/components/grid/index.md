@@ -26,18 +26,6 @@ import { Grid } from "rui-next";
 import styled from "styled-components";
 
 const ExampleContainer = styled.div`
-  margin: 0 15px;
-
-  .inline {
-    width: 80px!important;
-    margin: 9px 9px 9px 0;
-  }
-
-  .small {
-    height: 20px!important;
-    line-height: 20px!important;
-  }
-
   .sub-title {
     color: #888;
     font-size: 14px;
@@ -70,7 +58,7 @@ const Example = () => (
     <div className="sub-title">Grid with item Span</div>
     <Grid
       columns={3}
-      gap={10}
+      gap={3}
     >
       <Grid.Item span={3}>
         <PlaceHolder />
