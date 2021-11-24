@@ -115,10 +115,11 @@ export default Example;
 Properties | Description | Type | Default
 -----------|------------|------|--------
 | percent | percent value of progress | `number` | `0` |
-| position | position of progress bar, optional: `fixed` `normal` | `string` | `fixed` |
+| position | position of progress bar, optional: `fixed`, `normal` | `string` | `fixed` |
 | unfilled | whether to fill unfinished part of progress | `boolean` | `true` |
 | style | the style of container | `Object` | `{}` |
 | barStyle | the style of bar | `Object` | `{}` |
 | children | the customized information | `React.ReactNode` | - |
 | size | the width and height of the canvas of ProgressCircle | `number` | `50px` |
 | trackWidth | the width of the track of ProgressCircle | `number` | `3px` |
+| mode | the mode of progress, optional: `bar`, `circle` | `string` | `bar` |
