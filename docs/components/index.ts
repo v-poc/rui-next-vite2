@@ -47,6 +47,8 @@ export { default as PageIndicator } from "./page-indicator/index";
 export { default as NoticeBar } from "./notice-bar/index";
 // List
 export { default as List } from "./list/index";
+// Grid
+export { default as Grid } from "./grid/index";
 
 
 /**

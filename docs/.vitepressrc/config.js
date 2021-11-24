@@ -82,6 +82,7 @@ function getLocalSidebar() {
       text: "Navigation",
       children: [
         { text: "NavBar", link: "/components/nav-bar/index" },
+        { text: "Grid", link: "/components/grid/index" },
       ]
     },
 		{

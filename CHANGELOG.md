@@ -1,3 +1,7 @@
+# 0.28.0 (2021-11-24)
+
+Added `Grid` demo.
+
 # 0.27.0 (2021-11-23)
 
 - Updated `Progress` demo for `ProgressCircle`.
