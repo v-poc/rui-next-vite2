@@ -1,4 +1,4 @@
-import reachRefresh from "@vitejs/plugin-react-refresh";
+import reachRefresh from "@vitejs/plugin-react";
 
 const path = require("path");
 
