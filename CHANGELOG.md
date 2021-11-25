@@ -1,3 +1,7 @@
+# 0.28.1 (2021-11-25)
+
+Refactor: switch from `@vitejs/plugin-react-refresh` to `@vitejs/plugin-react`.
+
 # 0.28.0 (2021-11-24)
 
 Added `Grid` demo.
