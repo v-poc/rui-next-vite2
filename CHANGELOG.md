@@ -1,3 +1,7 @@
+# 0.28.2 (2021-11-26)
+
+Refactor: workaround the transform for `build-docs` command.
+
 # 0.28.1 (2021-11-25)
 
 Refactor: switch from `@vitejs/plugin-react-refresh` to `@vitejs/plugin-react`.

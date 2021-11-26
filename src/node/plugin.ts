@@ -1,5 +1,6 @@
 import path from 'path'
 import reactRefresh from '@vitejs/plugin-react'
+import reactRefreshBuild from './build/react-refresh'
 import { mdxTransform } from './transform'
 import { APP_PATH, SPECIAL_IMPORT_CODE_SCOPE, SPECIAL_IMPORT_SITE_DATA } from './paths'
 import { resolveSiteData } from './config'
@@ -20,7 +21,8 @@ export function createVitePlugin(
 	ssr = false,
 	pageToHashMap?: Record<string, string>
 ) {
-	const reactRefreshPlugin = reactRefresh()
+	// @ts-ignore
+	const reactRefreshPlugin = process.env.NODE_ENV === "production" ? reactRefreshBuild() : reactRefresh()
 
 	let _server: ViteDevServer
 	const vitePluginPressRc: VitePlugin = {
@@ -32,12 +34,12 @@ export function createVitePlugin(
 				},
 				css: {
 					preprocessorOptions: {
-					    less: {
-						    // Inline JavaScript should be enabled.
-						    javascriptEnabled: true,
-					    },
+						less: {
+							// Inline JavaScript should be enabled.
+							javascriptEnabled: true,
+						},
 					},
-				},				
+				},
 			}
 		},
 		resolveId(id) {
@@ -85,7 +87,8 @@ export function createVitePlugin(
 			if (/\.md?$/.test(id)) {
 				let { code: _code } = await mdxTransform(code, id, { root, alias, siteData }, md)
 				// @ts-ignore
-				const refreshResult = await reactRefreshPlugin[0]!.transform!.call(this, _code, id + '.js', ssr)
+				const reactPlugin = process.env.NODE_ENV === "production" ? reactRefreshPlugin : reactRefreshPlugin[0];
+				const refreshResult = await reactPlugin.transform!.call(this, _code, id + '.js', ssr)
 				//reactRefreshPlugin会检测导出的都必须是react组件，增加了pageData的导出会导致热更新失败，这里hack掉
 				if (refreshResult && typeof refreshResult !== 'string') {
 					refreshResult.code = refreshResult.code!.replace(

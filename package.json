@@ -1,12 +1,13 @@
 {
     "name": "rui-next",
-    "version": "0.28.1",
+    "version": "0.28.2",
     "description": "Mobile web UI components based on React and Vite 2",
     "files": [
         "dist/style.css",
         "dist/rui-next.es.js",
         "dist/rui-next.umd.js",
         "CHANGELOG.md",
+        "LICENSE",
         "README.md"
     ],
     "main": "dist/rui-next.umd.js",
