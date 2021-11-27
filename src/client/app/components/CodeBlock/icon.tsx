@@ -15,7 +15,7 @@ interface SvgProps {
 
 export const CopyIcon: FC<SvgProps> = ({ onClick }) => {
 	return (
-		<span onClick={onClick} title="复制">
+		<span onClick={onClick} title="copy">
 			<SvgWrap
 				aria-hidden="true"
 				xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ export const CopyOk: FC = () => {
 
 export const CodeIcon: FC<SvgProps> = ({ onClick }) => {
 	return (
-		<span onClick={onClick} title="代码">
+		<span onClick={onClick} title="sourceCode">
 			<SvgWrap
 				viewBox="0 0 1024 1024"
 				version="1.1"
@@ -99,7 +99,7 @@ export const SandboxIcon: FC<SvgProps> = ({ onClick }) => {
 
 export const RestoreIcon: FC<SvgProps> = ({ onClick }) => {
 	return (
-		<span onClick={onClick} title="重载">
+		<span onClick={onClick} title="reload">
 			<SvgWrap
 				viewBox="0 0 1024 1024"
 				version="1.1"
