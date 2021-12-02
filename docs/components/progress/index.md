@@ -62,11 +62,11 @@ const Example = () => {
       <p className="sub-title">ProgressCircle mode</p>
       <Progress
         mode="circle"
-        percent={60}
+        percent={percent}
         size={80}
         trackWidth={8}
       >
-        60%
+        {percent}%
       </Progress>
 
       <p className="sub-title">ProgressBar mode</p>

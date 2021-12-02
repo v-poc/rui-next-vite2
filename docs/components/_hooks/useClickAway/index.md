@@ -23,12 +23,7 @@ Basic usage of useClickAway hook.
 ```jsx live=local
 import React, { useRef, useState } from "react";
 import { useClickAway } from "rui-next";
-
-// Log info
-const logInfo = (content: any, type: string = 'info'): void => {
-  console[type] &&
-    console[type]('[RUI-log] %c%s', 'background: #69C;color: #FFF', content);
-};
+import { logInfo } from "experimental";
 
 // Example Styles
 import styled from "styled-components";

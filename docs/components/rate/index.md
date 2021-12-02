@@ -17,12 +17,7 @@ Basic usage of Rate component.
 ```jsx live=local
 import React from "react";
 import { Rate, Icon } from "rui-next";
-
-// Log info
-const logInfo = (content: any, type: string = 'info'): void => {
-  console[type] &&
-    console[type]('[RUI-log] %c%s', 'background: #69C;color: #FFF', content);
-};
+import { logInfo } from "experimental";
 
 // Example Styles
 import styled from "styled-components";

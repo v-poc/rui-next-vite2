@@ -17,12 +17,7 @@ Basic usage of useVisibilityChange hook.
 ```jsx live=local
 import React, { useEffect, useState } from "react";
 import { useVisibilityChange, Result, Icon } from "rui-next";
-
-// Log info
-const logInfo = (content: any, type: string = 'info'): void => {
-  console[type] &&
-    console[type]('[RUI-log] %c%s', 'background: #69C;color: #FFF', content);
-};
+import { logInfo } from "experimental";
 
 // Get visibility
 const getVisibility = () => {
