@@ -34,7 +34,7 @@ const ListItem: React.FC<ListItemProps> = (props) => {
   } = props;
 
   const isClickable = clickable || !!onClick;
-  const vArrow = arrow ? arrow : isClickable;
+  const vArrow = arrow !== undefined ? arrow : isClickable;
 
   const handleClick = (e: MouseEvent) => {
     if (disabled) {

@@ -1,3 +1,7 @@
+# 0.29.0 (2021-12-05)
+
+Added `CheckList` demo.
+
 # 0.28.2 (2021-11-26)
 
 Refactor: workaround the transform for `build-docs` command.
