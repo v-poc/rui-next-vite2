@@ -41,8 +41,6 @@ export { default as Rate } from "./rate/index";
 export { default as Watermark } from "./watermark/index";
 // Empty
 export { default as Empty } from "./empty/index";
-// PageIndicator
-export { default as PageIndicator } from "./page-indicator/index";
 // NoticeBar
 export { default as NoticeBar } from "./notice-bar/index";
 // List
@@ -51,7 +49,6 @@ export { default as List } from "./list/index";
 export { default as Grid } from "./grid/index";
 // CheckList
 export { default as CheckList } from "./check-list/index";
-
 
 
 /**

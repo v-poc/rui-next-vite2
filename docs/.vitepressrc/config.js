@@ -93,7 +93,6 @@ function getLocalSidebar() {
         { text: "Icon", link: "/components/icon/index" },
         { text: "Tag", link: "/components/tag/index" },
         { text: "Watermark", link: "/components/watermark/index" },
-        { text: "PageIndicator", link: "/components/page-indicator/index" },
         { text: "NoticeBar", link: "/components/notice-bar/index" },
         { text: "List", link: "/components/list/index" },
 			]
@@ -138,6 +137,7 @@ function getLocalSidebar() {
 		{
 			text: "Experimental",
 			children: [
+        { text: "PageIndicator", link: "/components/page-indicator/index" },
         { text: "Clamp", link: "/components/clamp/index" },
         { text: "AutoJustifyContent", link: "/components/auto-justify-content/index" },
         { text: "Playground", link: "/playground" }

@@ -1,4 +1,8 @@
-# 0.29.0 (2021-12-05)
+# 0.29.1 (2021-12-05)
+
+Moved `PageIndicator` component into `experimental` category.
+
+# 0.29.0 (2021-12-04)
 
 Added `CheckList` demo.
 

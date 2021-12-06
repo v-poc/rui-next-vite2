@@ -16,7 +16,7 @@ Basic usage of PageIndicator component.
 
 ```jsx live=local
 import React from "react";
-import { PageIndicator } from "rui-next";
+import { PageIndicator } from "experimental";
 
 // Example Styles
 import styled from "styled-components";
