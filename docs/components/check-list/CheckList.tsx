@@ -81,7 +81,7 @@ const CheckList: React.FC<CheckListProps> = (props) => {
 CheckList.defaultProps = {
   // prefixCls: "r-check-list",
   mode: "default",
-  activeIcon: <Icon type="check" />,
+  activeIcon: <Icon type="check" size="xxs" />,
   defaultValue: [],
   multiple: false,
 };

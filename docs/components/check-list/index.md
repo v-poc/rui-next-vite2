@@ -4,7 +4,7 @@ title: CheckList
 
 # CheckList
 
-`CheckList` supports two kinds of modes (`default` and `card`).
+`CheckList` supports two kinds of modes (`default` and `card`), `CheckList` is implemented based on `List`, which is a list that could be checked.
 
 ```jsx
 <CheckList defaultValue={["A"]}>
@@ -34,24 +34,38 @@ const ExampleContainer = styled.div`
   .sub-title:first-child {
     padding-top: 0;
   }
+
+  .card-wrapper {
+    padding: 10px 0;
+    background-color: #EEE;
+  }
 `;
 
 // Example FC
 const Example = () => (
   <ExampleContainer>
-    <div className="sub-title">Basic CheckList</div>
-    <CheckList defaultValue={["1"]}>
-      {new Array(4).fill("").map((item, i) => (
-        <CheckList.Item
-          key={`basic${i}`}
-          value={i}
-          disabled={i === 2}
-          readOnly={i === 3}
-        >
-          {`Content ${i + 1}`}
-        </CheckList.Item>
-      ))}
-    </CheckList>
+    <div className="sub-title">Card mode</div>
+    <div className="card-wrapper">
+      <CheckList
+        defaultValue={[1]}
+        mode="card"
+      >
+        {new Array(4).fill("").map((item, i) => {
+          const isDisabled = i === 2;
+          const isReadOnly = i === 3;
+          return (
+            <CheckList.Item
+              key={`basic${i}`}
+              value={i}
+              disabled={isDisabled}
+              readOnly={isReadOnly}
+            >
+              {`Content ${i + 1}`}{isDisabled ? " (disabled)" : isReadOnly ? " (readonly)" : ""}
+            </CheckList.Item>
+          );
+        })}
+      </CheckList>
+    </div>
   </ExampleContainer>
 );
 
