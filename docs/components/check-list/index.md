@@ -4,7 +4,7 @@ title: CheckList
 
 # CheckList
 
-`CheckList` supports two kinds of modes (`default` and `card`), `CheckList` is implemented based on `List`, which is a list that could be checked.
+`CheckList` is implemented based on `List`, which is a list that could be checked, also supports two kinds of modes (`default` and `card`).
 
 ```jsx
 <CheckList defaultValue={["A"]}>
@@ -38,13 +38,17 @@ const ExampleContainer = styled.div`
   .card-wrapper {
     padding: 10px 0;
     background-color: #EEE;
+
+    .r-list-item-content-main {
+      user-select: none;
+    }
   }
 `;
 
 // Example FC
 const Example = () => (
   <ExampleContainer>
-    <div className="sub-title">Card mode</div>
+    <div className="sub-title">Card mode (the 2nd item is checked by default)</div>
     <div className="card-wrapper">
       <CheckList
         defaultValue={[1]}
