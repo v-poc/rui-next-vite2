@@ -10,6 +10,7 @@ This is the playground for `RUI.next` (**experimental status**).
 import React, { useState } from "react";
 import {
   Divider,
+  Empty,
   Flex,
   NoticeBar,
   Icon,
@@ -232,7 +233,7 @@ const TodoList = () => {
           </Progress>
         </div>
       </div>
-      {tasks.length > 0 && (
+      {tasks.length > 0 ? (
         <div
           className="main-ft"
         >
@@ -273,6 +274,10 @@ const TodoList = () => {
             </div>
           ))}
         </div>
+      ) : (
+        <Empty
+          message="No result"
+        />
       )}
     </div>
   );

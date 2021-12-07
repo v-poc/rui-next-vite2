@@ -18,7 +18,7 @@ Basic usage of Progress component.
 
 ```jsx live=local
 import React, { useState } from "react";
-import { Button, Divider, Icon, Progress } from "rui-next";
+import { Button, Divider, Empty, Icon, Progress } from "rui-next";
 
 // Example Styles
 import styled from "styled-components";
@@ -237,7 +237,7 @@ const TodoList = () => {
           </Progress>
         </div>
       </div>
-      {tasks.length > 0 && (
+      {tasks.length > 0 ? (
         <div
           className="main-ft"
         >
@@ -278,6 +278,10 @@ const TodoList = () => {
             </div>
           ))}
         </div>
+      ) : (
+        <Empty
+          message="No result"
+        />
       )}
     </div>
   );
