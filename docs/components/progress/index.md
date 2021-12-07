@@ -17,8 +17,8 @@ Basic usage of Progress component.
 > For `ProgressBar`, position `fixed` is at the very top positon just like [`nprogress`](https://www.npmjs.com/package/nprogress).
 
 ```jsx live=local
-import React, { useCallback, useRef, useState } from "react";
-import { Button, Icon, Progress } from "rui-next";
+import React, { useState } from "react";
+import { Button, Divider, Icon, Progress } from "rui-next";
 
 // Example Styles
 import styled from "styled-components";
@@ -50,8 +50,12 @@ const ExampleContainer = styled.div`
       .header {
         display: flex;
 
-        .v-button {
-          margin-bottom: 0;
+        .r-button {
+          padding: 0 8px;
+
+          .r-button-icon {
+            margin-right: 0;
+          }
         }
       }
 
@@ -135,8 +139,7 @@ const ExampleContainer = styled.div`
 // TodoList FC
 const TodoList = () => {
   const [taskItem, setTaskItem] = useState("");
-  const [taskProgress, setTaskProgress] = useState(0);
-  const tasksRef = useRef([
+  const [tasks, setTasks] = useState([
     {
       text: "Foobar",
       done: false,
@@ -147,42 +150,55 @@ const TodoList = () => {
     },
   ]);
 
-  const getCompletedCount = useCallback(() => {
-    console.log("getCompletedCount");
-    return tasksRef.current.filter((item) => item.done).length;
-  }, [tasksRef]);
+  // get completed count
+  const getCompletedCount = () => {
+    return tasks.filter((item) => item.done).length;
+  };
 
-  const getRemainingCount = useCallback(() => {
-    console.log("getRemainingCount");
-    return tasksRef.current.length - getCompletedCount();
-  }, [tasksRef]);
+  // get remaining count
+  const getRemainingCount = () => {
+    return tasks.length - getCompletedCount();
+  };
 
   // create Task
-  const createTask = useCallback(() => {
-    console.log("createTask");
+  const createTask = () => {
     if (!taskItem) {
       return;
     }
 
-    tasksRef.current.push({
+    const arr = [...tasks];
+    arr.push({
       text: taskItem,
       done: false,
     });
 
-    setTaskProgress(tasksRef.current.length ? getCompletedCount() / tasksRef.current.length : 0);
     setTaskItem("");
-  }, [taskItem, tasksRef]);
+    setTasks(arr);
+  };
 
   // delete task
-  const deleteTask = useCallback((index) => {
-    tasksRef.current.splice(index, 1);
-  }, [tasksRef]);
+  const deleteTask = (index) => {
+    const arr = [...tasks];
+    arr.splice(index, 1);
+    setTasks(arr);
+  };
+
+  // mark task as completed
+  const completeTask = (e, index) => {
+    const checkFlag = e && e.target && e.target.checked;
+    const arr = [...tasks];
+    arr[index].done = checkFlag;
+    setTasks(arr);
+  };
 
   // input task item
   const inputTaskItem = (e) => {
-    const res = e.target.value.trim() || "";
-    setTaskItem(res);
+    const val = e && e.target && e.target.value.trim() || "";
+    setTaskItem(val);
   };
+
+  // calc task progress percent
+  const taskProgress = tasks.length ? Math.round(100 * getCompletedCount() / tasks.length) : 0;
 
   return (
     <div className="todo-list-wrapper">
@@ -192,7 +208,7 @@ const TodoList = () => {
             type="text"
             placeholder="What are you working on?"
             value={taskItem}
-            onKeyDown={(e) => e && e.keyCode === "12" && createTask()}
+            onKeyDown={(e) => e && e.keyCode === 13 && createTask()}
             onChange={inputTaskItem}
           />
           <Button
@@ -205,7 +221,7 @@ const TodoList = () => {
             onClick={createTask}
           ></Button>
         </div>
-        <p className="tasks">Tasks: { tasksRef.current.length }</p>
+        <p className="tasks">Tasks: { tasks.length }</p>
       </div>
       <div className="main-bd">
         <p className="remaining">Remaining: { getRemainingCount() }</p>
@@ -214,18 +230,18 @@ const TodoList = () => {
           <Progress
             mode="circle"
             percent={taskProgress}
-            size={70}
-            trackWidth={8}
+            size={60}
+            trackWidth={6}
           >
-            {taskProgress * 100}%
+            {taskProgress}%
           </Progress>
         </div>
       </div>
-      {tasksRef.current.length > 0 && (
+      {tasks.length > 0 && (
         <div
           className="main-ft"
         >
-          {tasksRef.current.map((item, index) => (
+          {tasks.map((item, index) => (
             <div
               key={`row${index}`}
               className="row"
@@ -234,8 +250,8 @@ const TodoList = () => {
                 key={`checkbox${index}`}
                 type="checkbox"
                 id={`checkbox${index}`}
-                value={item.done}
-                onChange={(e) => console.log(e)}
+                checked={item.done}
+                onChange={(e) => completeTask(e, index)}
               />
               <label
                 key={`label${index}`}
@@ -256,7 +272,7 @@ const TodoList = () => {
                   key={`deleteIcon${index}`}
                   type="cross-circle-o"
                   color="#CCC"
-                  onClick={deleteTask(index)}
+                  onClick={() => deleteTask(index)}
                 />
               </div>
             </div>
@@ -280,8 +296,16 @@ const Example = () => {
 
   return (
     <ExampleContainer>
-      <p className="sub-title">Todo List with progress</p>
+      <p className="sub-title">Todo List with animated progress</p>
       <TodoList />
+
+      <br />
+      <Divider
+        style={{
+          borderColor: "#36C",
+          borderStyle: "dashed",
+        }}
+      />
 
       <p className="sub-title">ProgressCircle mode</p>
       <Progress
