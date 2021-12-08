@@ -1,3 +1,7 @@
+# 0.29.2 (2021-12-08)
+
+Added `useLatest` hook.
+
 # 0.29.1 (2021-12-05)
 
 Moved `PageIndicator` component into `experimental` category.

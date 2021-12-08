@@ -64,3 +64,5 @@ export { default as useVisibilityChange } from "./_hooks/useVisibilityChange/ind
 export { default as useClickAway } from "./_hooks/useClickAway/index";
 // useLazyload
 export { default as useLazyload } from "./_hooks/useLazyload/index";
+// useLatest
+export { default as useLatest } from "./_hooks/useLatest/index";
