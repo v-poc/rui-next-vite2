@@ -191,10 +191,17 @@ const TodoList = () => {
     setTasks(arr);
   };
 
-  // input task item
-  const inputTaskItem = (e) => {
+  // input change for task item
+  const inputChangeTaskItem = (e) => {
     const val = e && e.target && e.target.value.trim() || "";
     setTaskItem(val);
+  };
+
+  // input keydown for task item
+  const inputKeydownTaskItem = (e) => {
+    if (e && (e.code === "Enter" || e.keyCode === 13)) {
+      createTask();
+    }
   };
 
   // calc task progress percent
@@ -208,8 +215,8 @@ const TodoList = () => {
             type="text"
             placeholder="What are you working on?"
             value={taskItem}
-            onKeyDown={(e) => e && e.keyCode === 13 && createTask()}
-            onChange={inputTaskItem}
+            onKeyDown={inputKeydownTaskItem}
+            onChange={inputChangeTaskItem}
           />
           <Button
             type="primary"
