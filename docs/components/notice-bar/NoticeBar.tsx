@@ -99,11 +99,13 @@ const NoticeBar: React.FC<NoticeBarProps> = (props) => {
       className={wrapCls}
     >
       <span
+        key="cnt-left"
         className={`${prefixCls}-left`}
       >
         {icon ? icon : <Icon type="voice" />}
       </span>
       <span
+        key="cnt-wrapper"
         ref={wrapperRef}
         className={`${prefixCls}-content-wrapper`}
       >
@@ -118,6 +120,7 @@ const NoticeBar: React.FC<NoticeBarProps> = (props) => {
       </span>
       {(extra || closeable) && (
         <span
+          key="cnt-right"
           className={`${prefixCls}-right`}
         >
           {extra}
