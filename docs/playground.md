@@ -6,6 +6,8 @@ title: Playground
 
 This is the playground for `RUI.next` (**experimental status**).
 
+> This is a lightweight demo ([github](https://github.com/v-poc/rui-poc) | [online](https://nikoni.top/rui-poc)) to use `react-ts` template of [@vite/create-vite](https://github.com/vitejs/vite/tree/main/packages/create-vite).
+
 ```jsx live=local
 import React, { useState } from "react";
 import {
