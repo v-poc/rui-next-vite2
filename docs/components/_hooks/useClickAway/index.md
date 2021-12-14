@@ -22,7 +22,7 @@ Basic usage of useClickAway hook.
 
 ```jsx live=local
 import React, { useRef, useState } from "react";
-import { useClickAway } from "rui-next";
+import { useClickAway, Button } from "rui-next";
 import { logInfo } from "experimental";
 
 // Example Styles
@@ -47,7 +47,7 @@ const ExampleContainer = styled.div`
 // Example FC
 const Example = () => {
   const [count, setCount] = useState(0);
-  const ADemoBtnRef = useRef();
+  const demoImgRef = useRef();
 
   useClickAway(
     () => {
@@ -55,7 +55,7 @@ const Example = () => {
       setCount((n) => n + 1);
     },
     [
-      ADemoBtnRef,
+      demoImgRef,
       () => document.getElementById("btnB"),
     ],
   );
@@ -63,17 +63,21 @@ const Example = () => {
   return (
     <ExampleContainer>
       <p className="sub-title">Multiple DOM elements</p>
-      <button
-        ref={ADemoBtnRef}
-      >
-        Test A button
-      </button>
+      <img
+        ref={demoImgRef}
+        src="https://nikoni.top/images/others/mj.png"
+        alt="Test A img"
+      />
       <br /><br />
-      <button
+      <Button
         id="btnB"
+        type="primary"
+        size="small"
+        inline
+        round
       >
         Test B button
-      </button>
+      </Button>
       <br /><br />
       <p>demo count: {count}</p>
     </ExampleContainer>
