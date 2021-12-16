@@ -55,6 +55,8 @@ const Example = () => {
   const [count, setCount] = useState(0);
   const demoImgRef = useRef();
 
+  const arrIds = ["btnB", "opC", "opD", "opE"].map((item) => () => document.getElementById(item));
+
   useClickAway(
     () => {
       logInfo(`click outside count: ${count}`);
@@ -62,10 +64,7 @@ const Example = () => {
     },
     [
       demoImgRef,
-      () => document.getElementById("btnB"),
-      () => document.getElementById("demoC"),
-      () => document.getElementById("demoD"),
-      () => document.getElementById("demoE"),
+      ...arrIds,
     ],
   );
   
@@ -89,15 +88,15 @@ const Example = () => {
       </Button>
       <br /><br />
       <div className="op-wrapper">
-        <div id="demoC">
+        <div id="opC">
           <OnePiece
             scale={0.5}
           />
         </div>
-        <div id="demoD">
+        <div id="opD">
           <OnePiece />
         </div>
-        <div id="demoE">
+        <div id="opE">
           <OnePiece
             scale={0.5}
           />
