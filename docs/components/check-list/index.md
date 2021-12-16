@@ -20,6 +20,7 @@ Basic usage of CheckList component.
 ```jsx live=local
 import React from "react";
 import { CheckList } from "rui-next";
+import { logInfo } from "experimental";
 
 // Example Styles
 import styled from "styled-components";
@@ -54,7 +55,7 @@ const Example = () => (
         defaultValue={[1]}
         mode="card"
       >
-        {new Array(4).fill("").map((item, i) => {
+        {new Array(5).fill("").map((item, i) => {
           const isDisabled = i === 2;
           const isReadOnly = i === 3;
           return (
@@ -63,6 +64,7 @@ const Example = () => (
               value={i}
               disabled={isDisabled}
               readOnly={isReadOnly}
+              onClick={() => logInfo(`Click item - Content ${i + 1}`)}
             >
               {`Content ${i + 1}`}{isDisabled ? " (disabled)" : isReadOnly ? " (readonly)" : ""}
             </CheckList.Item>
