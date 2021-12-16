@@ -22,7 +22,7 @@ Basic usage of useClickAway hook.
 
 ```jsx live=local
 import React, { useRef, useState } from "react";
-import { useClickAway, Button } from "rui-next";
+import { useClickAway, Button, OnePiece } from "rui-next";
 import { logInfo } from "experimental";
 
 // Example Styles
@@ -42,6 +42,12 @@ const ExampleContainer = styled.div`
   button {
     user-select: none;
   }
+
+  .op-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 // Example FC
@@ -57,6 +63,9 @@ const Example = () => {
     [
       demoImgRef,
       () => document.getElementById("btnB"),
+      () => document.getElementById("demoC"),
+      () => document.getElementById("demoD"),
+      () => document.getElementById("demoE"),
     ],
   );
   
@@ -79,7 +88,23 @@ const Example = () => {
         Test B button
       </Button>
       <br /><br />
-      <p>demo count: {count}</p>
+      <div className="op-wrapper">
+        <div id="demoC">
+          <OnePiece
+            scale={0.5}
+          />
+        </div>
+        <div id="demoD">
+          <OnePiece />
+        </div>
+        <div id="demoE">
+          <OnePiece
+            scale={0.5}
+          />
+        </div>
+      </div>
+      <br /><br />
+      <p>click outside count: {count}</p>
     </ExampleContainer>
   );
 };
