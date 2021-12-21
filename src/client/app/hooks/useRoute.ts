@@ -156,8 +156,8 @@ export function useRoute(fallbackComponent?: ComponentType<any>, ssrHref?: strin
 
 			return payloadPath === locationPath
 		}
-
-		if (import.meta.hot) {
+		// @ts-ignore
+		if (import.meta.hot) { // @ts-ignore
 			import.meta.hot!.on('vitepress:pageData', (payload) => {
 				if (shouldHotReload(payload)) {
 					setRoute((val) => ({ ...val, data: payload.pageData }))
@@ -204,7 +204,7 @@ export function pathToFile(path: string): string {
 	if (pagePath.endsWith('/')) {
 		pagePath += 'index'
 	}
-
+	// @ts-ignore
 	if (import.meta.env.DEV) {
 		// always force re-fetch content in dev
 		pagePath += `.md?t=${Date.now()}`
@@ -212,7 +212,7 @@ export function pathToFile(path: string): string {
 		// in production, each .md file is built into a .md.js file following
 		// the path conversion scheme.
 		// /foo/bar.html -> ./foo_bar.md
-		if (inBrowser) {
+		if (inBrowser) { // @ts-ignore
 			const base = import.meta.env.BASE_URL
 			pagePath = pagePath.slice(base.length).replace(/\//g, '_') + '.md'
 			// client production build needs to account for page hash, which is

@@ -5,7 +5,7 @@ import type { HeadConfig, Route } from '@vitepress-rc/types'
 
 let isFirstUpdate = true
 
-function updateHeadTags(newTags: HeadConfig[]) {
+function updateHeadTags(newTags: HeadConfig[]) { // @ts-ignore
 	if (import.meta.env.PROD && isFirstUpdate) {
 		// in production, the initial meta tags are already pre-rendered so we
 		// skip the first update.
