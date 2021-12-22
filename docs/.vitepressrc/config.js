@@ -104,6 +104,7 @@ function getLocalSidebar() {
         { text: "Switch", link: "/components/switch/index" },
         { text: "Rate", link: "/components/rate/index" },
         { text: "CheckList", link: "/components/check-list/index" },
+        { text: "Input", link: "/components/input/index" },
       ]
     },
 		{

@@ -49,6 +49,9 @@ export { default as List } from "./list/index";
 export { default as Grid } from "./grid/index";
 // CheckList
 export { default as CheckList } from "./check-list/index";
+// Input
+export { default as Input } from "./input/index";
+
 
 
 /**

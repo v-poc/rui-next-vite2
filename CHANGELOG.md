@@ -1,3 +1,7 @@
+# 0.30.0 (2021-12-22)
+
+Added `Input` demo.
+
 # 0.29.2 (2021-12-08)
 
 Added `useLatest` hook.
