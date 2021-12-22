@@ -78,11 +78,10 @@ Properties | Description | Type | Default
 -----------|-------------|------|--------
 | value        | The input value                                                                               | `string`                                             | -       |
 | defaultValue | The default value                                                                             | `string`                                             | -       |
-| onChange     | Triggered when the input content is changed                                                   | `(value: string) => void`                            | -       |
 | placeholder  | The prompt text                                                                               | `string`                                             | -       |
 | disabled     | Whether it is disabled or not                                                                 | `boolean`                                            | `false` |
 | readOnly     | Whether it is readonly or not                                                                 | `boolean`                                            | `false` |
 | clearable    | Whether to enable the clear icon, the input box will be cleared after clicking the clear icon | `boolean`                                            | `false` |
 | onClear      | Triggered after clicking the clear button                                                     | `() => void`                                         | -       |
 | id           | The id of the input element, usually used with label                                          | `string`                                             | -       |
-| onEnterPress | The callback when Enter key is pressed                                                        | `(e: React.KeyboardEvent<HTMLInputElement>) => void` | -       |
+| onEnterKeyPress | The callback when Enter key is pressed                                                        | `(e: React.KeyboardEvent<HTMLInputElement>) => void` | -       |
