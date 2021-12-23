@@ -51,6 +51,8 @@ export { default as Grid } from "./grid/index";
 export { default as CheckList } from "./check-list/index";
 // Input
 export { default as Input } from "./input/index";
+// AutoJustifyContent
+export { default as AutoJustifyContent } from "./auto-justify-content/index";
 
 
 

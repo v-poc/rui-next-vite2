@@ -70,19 +70,15 @@ module.exports = {
 
 function getLocalSidebar() {
 	return [
-		{
-			text: "Layout",
-			children: [
-				{ text: "Flex", link: "/components/flex/index" },
-        { text: "WhiteSpace", link: "/components/white-space/index" },
-        { text: "Divider", link: "/components/divider/index" },
-			]
-		},
     {
-      text: "Navigation",
+      text: "Navigation-Layout",
       children: [
         { text: "NavBar", link: "/components/nav-bar/index" },
         { text: "Grid", link: "/components/grid/index" },
+				{ text: "Flex", link: "/components/flex/index" },
+        { text: "WhiteSpace", link: "/components/white-space/index" },
+        { text: "Divider", link: "/components/divider/index" },
+        { text: "AutoJustifyContent", link: "/components/auto-justify-content/index" },
       ]
     },
 		{
@@ -141,7 +137,6 @@ function getLocalSidebar() {
 			children: [
         { text: "PageIndicator", link: "/components/page-indicator/index" },
         { text: "Clamp", link: "/components/clamp/index" },
-        { text: "AutoJustifyContent", link: "/components/auto-justify-content/index" },
         { text: "Playground", link: "/playground" }
 			]
 		},
