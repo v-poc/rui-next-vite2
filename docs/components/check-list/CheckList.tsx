@@ -2,6 +2,7 @@ import React, { ReactNode, useEffect, useState } from "react";
 import Icon from "../icon/index";
 import List from "../list/index";
 import { CheckListContext } from "./CheckListContext";
+import usePropsValue from "../_hooks/usePropsValue/index";
 
 // CheckListProps Type
 export type CheckListProps = {
@@ -32,23 +33,7 @@ const CheckList: React.FC<CheckListProps> = (props) => {
     onChange,
   } = props;
 
-  const [val, setVal] = useState(() => {
-    if ("value" in props) {
-      return value;
-    }
-
-    if ("defaultValue" in props) {
-      return defaultValue;
-    }
-
-    return [];
-  });
-
-  useEffect(() => {
-    if (onChange) {
-      onChange(val);
-    }
-  }, [val]);
+  const [val, setVal] = usePropsValue(props);
 
   const check = (v: string) => {
     setVal(multiple ? [...value, v] : [v]);

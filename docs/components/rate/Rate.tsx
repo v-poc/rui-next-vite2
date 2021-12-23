@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classnames from "classnames";
 import Icon from "../icon/index";
+import usePropsValue from "../_hooks/usePropsValue/index";
 
 // RateProps Type
 export type RateProps = {
@@ -35,23 +36,7 @@ const Rate: React.FC<RateProps> = (props) => {
     size,
   } = props;
 
-  const [val, setVal] = useState(() => {
-    if ("value" in props) {
-      return value;
-    }
-
-    if ("defaultValue" in props) {
-      return defaultValue;
-    }
-
-    return 0;
-  });
-
-  useEffect(() => {
-    if (onChange) {
-      onChange(val);
-    }
-  }, [val]);
+  const [val, setVal] = usePropsValue(props);
 
   const starList = Array(count).fill("");
 
@@ -60,11 +45,11 @@ const Rate: React.FC<RateProps> = (props) => {
       return;
     }
 
-    if (allowClear && val === v) {
-      setVal(0);
-    } else {
-      setVal(v);
-    }
+    setVal(
+      allowClear && val === v
+        ? 0
+        : v
+    );
   };
 
   const renderStarItem = (
