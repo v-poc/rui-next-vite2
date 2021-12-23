@@ -10,6 +10,7 @@ import React, {
   useLayoutEffect,
 } from "react";
 import Icon from "../icon/index";
+import usePropsValue from "../_hooks/usePropsValue/index";
 
 type NativeInputProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
@@ -41,7 +42,7 @@ export type InputProps = PickNativeInputProps & {
   placeholder?: string;
   readOnly?: boolean;
   value?: string;
-  // onChange?: (v: string) => void;
+  onChange?: (v: string) => void;
   onClear?: () => void;
   onEnterKeyPress?: (e: KeyboardEvent<HTMLInputElement>) => void;
   // onKeyDown?: (e: KeyboardEvent<HTMLInputElement>) => void;
@@ -83,17 +84,7 @@ const Input = forwardRef<InputRef, InputProps>((props, ref) => {
     onKeyUp,
   } = props;
 
-  const [val, setVal] = useState(() => {
-    if ("value" in props) {
-      return value;
-    }
-
-    if ("defaultValue" in props) {
-      return defaultValue;
-    }
-
-    return "";
-  });
+  const [val, setVal] = usePropsValue(props);
 
   const [isFocus, setIsFocus] = useState<boolean>(false);
   const nativeInputRef = useRef<HTMLInputElement>();
