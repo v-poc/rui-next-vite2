@@ -16,7 +16,7 @@ Basic usage of AutoJustifyContent component.
 
 ```jsx live=local
 import React from "react";
-import { AutoJustifyContent } from "experimental";
+import { AutoJustifyContent } from "rui-next";
 
 // Example Styles
 import styled from "styled-components";
