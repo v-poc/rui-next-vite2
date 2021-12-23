@@ -50,18 +50,23 @@ const Example = () => (
       <List
         mode="card"
       >
-        {new Array(4).fill("").map((item, i) => (
+        {new Array(3).fill("").map((item, i) => (
           <List.Item
             key={`card${i}`}
           >
             <Input
-              placeholder={`Content information ${i + 1}${i === 1 ? " (disabled)" : "" }${i === 2 ? " (readonly)" : "" }`}
+              placeholder={`Content information ${i + 1}${i === 1 ? " (disabled)" : "" }`}
               clearable
               disabled={i === 1}
-              readOnly={i === 2}
             />
           </List.Item>
         ))}
+        <List.Item>
+          <Input
+            value="Content information 4 (readonly)"
+            readOnly
+          />
+        </List.Item>
       </List>
     </div>
   </ExampleContainer>
