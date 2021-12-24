@@ -130,6 +130,7 @@ function getLocalSidebar() {
         { text: "useClickAway", link: "/components/_hooks/useClickAway/index" },
         { text: "useLazyload", link: "/components/_hooks/useLazyload/index" },
         { text: "useLatest", link: "/components/_hooks/useLatest/index" },
+        { text: "useMemoizedFn", link: "/components/_hooks/useMemoizedFn/index" },
       ]
     },
 		{

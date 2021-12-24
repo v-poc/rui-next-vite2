@@ -1,10 +1,10 @@
 import { useRef } from "react";
-import usePersistFn from "../usePersistFn/index";
+import useMemoizedFn from "../useMemoizedFn/index";
 import useUpdate from "../useUpdate/index";
 
 type PropsType<T> = {
   defaultValue?: T; // default value (optional)
-  value?: T;       // value (optional)
+  value?: T;        // value (optional)
   onChange?: (v: T) => void;
 };
 
@@ -23,7 +23,7 @@ const usePropsValue = <T>(props: PropsType<T>) => {
 
   const forceReRender = useUpdate();
 
-  const setValue = usePersistFn((val: T) => {
+  const setValue = useMemoizedFn((val: T) => {
     if (value === undefined) {
       valRef.current = val;
       forceReRender();

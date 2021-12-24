@@ -1,3 +1,7 @@
+# 0.30.4 (2021-12-24)
+
+Refactor: deprecate `usePersistFn` hook, switch to `useMemoizedFn` instead.
+
 # 0.30.0 (2021-12-22)
 
 Added `Input` demo.

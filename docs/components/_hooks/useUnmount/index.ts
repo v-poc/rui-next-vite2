@@ -1,15 +1,20 @@
 import { useEffect } from "react";
-import usePersistFn from "../usePersistFn/index";
+import useLatest from "../useLatest/index";
 
 const useUnmount = (
   fn: () => void
 ) => {
-  const fnPersist = usePersistFn(fn);
+  if (typeof fn !== "function") {
+    console.warn(`[useUnmount] The param type: ${typeof fn} that is not a function.`);
+    return;
+  }
+
+  const fnRef = useLatest(fn);
 
   useEffect(
     // return function
     () => () => {
-      typeof fnPersist === "function" && fnPersist();
+      fnRef.current();
     },
     []
   )
