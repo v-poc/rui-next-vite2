@@ -16,6 +16,7 @@ import {
   Flex,
   NoticeBar,
   Icon,
+  Input,
   QRCode,
   Watermark,
   Button,
@@ -47,6 +48,9 @@ const ExampleContainer = styled.div`
     .main-hd {
       .header {
         display: flex;
+        padding: 2px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
 
         .r-button {
           padding: 0 8px;
@@ -189,19 +193,6 @@ const TodoList = () => {
     setTasks(arr);
   };
 
-  // input change for task item
-  const inputChangeTaskItem = (e) => {
-    const val = e && e.target && e.target.value.trim() || "";
-    setTaskItem(val);
-  };
-
-  // input keydown for task item
-  const inputKeydownTaskItem = (e) => {
-    if (e && (e.code === "Enter" || e.keyCode === 13)) {
-      createTask();
-    }
-  };
-
   // calc task progress percent
   const taskProgress = tasks.length ? Math.round(100 * getCompletedCount() / tasks.length) : 0;
 
@@ -209,12 +200,11 @@ const TodoList = () => {
     <div className="todo-list-wrapper">
       <div className="main-hd">
         <div className="header">
-          <input
-            type="text"
+          <Input
             placeholder="What are you working on?"
             value={taskItem}
-            onKeyDown={inputKeydownTaskItem}
-            onChange={inputChangeTaskItem}
+            onEnterKeyPress={createTask}
+            onChange={(v: string) => setTaskItem(v)}
           />
           <Button
             type="primary"
