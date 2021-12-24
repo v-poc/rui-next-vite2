@@ -37,7 +37,7 @@ const func = useMemoizedFn(() => {
 
 ```jsx live=local
 import React, { useCallback, useRef, useState } from "react";
-import { useMemoizedFn, Button } from "rui-next";
+import { useMemoizedFn, Button, Divider } from "rui-next";
 
 type SubCompType = {
   logCount: () => void;
@@ -51,7 +51,7 @@ const SubComp = React.memo<SubCompType>((props) => {
 
   return (<>
     <p>Current SubComponent - renderCount: <strong>{countRenderRef.current}</strong></p>
-    <br /><br />
+    <br />
     <Button
       type="default"
       size="small"
@@ -77,24 +77,20 @@ export default () => {
   
   return (<>
     <p>Current ParentComponent - count: {count}</p>
-    <br /><br />
+    <br />
     <Button
       type="primary"
       size="small"
       inline
       onClick={() => setCount((c) => c + 1)}
     >
-      Click to test
+      Click to view the <strong>re-render</strong> of SubComponent
     </Button>
     <br /><br />
-    <p>Click to view the <strong>re-render</strong> of SubComponent</p>
-    <br /><br />
-    <h3>Pass prop to SubComponent by useCallback</h3>
-    <br /><br />
+    <Divider>Pass prop to SubComponent by <strong>useCallback</strong></Divider>
     <SubComp logCount={callbackFn} />
     <br /><br />
-    <h3>Pass prop to SubComponent by useMemoizedFn</h3>
-    <br /><br />
+    <Divider>Pass prop to SubComponent by <strong>useMemoizedFn</strong></Divider>
     <SubComp logCount={memoizedFn} />
   </>);
 };
