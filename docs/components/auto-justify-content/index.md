@@ -4,7 +4,7 @@ title: AutoJustifyContent
 
 # AutoJustifyContent
 
-`AutoJustifyContent` is able to justify content automatically (**experimental status**).
+`AutoJustifyContent` is able to justify content automatically, that could justify `center` for content within single line, and justify `left` for content with multiple lines.
 
 ```jsx
 <AutoJustifyContent>some content</AutoJustifyContent>

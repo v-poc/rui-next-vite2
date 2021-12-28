@@ -4,7 +4,7 @@ title: PageIndicator
 
 # PageIndicator
 
-`PageIndicator` indicates the current active page.
+`PageIndicator` indicates the current active page (**experimental status**).
 
 ```jsx
 <PageIndicator total={10} current={1} />
