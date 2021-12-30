@@ -107,7 +107,7 @@
         "classnames": "^2.3.1",
         "compression": "^1.7.4",
         "copy-text-to-clipboard": "^3.0.1",
-        "esbuild": "^0.14.8",
+        "esbuild": "^0.14.9",
         "escape-html": "^1.0.3",
         "fs-extra": "^9.1.0",
         "globby": "^11.0.3",
@@ -134,6 +134,6 @@
         "unified": "^9.2.1",
         "unist-util-find": "^1.0.2",
         "unist-util-visit": "^2.0.3",
-        "vite": "^2.7.9"
+        "vite": "^2.7.10"
     }
 }
