@@ -3,7 +3,7 @@ import classnames from "classnames";
 import Icon from "../icon/index";
 import usePropsValue from "../_hooks/usePropsValue/index";
 
-// RateProps Type
+// RateProps type
 export type RateProps = {
   prefixCls?: string;
   className?: string;
@@ -20,7 +20,7 @@ export type RateProps = {
 };
 
 // Rate FC
-const Rate: React.FC<RateProps> = (props) => {
+export const Rate: React.FC<RateProps> = (props) => {
   const {
     prefixCls,
     className,
@@ -120,5 +120,3 @@ Rate.defaultProps = {
   activeColor: "#FFD21E",
   size: 24,
 };
-
-export default Rate;
