@@ -1,4 +1,4 @@
-import Input from "./Input";
+import { Input } from "./Input";
 
 import "../_styles/index";
 import "./index.less";

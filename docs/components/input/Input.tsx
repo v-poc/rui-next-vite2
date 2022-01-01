@@ -32,6 +32,7 @@ type PickNativeInputProps = Pick<
   | "onKeyUp"
 >;
 
+// InputProps type
 export type InputProps = PickNativeInputProps & {
   prefixCls?: string;
   clearable?: boolean;
@@ -48,6 +49,7 @@ export type InputProps = PickNativeInputProps & {
   // onKeyDown?: (e: KeyboardEvent<HTMLInputElement>) => void;
 };
 
+// InputRef type
 export type InputRef = {
   blur: () => void;
   clear: () => void;
@@ -55,7 +57,7 @@ export type InputRef = {
 };
 
 // Input FC
-const Input = forwardRef<InputRef, InputProps>((props, ref) => {
+export const Input = forwardRef<InputRef, InputProps>((props, ref) => {
   const {
     prefixCls,
     autoCapitalize,
@@ -177,5 +179,3 @@ Input.defaultProps = {
   prefixCls: "r-input",
   defaultValue: "",
 };
-
-export default Input;
