@@ -6,7 +6,7 @@ export type AutoJustifyContentProps = {
 };
 
 // AutoJustifyContent FC
-const AutoJustifyContent: React.FC<AutoJustifyContentProps> = (props) => {
+export const AutoJustifyContent: React.FC<AutoJustifyContentProps> = (props) => {
   const {
     prefixCls,
     children,
@@ -28,5 +28,3 @@ const AutoJustifyContent: React.FC<AutoJustifyContentProps> = (props) => {
 AutoJustifyContent.defaultProps = {
   prefixCls: "r-auto-justify-content",
 };
-
-export default AutoJustifyContent;
