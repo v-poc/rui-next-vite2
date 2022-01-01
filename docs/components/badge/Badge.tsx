@@ -1,7 +1,7 @@
 import React, { CSSProperties } from "react";
 import classnames from "classnames";
 
-// BadgeProps Type
+// BadgeProps type
 export type BadgeProps = {
   prefixCls?: string;
   className?: string;
@@ -15,7 +15,7 @@ export type BadgeProps = {
 };
 
 // Badge FC
-const Badge: React.FC<BadgeProps> = (props) => {
+export const Badge: React.FC<BadgeProps> = (props) => {
   let {
     className,
     prefixCls,
@@ -80,5 +80,3 @@ Badge.defaultProps = {
   dot: false,
   corner: false,
 };
-
-export default Badge;
