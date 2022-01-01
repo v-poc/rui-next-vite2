@@ -75,3 +75,4 @@ export default Example;
 Properties | Description | Type | Default
 -----------|------------|------|--------
 | contentAlign | The alignment of content | `center`\|`left`\|`right` | `center` |
+| style | The custom style | `CSSProperties` | - |
