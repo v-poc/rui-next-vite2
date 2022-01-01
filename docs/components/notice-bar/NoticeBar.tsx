@@ -17,7 +17,7 @@ export type NoticeBarProps = {
 };
 
 // NoticeBar FC
-const NoticeBar: React.FC<NoticeBarProps> = (props) => {
+export const NoticeBar: React.FC<NoticeBarProps> = (props) => {
   const {
     prefixCls,
     className,
@@ -142,5 +142,3 @@ NoticeBar.defaultProps = {
   delay: 2000, // unit (ms)
   speed: 50, // unit (px / s)
 };
-
-export default NoticeBar;
