@@ -1,7 +1,7 @@
 import React, { CSSProperties } from "react";
 import classnames from "classnames";
 
-// DividerProps Type
+// DividerProps type
 export type DividerProps = {
   prefixCls?: string;
   className?: string;
@@ -10,7 +10,7 @@ export type DividerProps = {
 };
 
 // Divider FC
-const Divider: React.FC<DividerProps> = (props) => {
+export const Divider: React.FC<DividerProps> = (props) => {
   const {
     contentAlign,
     style,
@@ -43,5 +43,3 @@ Divider.defaultProps = {
   prefixCls: "r-divider",
   contentAlign: "center",
 };
-
-export default Divider;
