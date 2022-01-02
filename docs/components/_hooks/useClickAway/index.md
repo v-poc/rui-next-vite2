@@ -22,8 +22,8 @@ Basic usage of useClickAway hook.
 
 ```jsx live=local
 import React, { useRef, useState } from "react";
-import { useClickAway, Button, OnePiece } from "rui-next";
-import { logInfo } from "experimental";
+import { useClickAway, Button } from "rui-next";
+import { logInfo, OnePiece } from "experimental";
 
 // Example Styles
 import styled from "styled-components";

@@ -1,13 +1,13 @@
 import React from "react";
 
-// OnePieceProps Type
+// OnePieceProps type
 export type OnePieceProps = {
   prefixCls?: string;
   scale?: number;
 };
 
 // OnePiece FC
-const OnePiece: React.FC<OnePieceProps> = (props) => {
+export const OnePiece: React.FC<OnePieceProps> = (props) => {
   const {
     prefixCls,
     scale = 1,
@@ -39,5 +39,3 @@ const OnePiece: React.FC<OnePieceProps> = (props) => {
 OnePiece.defaultProps = {
   prefixCls: "r-op",
 };
-
-export default OnePiece;

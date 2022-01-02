@@ -16,7 +16,7 @@ Basic usage of OnePiece component.
 
 ```jsx live=local
 import React from "react";
-import { OnePiece } from "rui-next";
+import { OnePiece } from "experimental";
 
 // Example Styles
 import styled from "styled-components";

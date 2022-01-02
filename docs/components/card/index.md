@@ -28,7 +28,8 @@ Basic usage of Card component.
 
 ```jsx live=local
 import React from "react";
-import { Card, OnePiece } from "rui-next";
+import { Card } from "rui-next";
+import { OnePiece } from "experimental";
 
 // Example Styles
 import styled from "styled-components";
