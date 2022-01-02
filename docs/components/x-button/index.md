@@ -4,10 +4,10 @@ title: XButton
 
 # XButton
 
-`XButton` UI display.
+`XButton` UI display (**experimental status**).
 
 ```jsx
-<XButton scale={1.5} />
+<XButton scale={0.5} />
 ```
 
 ## Example

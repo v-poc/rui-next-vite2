@@ -4,7 +4,7 @@ title: OnePiece
 
 # OnePiece
 
-`OnePiece` UI display.
+`OnePiece` UI display (**experimental status**).
 
 ```jsx
 <OnePiece scale={1.5} />

@@ -4,7 +4,7 @@ title: Chart
 
 # Chart
 
-`Chart` made with SVG, supports polylines printing and display setting.
+`Chart` made with SVG, supports polylines printing and display setting (**experimental status**).
 
 ```jsx
 <Chart labels={[]} datasets={[]}/>
