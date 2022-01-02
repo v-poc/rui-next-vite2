@@ -138,6 +138,7 @@ function getLocalSidebar() {
         { text: "PageIndicator", link: "/components/page-indicator/index" },
         { text: "Clamp", link: "/components/clamp/index" },
         { text: "OnePiece", link: "/components/one-piece/index" },
+        { text: "XButton", link: "/components/x-button/index" },
         { text: "Playground", link: "/playground" }
 			]
 		},
