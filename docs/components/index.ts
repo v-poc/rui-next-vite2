@@ -29,8 +29,6 @@ export { default as Tag } from "./tag/index";
 export { default as Switch } from "./switch/index";
 // Skeleton
 export { default as Skeleton } from "./skeleton/index";
-// Chart
-export { default as Chart } from "./chart/index";
 // Divider
 export { default as Divider } from "./divider/index";
 // Rate

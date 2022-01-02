@@ -16,7 +16,7 @@ Basic usage of Chart component.
 
 ```jsx live=local
 import React from "react";
-import { Chart } from "rui-next";
+import { Chart } from "experimental";
 
 // Example Styles
 import styled from "styled-components";

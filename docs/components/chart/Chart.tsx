@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import useEventListener from '../_hooks/useEventListener/index';
 
-// ChartProps Type
+// ChartProps type
 export type ChartProps = {
   prefixCls?: string;
   labels: any[]; // The labels of X-Axis
@@ -16,7 +16,7 @@ export type ChartProps = {
 };
 
 // Chart FC
-const Chart: React.FC<ChartProps> = (props) => {
+export const Chart: React.FC<ChartProps> = (props) => {
   const {
     labels,
     datasets,
@@ -379,5 +379,3 @@ Chart.defaultProps = {
   shift: 0.6,
   format: (val) => val,
 };
-
-export default Chart;

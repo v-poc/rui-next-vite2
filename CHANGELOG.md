@@ -1,3 +1,8 @@
+# 0.31.1 (2022-01-02)
+
+- Moved `Chart` component into `experimental` category.
+- Added `XButton` demo (`experimental`).
+
 # 0.31.0 (2022-01-01)
 
 Moved `OnePiece` component into `experimental` category.
