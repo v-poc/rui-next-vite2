@@ -117,7 +117,6 @@ function getLocalSidebar() {
 			text: "Misc",
 			children: [
         { text: "QRCode", link: "/components/qr-code/index" },
-        { text: "Chart", link: "/components/chart/index" },
 			]
 		},
     {
@@ -136,6 +135,7 @@ function getLocalSidebar() {
 			text: "Experimental",
 			children: [
         { text: "PageIndicator", link: "/components/page-indicator/index" },
+        { text: "Chart", link: "/components/chart/index" },
         { text: "Clamp", link: "/components/clamp/index" },
         { text: "OnePiece", link: "/components/one-piece/index" },
         { text: "XButton", link: "/components/x-button/index" },
