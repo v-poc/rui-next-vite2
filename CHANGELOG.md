@@ -1,3 +1,7 @@
+# 0.31.0 (2022-01-01)
+
+Moved `OnePiece` component into `experimental` category.
+
 # 0.30.4 (2021-12-24)
 
 Refactor: deprecate `usePersistFn` hook, switch to `useMemoizedFn` instead.
