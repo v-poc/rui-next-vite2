@@ -2,7 +2,7 @@ import React, { CSSProperties, ReactNode } from "react";
 import classnames from "classnames";
 import Button from "../button/index";
 
-// ResultProps Type
+// ResultProps type
 export type ResultProps = {
   prefixCls?: string;
   className?: string;
@@ -17,7 +17,7 @@ export type ResultProps = {
 };
 
 // Result FC
-const Result: React.FC<ResultProps> = (props) => {
+export const Result: React.FC<ResultProps> = (props) => {
   const {
     style,
     img,
@@ -90,5 +90,3 @@ Result.defaultProps = {
   buttonType: "primary",
   onButtonClick: () => {},
 };
-
-export default Result;
