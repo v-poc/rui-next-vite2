@@ -4,7 +4,16 @@
 
 ## Overview
 
-Thanks to [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) that could support `React docs+demos` well to run with `vitepress+vite`. I tried [`dumi`](https://d.umijs.org/) but it is coupled with webpack, and tried [`vuepress@next`](https://github.com/vuepress/vuepress-next) with `vite bundler` but it seems not good enough to support `React docs+demos`.
+Thanks to [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) that could support `React docs+demos` well to run with `vitepress+vite`.
+
+Compare to other tools:
+
+- [`dumi`](https://d.umijs.org/)
+  - it is coupled with webpack instead.
+- [`vuepress@next`](https://github.com/vuepress/vuepress-next) with `vite bundler`
+  - it seems not good enough to support `React docs+demos`.
+- [`vite-plugin-react-page`](https://github.com/vitejs/vite-plugin-react-pages)
+  - it seems not able to show demos and source codes in the `CodeBlock`.
 
 React with Vite Playground - Mobile web UI components - (react-hooks+vite2).
 
