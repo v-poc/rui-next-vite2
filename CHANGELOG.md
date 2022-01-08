@@ -1,3 +1,8 @@
+# 0.31.2 (2022-01-07)
+
+- Added `LikeButton` demo (`experimental`).
+- Updated deps.
+
 # 0.31.1 (2022-01-02)
 
 - Moved `Chart` component into `experimental` category.
