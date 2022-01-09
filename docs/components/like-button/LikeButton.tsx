@@ -5,7 +5,10 @@ import classnames from "classnames";
 export type LikeButtonProps = {
   prefixCls?: string;
   className?: string;
+  delay?: number; // unit (ms)
   scale?: number;
+  heartColor?: string;
+  lineColors?: string[];
   callback?: () => void;
 };
 
@@ -14,13 +17,19 @@ export const LikeButton: React.FC<LikeButtonProps> = (props) => {
   const {
     prefixCls,
     className,
+    delay,
     scale = 1,
+    heartColor,
+    lineColors,
     callback,
   } = props;
 
   const [isAddCls, setIsAddCls] = useState(false);
 
-  const btnStyle = {};
+  const btnStyle = {
+    "--delay": delay,
+    "--heart-color": heartColor,
+  };
   if (scale !== 1) {
     btnStyle["transform"] = `scale(${scale})`;
   }
@@ -40,13 +49,13 @@ export const LikeButton: React.FC<LikeButtonProps> = (props) => {
       if (typeof callback === "function") {
         callback();
       }
-    }, 600);
+    }, delay);
   };
 
   return (
     <div className={`${prefixCls}-container`}>
       <div
-        className={cls}
+        className={cls} // @ts-ignore
         style={btnStyle}
         onClick={onClickButton}
       >
@@ -62,13 +71,16 @@ export const LikeButton: React.FC<LikeButtonProps> = (props) => {
           </svg>
           <div
             className={`${prefixCls}-particle`} // @ts-ignore
-            style={{"--line-count": 6}}
+            style={{"--line-count": lineColors.length}}
           >
-            {new Array(6).fill("").map((item: any, index: number) => (
+            {new Array(lineColors.length).fill("").map((_: any, index: number) => (
               <div
                 key={`item${index}`}
-                className={`${prefixCls}-particle-item`} // @ts-ignore
-                style={{"--line-index": index}}
+                className={`${prefixCls}-particle-item`}
+                style={{ // @ts-ignore
+                  "--line-index": index,
+                  "backgroundColor": lineColors[index],
+                }}
               ></div>
             ))}
           </div>
@@ -80,4 +92,7 @@ export const LikeButton: React.FC<LikeButtonProps> = (props) => {
 
 LikeButton.defaultProps = {
   prefixCls: "r-btn-like",
+  delay: 500,
+  heartColor: "#F66",
+  lineColors: ["#F66", "#66F", "#F90", "#09F", "#9C3", "#3C9"],
 };
