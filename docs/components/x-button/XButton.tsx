@@ -5,6 +5,7 @@ import classnames from "classnames";
 export type XButtonProps = {
   prefixCls?: string;
   className?: string;
+  delay?: number; // unit (ms)
   scale?: number;
   callback?: () => void;
 };
@@ -14,6 +15,7 @@ export const XButton: React.FC<XButtonProps> = (props) => {
   const {
     prefixCls,
     className,
+    delay,
     scale = 1,
     callback,
   } = props;
@@ -43,7 +45,7 @@ export const XButton: React.FC<XButtonProps> = (props) => {
       if (typeof callback === "function") {
         callback();
       }
-    }, 2000);
+    }, delay);
   };
 
   return (
@@ -63,4 +65,5 @@ export const XButton: React.FC<XButtonProps> = (props) => {
 
 XButton.defaultProps = {
   prefixCls: "r-btn-op",
+  delay: 2000,
 };

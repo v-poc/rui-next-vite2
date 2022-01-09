@@ -71,3 +71,4 @@ Properties | Description | Type | Default
 -----------|------------|------|--------
 | scale | the scale number, optional | `number` | 1 |
 | callback | the callback function, optional | `() => void` | - |
+| delay | The delay to trigger callback, unit `ms` | `number` | `2000` |
