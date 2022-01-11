@@ -1,5 +1,14 @@
-import React, { useState } from "react";
+import React, { CSSProperties, useState } from "react";
 import classnames from "classnames";
+
+type styleProps = CSSProperties & {
+  "--delay"?: number;
+  "--heart-color"?: string;
+  // "transform"?: string;
+  "--line-count"?: number;
+  "--line-index"?: number;
+  // "backgroundColor"?: string;
+};
 
 // LikeButtonProps type
 export type LikeButtonProps = {
@@ -26,7 +35,7 @@ export const LikeButton: React.FC<LikeButtonProps> = (props) => {
 
   const [isAddCls, setIsAddCls] = useState(false);
 
-  const btnStyle = {
+  const btnStyle: styleProps = {
     "--delay": delay,
     "--heart-color": heartColor,
   };
@@ -52,10 +61,19 @@ export const LikeButton: React.FC<LikeButtonProps> = (props) => {
     }, delay);
   };
 
+  const particleStyle: styleProps = {
+    "--line-count": lineColors.length,
+  };
+
+  const particleItemStyle = (i: number) => ({
+    "--line-index": i,
+    "backgroundColor": lineColors[i],
+  });
+
   return (
     <div className={`${prefixCls}-container`}>
       <div
-        className={cls} // @ts-ignore
+        className={cls}
         style={btnStyle}
         onClick={onClickButton}
       >
@@ -70,17 +88,14 @@ export const LikeButton: React.FC<LikeButtonProps> = (props) => {
             <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path>
           </svg>
           <div
-            className={`${prefixCls}-particle`} // @ts-ignore
-            style={{"--line-count": lineColors.length}}
+            className={`${prefixCls}-particle`}
+            style={particleStyle}
           >
-            {new Array(lineColors.length).fill("").map((_: any, index: number) => (
+            {new Array(lineColors.length).fill("").map((_: string, index: number) => (
               <div
                 key={`item${index}`}
                 className={`${prefixCls}-particle-item`}
-                style={{ // @ts-ignore
-                  "--line-index": index,
-                  "backgroundColor": lineColors[index],
-                }}
+                style={particleItemStyle(index)}
               ></div>
             ))}
           </div>
