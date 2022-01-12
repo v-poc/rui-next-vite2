@@ -1,4 +1,8 @@
-import React, { ReactNode } from "react";
+import React, { CSSProperties, ReactNode } from "react";
+
+type styleProps = CSSProperties & {
+  "--item-span"?: string;
+};
 
 // GridItemProps Type
 export type GridItemProps = {
@@ -17,13 +21,13 @@ const GridItem: React.FC<GridItemProps> = (props) => {
     children,
   } = props;
 
-  const itemStyle = {
+  const itemStyle: styleProps = {
     "--item-span": span.toString(),
   };
 
   return (
     <div
-      className={`${prefixCls}-item`} // @ts-ignore
+      className={`${prefixCls}-item`}
       style={itemStyle}
       onClick={onClick}
     >

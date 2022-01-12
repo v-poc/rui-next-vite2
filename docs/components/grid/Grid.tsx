@@ -1,5 +1,9 @@
-import React, { ReactNode } from "react";
+import React, { CSSProperties, ReactNode } from "react";
 import { getCSSLength } from '../_utils/index';
+
+type styleProps = CSSProperties & {
+  "--columns"?: string;
+};
 
 // GridProps Type
 export type GridProps = {
@@ -18,7 +22,7 @@ const Grid: React.FC<GridProps> = (props) => {
     children,
   } = props;
 
-  const wrapStyle = {
+  const wrapStyle: styleProps = {
     "--columns": columns.toString(),
   };
 
@@ -37,7 +41,7 @@ const Grid: React.FC<GridProps> = (props) => {
 
   return (
     <div
-      className={prefixCls} // @ts-ignore
+      className={prefixCls}
       style={wrapStyle}
     >
       {children}
