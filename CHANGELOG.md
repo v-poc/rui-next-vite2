@@ -1,3 +1,7 @@
+# 0.31.3 (2022-01-18)
+
+Refactor: upgrade `vitepress-rc` to latest version so far.
+
 # 0.31.2 (2022-01-07)
 
 - Added `LikeButton` demo (`experimental`).

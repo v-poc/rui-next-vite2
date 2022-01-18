@@ -8,7 +8,7 @@ A hook that returns the latest value, that could avoid the **closure problem**.
 import React, { useRef, useState } from "react";
 import { useLatest, Button } from "rui-next";
 
-export default () => {
+const Example = () => {
   const [isStart, setIsStart] = useState(false);
   const [count, setCount] = useState(0);
   const [refCount, setRefCount] = useState(0);
@@ -44,6 +44,7 @@ export default () => {
     </Button>
   </>);
 };
+export default Example;
 ```
 
 ## API

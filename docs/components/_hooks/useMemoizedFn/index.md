@@ -64,7 +64,7 @@ const SubComp = React.memo<SubCompType>((props) => {
 });
 
 // ParentComponent
-export default () => {
+const Example = () => {
   const [count, setCount] = useState(0); // the count of ParentComponent
 
   const callbackFn = useCallback(() => {
@@ -94,6 +94,7 @@ export default () => {
     <SubComp logCount={memoizedFn} />
   </>);
 };
+export default Example;
 ```
 
 ## API
