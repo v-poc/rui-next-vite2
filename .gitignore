@@ -6,6 +6,11 @@ dist-ssr
 /dist
 .cache
 .temp
+coverage
+temp
+explorations
+TODOs.md
+*.log
 
 # local env files
 .env.local
