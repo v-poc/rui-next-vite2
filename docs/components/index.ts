@@ -49,6 +49,8 @@ export { default as CheckList } from "./check-list/index";
 export { default as Input } from "./input/index";
 // AutoJustifyContent
 export { default as AutoJustifyContent } from "./auto-justify-content/index";
+// TextArea
+export { default as TextArea } from "./text-area/index";
 
 
 

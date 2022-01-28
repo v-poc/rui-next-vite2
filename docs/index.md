@@ -13,7 +13,7 @@ Compare to other tools:
 - [`vuepress@next`](https://github.com/vuepress/vuepress-next) with `vite bundler`
   - it seems not good enough to support `React docs+demos`.
 - [`vite-plugin-react-pages`](https://github.com/vitejs/vite-plugin-react-pages)
-  - it seems not able to show demos and source codes in the `CodeBlock`.
+  - for early version, it seems not able to show demos and source codes in the `CodeBlock`.
 
 React with Vite Playground - Mobile web UI components - (react-hooks+vite2).
 

@@ -1,3 +1,7 @@
+# 0.32.0 (2022-01-24)
+
+Added `TextArea` demo.
+
 # 0.31.3 (2022-01-18)
 
 Refactor: upgrade `vitepress-rc` to latest version so far.
