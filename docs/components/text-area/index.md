@@ -56,6 +56,7 @@ const Example = () => (
     />
     <Divider contentAlign="left">TextArea showCount feature</Divider>
     <TextArea
+      placeholder="Please input content"
       defaultValue={"These are demo lines\nshowing different words."}
       showCount
       maxLength={50}
