@@ -20,7 +20,7 @@ export async function resolveConfig(root: string = process.cwd()): Promise<SiteC
 	const config = {
 		root,
 		siteData,
-		themeDir,
+		themeDir, // @ts-ignore
 		pages: await globby(['**.md'], { cwd: root, ignore: ['node_modules'] }),
 		configPath: resolve(root, 'config.js'),
 		outDir: resolve(root, 'dist'),

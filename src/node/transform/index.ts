@@ -140,7 +140,7 @@ async function mdxTransform(
 		],
 		rehypePlugins: [pluginWrapper as any, [pluginImg, { id, root, siteData }], ...userRehypePlugins],
 	}).process(code_mdx)
-
+	// @ts-ignore
 	const _data = code_vFile.data as VFileData
 
 	let _frontmatter = _data.frontmatter ?? {}
