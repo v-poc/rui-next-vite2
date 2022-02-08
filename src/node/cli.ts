@@ -6,7 +6,7 @@ import { serve } from './serve'
 
 const argv: any = minimist(process.argv.slice(2))
 
-console.log(chalk.cyan(`vitepress-rc v${require('../../package.json').version}`))
+console.log(chalk.cyan(`${require('../../package.json').name} v${require('../../package.json').version}`))
 console.log(chalk.cyan(`vite v${require('vite/package.json').version}`))
 
 const command = argv._[0]
