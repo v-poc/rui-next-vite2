@@ -65,7 +65,7 @@ const Example = () => {
         message="Data Not Found"
       />
       <br /><br />
-      <p className="sub-title">Empty with customized Icon image</p>
+      <p className="sub-title">Empty with customized Icon (ReactNode)</p>
       <Empty
         img={imgEl}
         message="Customize Description"
