@@ -51,6 +51,8 @@ export { default as Input } from "./input/index";
 export { default as AutoJustifyContent } from "./auto-justify-content/index";
 // TextArea
 export { default as TextArea } from "./text-area/index";
+// Steps
+export { default as Steps } from "./steps/index";
 
 
 

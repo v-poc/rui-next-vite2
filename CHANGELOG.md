@@ -1,3 +1,7 @@
+# 0.33.0 (2022-02-25)
+
+Added `Steps` demo.
+
 # 0.32.0 (2022-01-24)
 
 Added `TextArea` demo.
