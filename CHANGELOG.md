@@ -1,3 +1,8 @@
+# 0.33.1 (2022-03-04)
+
+- Added `SafeArea` demo (`experimental`).
+- Updated deps.
+
 # 0.33.0 (2022-02-25)
 
 Added `Steps` demo.

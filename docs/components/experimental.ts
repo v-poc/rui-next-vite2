@@ -13,6 +13,8 @@ export { default as OnePiece } from "./one-piece/index";
 export { default as XButton } from "./x-button/index";
 // LikeButton
 export { default as LikeButton } from "./like-button/index";
+// SafeArea
+export { default as SafeArea } from "./safe-area/index";
 
 
 
