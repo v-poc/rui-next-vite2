@@ -1,3 +1,7 @@
+# 0.33.2 (2022-03-08)
+
+Refactor: optimize deps to remove `react-simple-code-editor`.
+
 # 0.33.1 (2022-03-04)
 
 - Added `SafeArea` demo (`experimental`).

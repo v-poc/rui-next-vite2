@@ -18,8 +18,13 @@ if (root) {
 
 if (!command || command === 'dev') {
 	createServer(root, argv)
+		// .then((server) => {
+		// 	server.listen()
+		// })
+		.then((server) => server.listen())
 		.then((server) => {
-			server.listen()
+			// console.log()
+			server.printUrls()
 		})
 		.catch((err) => {
 			console.error(chalk.red(`failed to start server. error:\n`), err)
