@@ -63,8 +63,8 @@ const KEYCODE_ESCAPE = 27
 const HISTORY_LIMIT = 100
 const HISTORY_TIME_GAP = 3000
 
-const isWindows = 'navigator' in global && /Win/i.test(navigator.platform)
-const isMacLike = 'navigator' in global && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)
+const isWindows = typeof global !== "undefined" && 'navigator' in global && /Win/i.test(navigator.platform)
+const isMacLike = typeof global !== "undefined" && 'navigator' in global && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)
 
 const className = 'npm__react-simple-code-editor__textarea'
 
