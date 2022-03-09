@@ -1,4 +1,5 @@
 const path = require('path');
+const pkg = require("../../package.json");
 
 module.exports = {
   base: '/rui-next/docs',
@@ -34,7 +35,7 @@ module.exports = {
 
     nav: [
       {
-        text: 'IndexPage',
+        text: 'Home',
         link: '/'
       },
       {
@@ -44,6 +45,10 @@ module.exports = {
       {
         text: 'Links',
         items: [
+          {
+            text: `Repo (v${pkg.version})`,
+            link: 'https://github.com/v-poc/rui-next'
+          },
           {
             text: 'Vite',
             link: 'https://vitejs.dev/'
