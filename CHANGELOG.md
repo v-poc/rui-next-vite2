@@ -1,4 +1,4 @@
-# 0.33.2 (2022-03-08)
+# 0.33.3 (2022-03-08)
 
 Refactor: optimize deps to remove `react-simple-code-editor`.
 
