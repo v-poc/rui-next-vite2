@@ -1,3 +1,7 @@
+# 0.33.4 (2022-04-02)
+
+Refactor: upgrade to React 18.
+
 # 0.33.3 (2022-03-08)
 
 Refactor: optimize deps to remove `react-simple-code-editor`.
