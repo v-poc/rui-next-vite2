@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import ReactDomClient from 'react-dom/client'
 import { StyleSheetManager } from 'styled-components'
 
 const fakeHost = `https://a.com`
@@ -14,13 +15,16 @@ export async function getReact(local = true): Promise<typeof React> {
 	}
 }
 
-export async function getReactDom(local = true): Promise<typeof ReactDom> {
+export async function getReactDom(local = true) {
 	if (local) {
-		return ReactDom
+		return { ReactDom, ReactDomClient }
 	} else {
 		const url_react_dom = new URL('//jspm.dev/react-dom', fakeHost).href
 		const { default: ReactDomFetch } = await import(/* @vite-ignore */ url_react_dom)
-		return ReactDomFetch
+		const url_react_dom_client = new URL('//jspm.dev/react-dom/client', fakeHost).href
+		const { default: ReactDomClientFetch } = await import(/* @vite-ignore */ url_react_dom_client)
+		// return ReactDomFetch
+		return { ReactDom: ReactDomFetch, ReactDomClient: ReactDomClientFetch };
 	}
 }
 

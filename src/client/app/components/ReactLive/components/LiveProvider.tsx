@@ -43,7 +43,8 @@ export default function LiveProvider({
 				RemoveShadowRootSkeleton(shadowRoot.current)
 				let reactRenderDom = shadowRoot.current.querySelector('.react-render')
 				if (reactRenderDom) {
-					ReactDom_P.unmountComponentAtNode(reactRenderDom)
+					// ReactDom_P.unmountComponentAtNode(reactRenderDom)
+					ReactDom_P.ReactDomClient.createRoot(reactRenderDom).unmount();
 				}
 				shadowRoot.current.innerHTML = ''
 			}

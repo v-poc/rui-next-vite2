@@ -44,7 +44,8 @@ const errorBoundary = async ({ Element, errorCallback, shadowDom, shadowRoot, cs
 			RemoveShadowRootSkeleton(shadowRoot.current)
 			let reactRenderDom = shadowRoot.current.querySelector('.react-render')
 			if (reactRenderDom) {
-				ReactDom_P.unmountComponentAtNode(reactRenderDom)
+				// ReactDom_P.unmountComponentAtNode(reactRenderDom)
+				ReactDom_P.ReactDomClient.createRoot(reactRenderDom).unmount();
 			} else {
 				reactRenderDom = document.createElement('div')
 				reactRenderDom.classList.add('react-render')
@@ -71,9 +72,9 @@ const errorBoundary = async ({ Element, errorCallback, shadowDom, shadowRoot, cs
 				styleContainer.classList.add('shadow-sheet')
 				shadowRoot.current.appendChild(styleContainer)
 
-				let _CreatePortal = ReactDom_P.createPortal
+				let _CreatePortal = ReactDom_P.ReactDom.createPortal
 
-				ReactDom_P.createPortal = function (children: any, container, key) {
+				ReactDom_P.ReactDom.createPortal = function (children: any, container: any, key: any) {
 					setTimeout(() => {
 						if (children._owner) {
 							let parent = children._owner.return
@@ -101,12 +102,17 @@ const errorBoundary = async ({ Element, errorCallback, shadowDom, shadowRoot, cs
 					})
 					return _CreatePortal(children, container, key)
 				}
-				ReactDom_P.render(
+				// ReactDom_P.render(
+				// 	<StyleSheetManager target={styleContainer}>
+				// 		<ErrorBoundary />
+				// 	</StyleSheetManager>,
+				// 	reactRenderDom
+				// )
+				ReactDom_P.ReactDomClient.createRoot(reactRenderDom).render(
 					<StyleSheetManager target={styleContainer}>
 						<ErrorBoundary />
-					</StyleSheetManager>,
-					reactRenderDom
-				)
+					</StyleSheetManager>
+				);
 			} else {
 				//注入全局css样式
 				let style = document.head.querySelector('style[data-shadow-style="y"]')
@@ -118,7 +124,8 @@ const errorBoundary = async ({ Element, errorCallback, shadowDom, shadowRoot, cs
 					style.textContent = cssText || ''
 					document.head.appendChild(style)
 				}
-				ReactDom_P.render(<ErrorBoundary />, reactRenderDom)
+				// ReactDom_P.render(<ErrorBoundary />, reactRenderDom)
+				ReactDom_P.ReactDomClient.createRoot(reactRenderDom).render(<ErrorBoundary />);
 			}
 		} catch (error) {
 			errorCallback(error)
