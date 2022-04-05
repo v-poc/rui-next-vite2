@@ -1,3 +1,7 @@
+# 0.34.0 (2022-04-04)
+
+Added `Slider` demo.
+
 # 0.33.4 (2022-04-02)
 
 Refactor: upgrade to React 18.

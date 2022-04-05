@@ -108,6 +108,7 @@ function getLocalSidebar() {
         { text: "CheckList", link: "/components/check-list/index" },
         { text: "Input", link: "/components/input/index" },
         { text: "TextArea", link: "/components/text-area/index" },
+        { text: "Slider", link: "/components/slider/index" },
       ]
     },
 		{

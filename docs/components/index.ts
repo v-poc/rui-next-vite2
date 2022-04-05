@@ -53,6 +53,8 @@ export { default as AutoJustifyContent } from "./auto-justify-content/index";
 export { default as TextArea } from "./text-area/index";
 // Steps
 export { default as Steps } from "./steps/index";
+// Slider
+export { default as Slider } from "./slider/index";
 
 
 
