@@ -99,10 +99,17 @@ export const Slider: React.FC<SliderProps> = (props) => {
       return;
     }
 
-    const offsetL = trackRef.current.getBoundingClientRect().left;
+    const offsetL = trackRef.current?.getBoundingClientRect().left;
     const pos = (max - min) * (e.clientX - offsetL) / Math.ceil(trackRef.current.offsetWidth) + min;
     const targetValue = getValueByPosition(pos);
-    const nextSliderValue: [number, number] = [min, targetValue];
+    let nextSliderValue: [number, number] = [min, targetValue];
+    if (range) {
+      if (Math.abs(targetValue - sliderValue[0]) > Math.abs(targetValue - sliderValue[1])) {
+        nextSliderValue = [sliderValue[0], targetValue];
+      } else {
+        nextSliderValue = [targetValue, sliderValue[1]];
+      }
+    }
 
     setSliderValue(nextSliderValue);
     doAfterChange(nextSliderValue);
@@ -171,6 +178,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
               left: fillL,
             }}
           ></div>
+          {range && renderThumb(0)}
           {renderThumb(1)}
         </div>
       </div>

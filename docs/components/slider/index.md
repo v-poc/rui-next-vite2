@@ -26,7 +26,7 @@ const handleSlider = (v) => {
   } else if (Array.isArray(v)) {
     res = `[${v.join(",")}]`;
   }
-  logInfo(`The current value is: ${res}`);
+  logInfo(`[onAfterChange] the current value is: ${res}`);
 };
 
 // Example Styles
@@ -52,10 +52,17 @@ const Example = () => (
       defaultValue={10}
       onAfterChange={handleSlider}
     />
-    <p className="sub-title">Slider with disabled state</p>
+    <p className="sub-title">Slider with disabled status</p>
     <Slider
       value={30}
       disabled
+    />
+    <p className="sub-title">Slider with double Thumb (refer `RUI-log` in Console log)</p>
+    <Slider
+      defaultValue={[10, 40]}
+      onChange={(v) => logInfo(`[onChange] the changing value: [${v}]`)}
+      onAfterChange={handleSlider}
+      range
     />
   </ExampleContainer>
 );
