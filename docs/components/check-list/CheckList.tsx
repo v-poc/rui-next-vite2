@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { ReactNode } from "react";
 import Icon from "../icon/index";
 import List from "../list/index";
 import { CheckListContext } from "./CheckListContext";

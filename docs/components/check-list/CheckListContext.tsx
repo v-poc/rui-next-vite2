@@ -1,5 +1,6 @@
 import { createContext, ReactNode } from "react";
 
+// CheckListContext type
 export type CheckListContextType = {
   activeIcon?: ReactNode;
   disabled?: boolean;

@@ -1,4 +1,4 @@
-import React, { ReactNode, useMemo, useRef } from "react";
+import React, { ReactNode, useRef } from "react";
 import classnames from "classnames";
 import { Thumb } from "./Thumb";
 import usePropsValue from "../_hooks/usePropsValue/index";

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import classnames from "classnames";
 import Icon from "../icon/index";
 import usePropsValue from "../_hooks/usePropsValue/index";
