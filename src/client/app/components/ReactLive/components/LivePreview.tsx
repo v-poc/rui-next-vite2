@@ -36,7 +36,7 @@ interface ILivePreview {
 }
 
 export default function LivePreview({ Component, ...rest }: ILivePreview) {
-	return (
+	return ( // @ts-ignore
 		<Component {...rest}>
 			<LiveContext.Consumer>
 				{({ shadowDom, shadowRoot }) =>

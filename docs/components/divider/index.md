@@ -36,8 +36,18 @@ const ExampleContainer = styled.div`
 // Example FC
 const Example = () => (
   <ExampleContainer>
-    <p className="sub-title">Basic Divider (pure line)</p>
+    <p className="sub-title">Basic Divider with pure line (horizontal mode)</p>
     <Divider />
+    <p className="sub-title">Basic Divider (vertical mode)</p>
+    <>
+      one
+      <Divider vertical />
+      two
+      <Divider vertical />
+      three
+      <Divider vertical />
+      four
+    </>
     <p className="sub-title">Divider with content</p>
     <Divider>center content</Divider>
     <br /><br />
@@ -76,3 +86,4 @@ Properties | Description | Type | Default
 -----------|------------|------|--------
 | contentAlign | The alignment of content | `center`\|`left`\|`right` | `center` |
 | style | The custom style | `CSSProperties` | - |
+| vertical | Whether the direction mode is vertical | `boolean` | `false` |

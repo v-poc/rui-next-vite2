@@ -1,3 +1,8 @@
+# 0.34.2 (2021-04-09)
+
+- Updated `Divider` demo for `vertical` mode.
+- Updated deps.
+
 # 0.34.0 (2022-04-04)
 
 Added `Slider` demo.

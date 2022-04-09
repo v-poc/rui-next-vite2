@@ -6,22 +6,25 @@ export type DividerProps = {
   prefixCls?: string;
   className?: string;
   style?: CSSProperties;
-  contentAlign?: "center" | "left" | "right";
+  contentAlign?: "center" | "left" | "right"; // takes effect when vertical: false
+  vertical?: boolean; // vertical or horizontal
 };
 
 // Divider FC
 export const Divider: React.FC<DividerProps> = (props) => {
   const {
-    contentAlign,
-    style,
     prefixCls,
     className,
     children,
+    contentAlign,
+    style,
+    vertical,
   } = props;
 
   const wrapCls = classnames(
     prefixCls,
     className,
+    `${prefixCls}-${vertical ? "vertical" : "horizontal"}`,
     `${prefixCls}-${contentAlign}`,
   );
 
@@ -42,4 +45,5 @@ export const Divider: React.FC<DividerProps> = (props) => {
 Divider.defaultProps = {
   prefixCls: "r-divider",
   contentAlign: "center",
+  vertical: false,
 };

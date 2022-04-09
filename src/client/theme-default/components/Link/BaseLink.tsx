@@ -8,6 +8,7 @@ const Wrap = styled.a`
 
 interface BaseLinkProps {
 	to: string
+	children: React.ReactNode
 }
 
 export const BaseLink: FC<BaseLinkProps> = (props) => {

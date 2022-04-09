@@ -35,7 +35,7 @@ const errorBoundary = async ({ Element, errorCallback, shadowDom, shadowRoot, cs
 			errorCallback(error)
 		}
 
-		render() {
+		render() { // @ts-ignore
 			return typeof Element === 'function' ? <Element /> : Element
 		}
 	}
