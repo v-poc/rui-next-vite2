@@ -55,6 +55,8 @@ const Example = () => (
     <p className="sub-title">Slider with disabled status</p>
     <Slider
       value={30}
+      step={15}
+      ticks
       disabled
     />
     <p className="sub-title">Slider with double Thumb (refer `RUI-log` in Console log)</p>
@@ -63,6 +65,8 @@ const Example = () => (
       onChange={(v) => logInfo(`[onChange] the changing value: [${v}]`)}
       onAfterChange={handleSlider}
       range
+      step={10}
+      ticks
     />
   </ExampleContainer>
 );
@@ -86,3 +90,4 @@ Properties | Description | Type | Default
 | onChange | Triggered when the slider is dragged, and the current dragged value is passed in as a parameter | `(value: number \| [number, number]) => void` | - |
 | onAfterChange | Consistent with the trigger timing of `touchend`, pass the current value as a parameter | `(value: number \| [number, number]) => void` | - |
 | icon | The icon of slider | `ReactNode`| - |
+| ticks | Whether to display the Ticks | `boolean` | `false` |

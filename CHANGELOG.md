@@ -1,4 +1,8 @@
-# 0.34.2 (2021-04-09)
+# 0.34.3 (2022-04-10)
+
+- Updated `Slider` demo to support `Ticks` display.
+
+# 0.34.2 (2022-04-09)
 
 - Updated `Divider` demo for `vertical` mode.
 - Updated deps.

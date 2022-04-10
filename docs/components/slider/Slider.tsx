@@ -1,10 +1,9 @@
-import React, { ReactNode, useRef } from "react";
+import React, { ReactNode, useMemo, useRef } from "react";
 import classnames from "classnames";
 import { Thumb } from "./Thumb";
+import { Ticks } from "./Ticks";
+import { getNearest, sortValue } from "../_utils/index";
 import usePropsValue from "../_hooks/usePropsValue/index";
-
-// utility function
-const sortValue = (v: [number, number]): [number, number] => v.sort((a, b) => a - b);
 
 // SliderValue type
 export type SliderValue = number | [number, number];
@@ -22,7 +21,7 @@ export type SliderProps = {
   range?: boolean;
   step?: number;
   // marks?: boolean;
-  // ticks?: boolean;
+  ticks?: boolean;
   onChange?: (v: SliderValue) => void;
   onAfterChange?: (v: SliderValue) => void;
 };
@@ -39,7 +38,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
     disabled,
     icon,
     // marks,
-    // ticks,
+    ticks,
     range,
     step,
     onChange,
@@ -79,12 +78,27 @@ export const Slider: React.FC<SliderProps> = (props) => {
     setRawValue(reverseValue(next));
   };
 
+  const pointsList = useMemo(() => {
+    const res: number[] = [];
+    for (let i = min; i <= max; i += step) {
+      res.push(i);
+    }
+    return res;
+  }, [min, max, step]);
+
   const getValueByPosition = (pos: number) => {
     const newPos = pos < min ? min : pos > max ? max : pos;
     let val = min;
-    const lenPerStep = 100 / ((max - min) / step);
-    const steps = Math.round(newPos / lenPerStep);
-    val = steps * lenPerStep * (max - min) * 0.01 + min;
+
+    if (pointsList.length) {
+      // Move to the tick point if the Ticks are displayed.
+      val = getNearest(pointsList, newPos);
+    } else {
+      const lenPerStep = 100 / ((max - min) / step);
+      const steps = Math.round(newPos / lenPerStep);
+      val = steps * lenPerStep * (max - min) * 0.01 + min;  
+    }
+
     return val;
   };
 
@@ -178,6 +192,15 @@ export const Slider: React.FC<SliderProps> = (props) => {
               left: fillL,
             }}
           ></div>
+          {ticks && (
+            <Ticks
+              min={min}
+              max={max}
+              points={pointsList}
+              rangeLeft={sliderValue[0]}
+              rangeRight={sliderValue[1]}
+            />
+          )}
           {range && renderThumb(0)}
           {renderThumb(1)}
         </div>
@@ -192,7 +215,7 @@ Slider.defaultProps = {
   max: 100,
   disabled: false,
   // marks: false,
-  // ticks: false,
+  ticks: false,
   range: false,
   step: 1,
 };

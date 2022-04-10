@@ -89,3 +89,13 @@ export const canUseDOM = !!(
 export const getCSSLength = (v: string | number) => {
   return typeof v === "number" ? `${v}px` : v;
 };
+
+// Sort value
+export const sortValue = (v: [number, number]): [number, number] => v.sort((a, b) => a - b);
+
+// Find the nearest item from the numbers array
+export const getNearest = (arr: number[], targetItem: number) => {
+  return arr.reduce((prevItem, currItem) => {
+    return Math.abs(prevItem - targetItem) < Math.abs(currItem - targetItem) ? prevItem : currItem;
+  });
+};
