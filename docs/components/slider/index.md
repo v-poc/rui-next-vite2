@@ -19,6 +19,8 @@ import React from "react";
 import { Slider } from "rui-next";
 import { logInfo } from "experimental";
 
+const marksSample = {0: "0", 25: "25%", 50: "50%", 75: "75%", 100: "100%"};
+
 const handleSlider = (v) => {
   let res = "";
   if (typeof v === "number") {
@@ -52,10 +54,16 @@ const Example = () => (
       defaultValue={10}
       onAfterChange={handleSlider}
     />
+    <p className="sub-title">Slider with Ticks and Marks (refer `RUI-log` in Console log)</p>
+    <Slider
+      marks={marksSample}
+      ticks
+      onAfterChange={handleSlider}
+    />
     <p className="sub-title">Slider with disabled status</p>
     <Slider
-      value={30}
-      step={15}
+      value={50}
+      marks={marksSample}
       ticks
       disabled
     />
@@ -65,7 +73,7 @@ const Example = () => (
       onChange={(v) => logInfo(`[onChange] the changing value: [${v}]`)}
       onAfterChange={handleSlider}
       range
-      step={10}
+      step={5}
       ticks
     />
   </ExampleContainer>
@@ -91,3 +99,4 @@ Properties | Description | Type | Default
 | onAfterChange | Consistent with the trigger timing of `touchend`, pass the current value as a parameter | `(value: number \| [number, number]) => void` | - |
 | icon | The icon of slider | `ReactNode`| - |
 | ticks | Whether to display the Ticks | `boolean` | `false` |
+| marks | The Marks of Ticks | `{[key: number]: React.ReactNode}` | - |

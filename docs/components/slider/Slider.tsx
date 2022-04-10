@@ -2,6 +2,7 @@ import React, { ReactNode, useMemo, useRef } from "react";
 import classnames from "classnames";
 import { Thumb } from "./Thumb";
 import { Ticks } from "./Ticks";
+import { Marks, SliderMarks } from "./Marks";
 import { getNearest, sortValue } from "../_utils/index";
 import usePropsValue from "../_hooks/usePropsValue/index";
 
@@ -20,7 +21,7 @@ export type SliderProps = {
   icon?: ReactNode;
   range?: boolean;
   step?: number;
-  // marks?: boolean;
+  marks?: SliderMarks;
   ticks?: boolean;
   onChange?: (v: SliderValue) => void;
   onAfterChange?: (v: SliderValue) => void;
@@ -37,7 +38,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
     max,
     disabled,
     icon,
-    // marks,
+    marks,
     ticks,
     range,
     step,
@@ -79,12 +80,16 @@ export const Slider: React.FC<SliderProps> = (props) => {
   };
 
   const pointsList = useMemo(() => {
+    if (marks) {
+      return Object.keys(marks).map(parseFloat).sort((a, b) => a - b);
+    }
+
     const res: number[] = [];
     for (let i = min; i <= max; i += step) {
       res.push(i);
     }
     return res;
-  }, [min, max, step]);
+  }, [marks, min, max, step]);
 
   const getValueByPosition = (pos: number) => {
     const newPos = pos < min ? min : pos > max ? max : pos;
@@ -205,6 +210,15 @@ export const Slider: React.FC<SliderProps> = (props) => {
           {renderThumb(1)}
         </div>
       </div>
+      {marks && (
+        <Marks
+          marks={marks}
+          min={min}
+          max={max}
+          rangeLeft={sliderValue[0]}
+          rangeRight={sliderValue[1]}
+        />
+      )}
     </div>
   );
 };
@@ -214,7 +228,6 @@ Slider.defaultProps = {
   min: 0,
   max: 100,
   disabled: false,
-  // marks: false,
   ticks: false,
   range: false,
   step: 1,

@@ -1,6 +1,6 @@
 # 0.34.3 (2022-04-10)
 
-- Updated `Slider` demo to support `Ticks` display.
+- Updated `Slider` demo to support `Ticks` and `Marks` display.
 
 # 0.34.2 (2022-04-09)
 
