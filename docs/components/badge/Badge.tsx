@@ -1,10 +1,11 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, ReactNode } from "react";
 import classnames from "classnames";
 
 // BadgeProps type
 export type BadgeProps = {
   prefixCls?: string;
   className?: string;
+  children?: ReactNode;
   style?: CSSProperties;
   hot?: boolean;
   size?: "large" | "small";

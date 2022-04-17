@@ -6,6 +6,7 @@ import type { StepProps } from "./Step";
 export type StepsProps = {
   prefixCls?: string;
   className?: string;
+  children?: ReactNode;
   currentIndex?: number;
   direction?: "horizontal" | "vertical";
 };

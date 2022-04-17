@@ -1,10 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import classnames from "classnames";
 
 // ClampProps type
 export type ClampProps = {
   prefixCls?: string;
   className?: string;
+  children?: ReactNode;
   maxLines?: number;
 };
 

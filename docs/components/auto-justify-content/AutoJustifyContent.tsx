@@ -1,8 +1,9 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 // AutoJustifyContentProps type
 export type AutoJustifyContentProps = {
   prefixCls?: string;
+  children?: ReactNode;
 };
 
 // AutoJustifyContent FC

@@ -5,6 +5,7 @@ import classnames from "classnames";
 export type NavBarProps = {
   prefixCls?: string;
   className?: string;
+  children?: ReactNode;
   mode?: "dark" | "light";
   icon?: ReactNode;
   leftContent?: ReactNode;

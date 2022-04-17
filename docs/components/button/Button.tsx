@@ -15,6 +15,7 @@ export type ButtonProps = {
   icon?: ReactNode;
   activeClassName?: string;
   activeStyle?: boolean | CSSProperties;
+  children?: ReactNode;
   type?: "primary" | "warning" | "ghost";
   size?: "large" | "small";
   disabled?: boolean;

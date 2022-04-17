@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import classnames from "classnames";
 
 // WhiteSpaceProps Type
@@ -8,7 +8,7 @@ export type WhiteSpaceProps = {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   style?: React.CSSProperties;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
-  children?: any;
+  children?: ReactNode;
   vertical?: boolean; // vertical or horizontal
 };
 

@@ -1,10 +1,11 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, ReactNode } from "react";
 import classnames from "classnames";
 
 // DividerProps type
 export type DividerProps = {
   prefixCls?: string;
   className?: string;
+  children?: ReactNode;
   style?: CSSProperties;
   contentAlign?: "center" | "left" | "right"; // takes effect when vertical: false
   vertical?: boolean; // vertical or horizontal

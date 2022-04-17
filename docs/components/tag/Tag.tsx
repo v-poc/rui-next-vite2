@@ -1,4 +1,4 @@
-import React, { CSSProperties, useCallback, useEffect, useState } from "react";
+import React, { CSSProperties, ReactNode, useCallback, useEffect, useState } from "react";
 import classnames from "classnames";
 import Icon from "../icon/index";
 import TouchFeedback from "../_utils/TouchFeedback";
@@ -8,6 +8,7 @@ import { getDataAttr } from "../_utils/index";
 export type TagProps = {
   prefixCls?: string;
   className?: string;
+  children?: ReactNode;
   style?: CSSProperties;
   disabled?: boolean;
   selected?: boolean;

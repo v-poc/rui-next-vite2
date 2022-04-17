@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import classnames from "classnames";
 
 const SKELETON_WIDTH = {
@@ -13,6 +13,7 @@ export type SkeletonProps = {
   loading: boolean;
   avatar?: boolean;
   avatarSize?: string;
+  children?: ReactNode;
   title?: boolean;
   titleWidth?: number | string;
   row?: number;
