@@ -1,3 +1,7 @@
+# 0.35.1 (2022-04-17)
+
+Updated `SearchBar` demo for events usage.
+
 # 0.35.0 (2022-04-16)
 
 - Added `SearchBar` demo.

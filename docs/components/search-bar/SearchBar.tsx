@@ -167,6 +167,6 @@ SearchBar.defaultProps = {
   clearable: true,
   clearOnCancel: true,
   defaultValue: "",
-  icon: <Icon type="search" size="xxs" />,
+  icon: <Icon type="search" size="xs" />,
   showCancel: false,
 };

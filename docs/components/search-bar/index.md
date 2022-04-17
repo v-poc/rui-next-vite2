@@ -15,8 +15,13 @@ title: SearchBar
 Basic usage of SearchBar component.
 
 ```jsx live=local
-import React from "react";
-import { SearchBar } from "rui-next";
+import React, { useRef } from "react";
+import { Button, SearchBar } from "rui-next";
+import { logInfo } from "experimental";
+
+const handleLog = (name, v) => {
+  logInfo(`[${name}] info: ${v}`);
+};
 
 // Example Styles
 import styled from "styled-components";
@@ -32,31 +37,66 @@ const ExampleContainer = styled.div`
     padding-top: 0;
   }
 
-  .card-wrapper {
-    padding: 10px 0;
-    background-color: #EEE;
+  .btn-wrapper {
+    margin-top: 10px;
+    margin-right: 10px;
   }
 `;
 
 // Example FC
-const Example = () => (
-  <ExampleContainer>
-    <p className="sub-title">Basic SearchBar with cancel button</p>
-    <SearchBar
-      placeholder="Please input content"
-      showCancel
-    />
-    <p className="sub-title">Basic SearchBar without cancel button</p>
-    <SearchBar
-      placeholder="Please input content"
-    />
-    <p className="sub-title">SearchBar always with cancel button</p>
-    <SearchBar
-      placeholder="Please input content"
-      showCancel={() => true}
-    />
-  </ExampleContainer>
-);
+const Example = () => {
+  const searchBarRef = useRef();
+
+  return (
+    <ExampleContainer>
+      <p className="sub-title">Basic SearchBar with cancel button</p>
+      <SearchBar
+        placeholder="Please input content"
+        showCancel
+      />
+      <p className="sub-title">Basic SearchBar without cancel button</p>
+      <SearchBar
+        placeholder="Please input content"
+      />
+      <p className="sub-title">SearchBar always with cancel button</p>
+      <SearchBar
+        placeholder="Please input content"
+        showCancel={() => true}
+      />
+      <p className="sub-title">SearchBar with events (refer `RUI-log` in Console log)</p>
+      <SearchBar
+        ref={searchBarRef}
+        placeholder="Please input content"
+        showCancel
+        onBlur={() => handleLog("onBlur", "Lose focus")}
+        onCancel={() => handleLog("onCancel", "Cancel search")}
+        onClear={() => handleLog("onClear", "Clear content")}
+        onFocus={() => handleLog("onFocus", "Get focus")}
+        onSearch={(v) => handleLog("onSearch", `Search content: ${v}`)}
+      />
+      <Button
+        type="primary"
+        className="btn-wrapper"
+        inline
+        round
+        size="small"
+        onClick={() => searchBarRef.current.focus()}
+      >
+        Test to get focus
+      </Button>
+      <Button
+        type="primary"
+        className="btn-wrapper"
+        inline
+        round
+        size="small"
+        onClick={() => searchBarRef.current.clear()}
+      >
+        Test to clear content
+      </Button>
+    </ExampleContainer>
+  );
+}
 
 export default Example;
 ```
