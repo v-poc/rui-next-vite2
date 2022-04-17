@@ -55,7 +55,8 @@ export { default as TextArea } from "./text-area/index";
 export { default as Steps } from "./steps/index";
 // Slider
 export { default as Slider } from "./slider/index";
-
+// SearchBar
+export { default as SearchBar } from "./search-bar/index";
 
 
 /**

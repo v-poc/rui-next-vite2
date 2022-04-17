@@ -99,3 +99,18 @@ export const getNearest = (arr: number[], targetItem: number) => {
     return Math.abs(prevItem - targetItem) < Math.abs(currItem - targetItem) ? prevItem : currItem;
   });
 };
+
+// Get bound
+export const getBound = (pos: number, min: number | undefined, max: number | undefined) => {
+  let res = pos;
+
+  if (min !== undefined) {
+    res = Math.max(pos, min);
+  }
+
+  if (max !== undefined) {
+    res = Math.min(res, max);
+  }
+  
+  return res;
+};

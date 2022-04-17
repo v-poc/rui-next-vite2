@@ -1,3 +1,8 @@
+# 0.35.0 (2022-04-16)
+
+- Added `SearchBar` demo.
+- Updated `Input` component.
+
 # 0.34.3 (2022-04-10)
 
 - Updated `Slider` demo to support `Ticks` and `Marks` display.

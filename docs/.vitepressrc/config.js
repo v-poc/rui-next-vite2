@@ -109,6 +109,7 @@ function getLocalSidebar() {
         { text: "Input", link: "/components/input/index" },
         { text: "TextArea", link: "/components/text-area/index" },
         { text: "Slider", link: "/components/slider/index" },
+        { text: "SearchBar", link: "/components/search-bar/index" },
       ]
     },
 		{
