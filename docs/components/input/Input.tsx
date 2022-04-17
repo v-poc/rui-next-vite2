@@ -9,7 +9,9 @@ import React, {
   useImperativeHandle,
   useLayoutEffect,
 } from "react";
+import classnames from "classnames";
 import Icon from "../icon/index";
+import { getBound } from "../_utils/index";
 import usePropsValue from "../_hooks/usePropsValue/index";
 
 type NativeInputProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
@@ -19,14 +21,15 @@ type PickNativeInputProps = Pick<
   | "autoCapitalize"
   | "autoComplete"
   | "autoCorrect"
+  | "autoFocus"
   | "inputMode"
-  | "max"
-  | "min"
   | "maxLength"
   | "minLength"
   | "pattern"
   | "type"
   | "onBlur"
+  | "onCompositionStart"
+  | "onCompositionEnd"
   | "onFocus"
   | "onKeyDown"
   | "onKeyUp"
@@ -35,11 +38,14 @@ type PickNativeInputProps = Pick<
 // InputProps type
 export type InputProps = PickNativeInputProps & {
   prefixCls?: string;
+  className?: string;
   clearable?: boolean;
   defaultValue?: string;
   disabled?: boolean;
   enterKeyHint?: "done" | "enter" | "go" | "next" | "previous" | "search" | "send";
   id?: string;
+  min?: number;
+  max?: number;
   placeholder?: string;
   readOnly?: boolean;
   value?: string;
@@ -54,20 +60,24 @@ export type InputRef = {
   blur: () => void;
   clear: () => void;
   focus: () => void;
+  nativeElement: HTMLInputElement | null;
 };
 
 // Input FC
 export const Input = forwardRef<InputRef, InputProps>((props, ref) => {
   const {
     prefixCls,
+    className,
     autoCapitalize,
     autoComplete,
     autoCorrect,
+    autoFocus,
     clearable,
     defaultValue,
     disabled,
     enterKeyHint,
     id,
+    inputMode,
     max,
     min,
     maxLength,
@@ -79,6 +89,8 @@ export const Input = forwardRef<InputRef, InputProps>((props, ref) => {
     value,
     // onChange,
     onClear,
+    onCompositionStart,
+    onCompositionEnd,
     onEnterKeyPress,
     onBlur,
     onFocus,
@@ -96,6 +108,9 @@ export const Input = forwardRef<InputRef, InputProps>((props, ref) => {
     blur: () => nativeInputRef.current?.blur(),
     clear: () => setVal(""),
     focus: () => nativeInputRef.current?.focus(),
+    get nativeElement() {
+      return nativeInputRef.current;
+    },
   }));
 
   // useLayoutEffect hook
@@ -111,6 +126,19 @@ export const Input = forwardRef<InputRef, InputProps>((props, ref) => {
     }
   }, [enterKeyHint]);
 
+  // check value
+  const checkVal = () => {
+    let nextVal = val;
+
+    if (type === "number") {
+      nextVal = nextVal && getBound(parseFloat(nextVal), min, max).toString();
+    }
+
+    if (nextVal !== val) {
+      setVal(nextVal);
+    }
+  };
+
   // handle keydown event
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (onEnterKeyPress && (e.code === "Enter" || e.keyCode === 13)) {
@@ -123,6 +151,7 @@ export const Input = forwardRef<InputRef, InputProps>((props, ref) => {
   // handle blur event
   const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
     setIsFocus(false);
+    checkVal();
     onBlur?.(e);
   };
 
@@ -132,18 +161,28 @@ export const Input = forwardRef<InputRef, InputProps>((props, ref) => {
     onFocus?.(e);
   };
 
+  const wrapCls = classnames(
+    prefixCls,
+    className,
+    {
+      [`${prefixCls}-disabled`]: disabled,
+    },
+  );
+
   return (
     <div
-      className={`${prefixCls}-wrapper`}
+      className={wrapCls}
     >
       <input
         ref={nativeInputRef}
         autoCapitalize={autoCapitalize}
         autoComplete={autoComplete}
         autoCorrect={autoCorrect}
-        className={prefixCls}
+        autoFocus={autoFocus}
+        className={`${prefixCls}-element`}
         disabled={disabled}
         id={id}
+        inputMode={inputMode}
         max={max}
         min={min}
         maxLength={maxLength}
@@ -154,12 +193,14 @@ export const Input = forwardRef<InputRef, InputProps>((props, ref) => {
         type={type}
         value={val}
         onChange={(e) => setVal(e.target?.value)}
+        onCompositionStart={onCompositionStart}
+        onCompositionEnd={onCompositionEnd}
         onBlur={handleBlur}
         onFocus={handleFocus}
         onKeyDown={handleKeyDown}
         onKeyUp={onKeyUp}
       />
-      {clearable && !!val && isFocus && (
+      {clearable && !!val && !readOnly && isFocus && (
         <div
           className={`${prefixCls}-clear`}
           onMouseDown={(e) => e.preventDefault()}
