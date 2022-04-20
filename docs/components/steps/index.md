@@ -59,7 +59,7 @@ const Example = () => (
     </Steps>
     <p className="sub-title">Basic Steps with status (vertical)</p>
     <Steps
-      direction="vertical"
+      vertical
     >
       <Steps.Item
         title="Step one"
@@ -87,7 +87,7 @@ export default Example;
 Properties | Description | Type | Default
 -----------|------------|------|--------
 | currentIndex | The specified current step counting from 0. In the child Step element, the status can be overridden by the `status` attribute | `number` | `0` |
-| direction | The specified direction of the step bar | `horizontal \| vertical` | `horizontal` |
+| vertical | Whether the direction mode is vertical | `boolean` | `false` |
 
 ### Steps.Item
 

@@ -8,7 +8,7 @@ export type StepsProps = {
   className?: string;
   children?: ReactNode;
   currentIndex?: number;
-  direction?: "horizontal" | "vertical";
+  vertical?: boolean; // vertical or horizontal
 };
 
 // Steps FC
@@ -17,14 +17,14 @@ export const Steps: React.FC<StepsProps> = (props) => {
     prefixCls,
     className,
     currentIndex,
-    direction,
+    vertical,
     children,
   } = props;
 
   const wrapCls = classnames(
     prefixCls,
     className,
-    `${prefixCls}-${direction}`,
+    `${prefixCls}-${vertical ? "vertical" : "horizontal"}`,
   );
 
   return (
@@ -59,5 +59,5 @@ export const Steps: React.FC<StepsProps> = (props) => {
 Steps.defaultProps = {
   prefixCls: 'r-steps',
   currentIndex: 0,
-  direction: "horizontal",
+  vertical: false,
 };
