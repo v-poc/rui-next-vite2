@@ -16,9 +16,13 @@ type NativeTextAreaProps = DetailedHTMLProps<TextareaHTMLAttributes<HTMLTextArea
 type PickNativeTextAreaProps = Pick<
   NativeTextAreaProps,
   | "autoComplete"
+  | "autoFocus"
   | "disabled"
   | "readOnly"
   | "onBlur"
+  | "onClick"
+  | "onCompositionEnd"
+  | "onCompositionStart"
   | "onFocus"
 >;
 
@@ -68,6 +72,7 @@ export const TextArea = forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
     prefixCls,
     className,
     autoComplete,
+    autoFocus,
     autoSize,
     defaultValue,
     disabled,
@@ -80,12 +85,19 @@ export const TextArea = forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
     value,
     onBlur,
     onChange,
+    onClick,
+    onCompositionEnd,
+    onCompositionStart,
     onFocus,
   } = props;
 
-  const [val, setVal] = usePropsValue(props);
+  const [val, setVal] = usePropsValue({
+    ...props,
+    value: value === null ? "" : value,
+  });
   
   const nativeTextAreaRef = useRef<HTMLTextAreaElement>();
+  const compositionRef = useRef(false);
 
   // useImperativeHandle hook
   useImperativeHandle(ref, () => ({
@@ -131,7 +143,7 @@ export const TextArea = forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
         </div>
       );
     } else if (typeof showCount === "function") {
-      res = showCount(val.length, maxLength);
+      res = showCount([...val].length, maxLength);
     }
 
     return res;
@@ -149,7 +161,8 @@ export const TextArea = forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
       <textarea
         ref={nativeTextAreaRef}
         autoComplete={autoComplete}
-        className={prefixCls}
+        autoFocus={autoFocus}
+        className={`${prefixCls}-element`}
         disabled={disabled}
         id={id}
         maxLength={maxLength}
@@ -157,9 +170,27 @@ export const TextArea = forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
         readOnly={readOnly}
         rows={rows}
         value={val}
-        onChange={(e) => setVal(e.target.value)}
-        onBlur={(e) => onBlur?.(e)}
-        onFocus={(e) => onFocus?.(e)}
+        onBlur={onBlur}
+        onChange={(e) => {
+          let v = e.target.value;
+          if (maxLength && !compositionRef.current) {
+            v = [...v].slice(0, maxLength).join("");
+          }
+          setVal(v);
+        }}
+        onClick={onClick}
+        onCompositionEnd={(e) => {
+          compositionRef.current = false;
+          if (maxLength) {
+            setVal([...val].slice(0, maxLength).join(""));
+          }
+          onCompositionEnd?.(e);
+        }}
+        onCompositionStart={(e) => {
+          compositionRef.current = true;
+          onCompositionStart?.(e);
+        }}
+        onFocus={onFocus}
       />
       {renderCount()}
     </div>

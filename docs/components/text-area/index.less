@@ -3,62 +3,63 @@
 
 @textAreaPrefixCls: r-text-area;
 
-.@{textAreaPrefixCls} {
-  font-family: @font-family;
-  resize: none;
-  flex: auto;
-  display: block;
-  box-sizing: border-box;
+.@{textAreaPrefixCls} { 
   width: 100%;
   max-width: 100%;
   max-height: 100%;
-  padding: 0;
-  margin: 0;
-  color: #333;
-  font-size: 17px;
-  line-height: 1.5;
-  background: transparent;
-  border: 0;
-  outline: none;
-  appearance: none;
-  min-height: 1.5em;
 
-  &-wrapper {  
+  &-element {
+    font-family: @font-family;
+    resize: none;
+    flex: auto;
+    display: block;
+    box-sizing: border-box;
     width: 100%;
     max-width: 100%;
     max-height: 100%;
-  }
-
-  &::placeholder {
-    color: #CCC;
-    font-family: inherit;
-  }
-
-  &:-webkit-autofill {
-    background-color: transparent;
-  }
-
-  &:disabled {
-    color: #999;
-    cursor: not-allowed;
-    opacity: 1;
-    -webkit-text-fill-color: #999;
-  }
-
-  &:read-only {
-    cursor: default;
-  }
-
-  &:invalid {
-    box-shadow: none;
-  }
-
-  &::-ms-clear {
-    display: none;
-  }
-
-  &[readonly] {
-    pointer-events: none;
+    padding: 0;
+    margin: 0;
+    color: #333;
+    font-size: 17px;
+    line-height: 1.5;
+    background: transparent;
+    border: 0;
+    outline: none;
+    appearance: none;
+    min-height: 1.5em;
+    text-align: left;
+  
+    &::placeholder {
+      color: #CCC;
+      font-family: inherit;
+    }
+  
+    &:-webkit-autofill {
+      background-color: transparent;
+    }
+  
+    &:disabled {
+      color: #999;
+      cursor: not-allowed;
+      opacity: 1;
+      -webkit-text-fill-color: #999;
+    }
+  
+    &:read-only {
+      cursor: default;
+    }
+  
+    &:invalid {
+      box-shadow: none;
+    }
+  
+    &::-ms-clear {
+      display: none;
+    }
+  
+    &[readonly] {
+      pointer-events: none;
+    }
   }
 
   &-count {

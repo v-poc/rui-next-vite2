@@ -9,6 +9,8 @@ The `Input` component is layout-independent, that means it only includes the mos
 > In native `input`, `maxlength` only takes effect when `type` is `text`, `search`, `url`, `tel`, `email`, `password`.
 >
 > If you need to limit the number type to the input box, you can pass the `max/min` prop.
+>
+> In addition, the following native attributes are supported: `maxLength` `minLength` `max` `min` `autoComplete` `autoFocus` `enterKeyHint` `pattern` `inputMode` `type` `onFocus` `onBlur` `autoCapitalize` `autoCorrect` `onKeyDown` `onKeyUp` `onCompositionStart` `onCompositionEnd` `onClick`
 
 ```jsx
 <Input placeholder="please input content" />

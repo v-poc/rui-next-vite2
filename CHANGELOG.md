@@ -1,3 +1,8 @@
+# 0.35.2 (2022-04-23)
+
+Refactor: update `Input` component.
+Refactor: update `TextArea` component.
+
 # 0.35.1 (2022-04-17)
 
 Updated `SearchBar` demo for events usage.

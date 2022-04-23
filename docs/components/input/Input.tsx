@@ -28,6 +28,7 @@ type PickNativeInputProps = Pick<
   | "pattern"
   | "type"
   | "onBlur"
+  | "onClick"
   | "onCompositionStart"
   | "onCompositionEnd"
   | "onFocus"
@@ -89,6 +90,7 @@ export const Input = forwardRef<InputRef, InputProps>((props, ref) => {
     value,
     // onChange,
     onClear,
+    onClick,
     onCompositionStart,
     onCompositionEnd,
     onEnterKeyPress,
@@ -193,6 +195,7 @@ export const Input = forwardRef<InputRef, InputProps>((props, ref) => {
         type={type}
         value={val}
         onChange={(e) => setVal(e.target?.value)}
+        onClick={onClick}
         onCompositionStart={onCompositionStart}
         onCompositionEnd={onCompositionEnd}
         onBlur={handleBlur}

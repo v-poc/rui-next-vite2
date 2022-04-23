@@ -6,7 +6,7 @@ title: TextArea
 
 The `TextArea` component is layout-independent, that means it only includes the most basic TextArea box part. If you want to add borders, titles, or some operation buttons with it, you can combine with the `List` or `Form` components.
 
-> In addition, the following native attributes are supported: `autoComplete`, `disabled`, `readOnly`, `onBlur`, `onFocus`.
+> In addition, the following native attributes are supported: `autoComplete` `autoFocus` `disabled` `readOnly` `onFocus` `onBlur` `onCompositionStart` `onCompositionEnd` `onClick`.
 
 ```jsx
 <TextArea placeholder="please input content" />
