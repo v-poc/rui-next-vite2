@@ -43,13 +43,13 @@ const ExampleContainer = styled.div`
 
   .btn-lt {
     position: absolute;
-    top: 175px;
+    top: 205px;
     left: 145px;
   }
 
   .btn-rt {
     position: absolute;
-    top: 175px;
+    top: 205px;
     left: 240px;
   }
 `;
