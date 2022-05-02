@@ -63,12 +63,12 @@ const Example = () => {
       <p className="sub-title">Let your imagination run wild and be creative</p>
       <img src="https://nikoni.top/images/others/cg.jpg" />
       <XButton
-        scale={0.5}
+        scale={0.6}
         className="btn-lt"
         callback={handleClick}
       />
       <XButton
-        scale={0.5}
+        scale={0.6}
         className="btn-rt"
         callback={handleClick}
       />
