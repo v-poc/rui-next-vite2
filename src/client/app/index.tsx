@@ -10,7 +10,7 @@ if (import.meta.env.PROD) {
 	//	</React.StrictMode>,
 	//	document.getElementById('app')
 	// )
-	const container = document.getElementById("app") as any;
+	const container = document.getElementById("app") as HTMLElement;
 	hydrateRoot(
 		container,
 		<React.StrictMode>
@@ -24,7 +24,7 @@ if (import.meta.env.PROD) {
 	// 	</React.StrictMode>,
 	// 	document.getElementById('app')
 	// )
-	const clientContainer = document.getElementById("app") as any;
+	const clientContainer = document.getElementById("app") as HTMLElement;
 	createRoot(clientContainer).render(
 		<React.StrictMode>
 			<App />
