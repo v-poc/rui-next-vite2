@@ -1,6 +1,6 @@
 # Getting Started
 
-[![npm](https://img.shields.io/npm/v/rui-next)](https://www.npmjs.com/package/rui-next) <a href="https://nikoni.top/rui-next/docs/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" /></a>
+[![npm](https://img.shields.io/npm/v/rui-next)](https://www.npmjs.com/package/rui-next) <a href="https://nikoni.top/rui-next/docs/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" /></a> [![Required Node.JS >= v12.2.0](https://img.shields.io/static/v1?label=node&message=%3E=12.2.0&logo=node.js&color=3f893e&style=flat)](https://nodejs.org/about/releases)
 
 ## Overview
 
