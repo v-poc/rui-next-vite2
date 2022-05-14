@@ -4,6 +4,8 @@
 
 ## Overview
 
+React with Vite Playground - Mobile web UI components - (react-hooks+vite2).
+
 Thanks to [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) that could support `React docs+demos` well to run with `vitepress+vite`, the `CodeBlock` is able to play a role of `LiveEditor+LivePreview`.
 
 Compare to other tools:
@@ -14,8 +16,6 @@ Compare to other tools:
   - it seems not good enough to support `React docs+demos`.
 - [`vite-plugin-react-pages`](https://github.com/vitejs/vite-plugin-react-pages)
   - for early version, it seems not able to show both demos and source codes in the `CodeBlock`.
-
-React with Vite Playground - Mobile web UI components - (react-hooks+vite2).
 
 ## Preview
 
