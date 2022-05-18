@@ -6,7 +6,7 @@ title: Playground
 
 This is the playground for `RUI.next` (**experimental status**).
 
-> This is a lightweight demo ([github](https://github.com/v-poc/rui-poc) | [online](https://nikoni.top/rui-poc)) to use `react-ts` template of [@vite/create-vite](https://github.com/vitejs/vite/tree/main/packages/create-vite).
+> This is a lightweight demo ([rui-poc](https://github.com/v-poc/rui-poc) | [online](https://nikoni.top/rui-poc) | [electron-rui-poc](https://github.com/v-poc/vite-electron-rui-poc)) to use `react-ts` template of [@vite/create-vite](https://github.com/vitejs/vite/tree/main/packages/create-vite).
 
 ```jsx live=local
 import React, { useState } from "react";
@@ -299,7 +299,7 @@ const Example = () => {
             <Icon
               type="ellipsis"
               className="mr"
-              onClick={() => handleBtnClick()}
+              onClick={handleBtnClick}
             />
           }
           closeable
