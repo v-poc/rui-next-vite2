@@ -29,7 +29,7 @@ export const LikeButton: React.FC<LikeButtonProps> = (props) => {
     delay,
     scale = 1,
     heartColor,
-    lineColors,
+    lineColors = [],
     callback,
   } = props;
 
