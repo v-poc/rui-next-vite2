@@ -34,7 +34,7 @@ const Switch: React.FC<SwitchProps> = (props) => {
 
   const dataAttributes = getDataAttr(restProps) || {};
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputELement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (onChange) {
       onChange(e.target.checked);
     }
