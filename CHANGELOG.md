@@ -1,3 +1,7 @@
+# 0.35.4 (2022-06-25)
+
+Updated styles for `Badge` component.
+
 # 0.35.2 (2022-04-23)
 
 - Refactor: update `Input` component.
