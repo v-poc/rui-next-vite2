@@ -85,7 +85,7 @@ const Example = () => (
     <p className="sub-title">Numberic badge</p>
     <Badge
       text={99}
-      overflowCount={66}
+      overflowcount={66}
     />
     <p className="sub-title">Corner badge</p>
     <Badge
@@ -124,5 +124,5 @@ Properties | Description | Type | Default
 | text | the text or number inside badge | `string\|number` | - |
 | corner | whether the badge is at the corner position | `boolean` | `false` |
 | dot | show badge as a red dot | `boolean` | `false` |
-| overflowCount | the max count to show | `number` | `99` |
+| overflowcount | the max count to show | `number` | `99` |
 | hot | the hot commercial style | `boolean` | `false` |

@@ -9,7 +9,7 @@ export type BadgeProps = {
   style?: CSSProperties;
   hot?: boolean;
   size?: "large" | "small";
-  overflowCount?: number;
+  overflowcount?: number;
   corner?: boolean;
   dot?: boolean;
   text?: any;
@@ -17,27 +17,29 @@ export type BadgeProps = {
 
 // Badge FC
 export const Badge: React.FC<BadgeProps> = (props) => {
-  let {
+  const {
     className,
     prefixCls,
     children,
-    text,
+    // text,
     size,
-    overflowCount,
+    // overflowcount,
     dot,
     corner,
     hot,
     ...restProps
   } = props;
 
-  overflowCount = overflowCount as number;
+  let {text, overflowcount} = props;
+
+  overflowcount = overflowcount as number;
 
   if (dot) {
     text = ""; // dot mode don't need text
   }
 
-  if (typeof text === 'number' && text > overflowCount) {
-    text = `${overflowCount}+`; // overflow count
+  if (typeof text === 'number' && text > overflowcount) {
+    text = `${overflowcount}+`; // overflow count
   }
 
   const scrollNumberCls = classnames({
@@ -77,7 +79,7 @@ export const Badge: React.FC<BadgeProps> = (props) => {
 Badge.defaultProps = {
   prefixCls: "r-badge",
   size: "small",
-  overflowCount: 99,
+  overflowcount: 99,
   dot: false,
   corner: false,
 };
