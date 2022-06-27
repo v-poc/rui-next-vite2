@@ -16,10 +16,10 @@ const ProgressCircle: React.FC<ProgressCircleProps> = (props) => {
   const {
     prefixCls,
     className,
-    percent,
+    percent = 0,
     children,
-    size,
-    trackWidth,
+    size = 50,
+    trackWidth = 3,
   } = props;
 
   const wrapCls = classnames(
