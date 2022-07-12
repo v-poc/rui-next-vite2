@@ -50,8 +50,11 @@ const Watermark: React.FC<WatermarkProps> = (props) => {
   const [base64DataURL, setBase64DataURL] = useState("");
 
   useEffect(() => {
-    if (!canUseDOM) return;
-    const canvas = canUseDOM && document.createElement("canvas");
+    if (!canUseDOM) {
+      return;
+    }
+
+    const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
     if (!ctx) {
       throw new Error("Canvas is not supported!");
