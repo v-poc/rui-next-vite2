@@ -30,17 +30,17 @@ const Watermark: React.FC<WatermarkProps> = (props) => {
     prefixCls,
     style,
     className,
-    gapX,
-    gapY,
+    gapX = 0,
+    gapY = 0,
     zIndex,
-    width,
-    height,
-    rotate,
+    width = 0,
+    height = 0,
+    rotate = 0,
     content,
     image,
-    imageW,
-    imageH,
-    fontColor,
+    imageW = 0,
+    imageH = 0,
+    fontColor = "rgba(0, 0, 0, .15)",
     fontFamily,
     fontSize,
     fontStyle,
@@ -50,6 +50,7 @@ const Watermark: React.FC<WatermarkProps> = (props) => {
   const [base64DataURL, setBase64DataURL] = useState("");
 
   useEffect(() => {
+    if (!canUseDOM) return;
     const canvas = canUseDOM && document.createElement("canvas");
     const ctx = canvas.getContext("2d");
     if (!ctx) {
