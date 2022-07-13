@@ -1,9 +1,8 @@
 import CheckList from "./CheckList";
 import CheckListItem from "./CheckListItem";
+import { attachPropsToComp } from "../_utils/index";
 
 import "../_styles/index";
 import "./index.less";
 
-CheckList.Item = CheckListItem;
-
-export default CheckList;
+export default attachPropsToComp(CheckList, { Item: CheckListItem });

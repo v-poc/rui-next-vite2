@@ -1,9 +1,8 @@
 import List from "./List";
 import ListItem from "./ListItem";
+import { attachPropsToComp } from "../_utils/index";
 
 import "../_styles/index";
 import "./index.less";
 
-List.Item = ListItem;
-
-export default List;
+export default attachPropsToComp(List, { Item: ListItem });

@@ -16,7 +16,7 @@ export const Steps: React.FC<StepsProps> = (props) => {
   const {
     prefixCls,
     className,
-    currentIndex,
+    currentIndex = 0,
     vertical,
     children,
   } = props;
