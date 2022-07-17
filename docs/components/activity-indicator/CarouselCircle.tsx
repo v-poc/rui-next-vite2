@@ -33,11 +33,11 @@ const CarouselCircle: React.FC<CarouselCircleProps> = (props) => {
     };
   };
 
-  const getCx = (index) => index * size * 1.5 + size / 2;
+  const getCx = (index: number) => index * size * 1.5 + size / 2;
 
-  const opacityValues = (animateValues) => animateValues.join(";");
+  const opacityValues = (animateValues: number[]) => animateValues.join(";");
 
-  const sizeValues = (animateValues) => animateValues.map((val) => (val * size) / 2).join(";");
+  const sizeValues = (animateValues: number[]) => animateValues.map((val) => (val * size) / 2).join(";");
 
   return (
     <div className={prefixCls}>
