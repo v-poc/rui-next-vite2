@@ -9,6 +9,7 @@ export type ActivityIndicatorProps = {
   className?: string;
   animating?: boolean;
   carousel?: "circle" | "rect";
+  panelColor?: string;
   toast?: boolean;
   sizeType?: "large" | "small";
   size?: number;
