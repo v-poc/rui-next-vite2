@@ -1,6 +1,6 @@
 {
     "name": "rui-next",
-    "version": "0.35.6",
+    "version": "0.35.7",
     "description": "Mobile web UI components based on React and Vite 2",
     "files": [
         "dist/style.css",
@@ -81,6 +81,10 @@
             "pre-commit": "lint-staged"
         }
     },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
     "devDependencies": {
         "@mdx-js/mdx": "2.0.0-next.9",
         "@mdx-js/react": "2.0.0-next.9",
@@ -114,9 +118,7 @@
         "polka": "^0.5.2",
         "prettier": "^2.7.1",
         "prism-react-renderer": "^1.3.3",
-        "react": "^18.2.0",
         "react-docgen-typescript": "^2.2.2",
-        "react-dom": "^18.2.0",
         "react-is": "^18.2.0",
         "remark-emoji": "2.2.0",
         "remark-frontmatter": "3.0.0",
@@ -132,7 +134,7 @@
         "unified": "^10.1.2",
         "unist-util-find": "^1.0.2",
         "unist-util-visit": "2.0.3",
-        "v-qr-code-next": "^0.1.9",
-        "vite": "^2.9.12"
+        "v-qr-code-next": "^0.1.11",
+        "vite": "^2.9.14"
     }
 }
