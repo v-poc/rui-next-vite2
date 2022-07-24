@@ -2,13 +2,13 @@ import React from "react";
 import classnames from "classnames";
 
 // CardBodyProps Type
-export type CardBodyProps = {
+export type CardBodyProps = React.HTMLProps<HTMLDivElement> & {
   prefixCls?: string;
   className?: string;
 };
 
 // CardBody FC
-const CardBody: React.FC = <CardBodyProps extends React.HTMLProps<HTMLDivElement>>(props) => {
+const CardBody: React.FC<CardBodyProps> = (props) => {
   const {
     prefixCls,
     className,

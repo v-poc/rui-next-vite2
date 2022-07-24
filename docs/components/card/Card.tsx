@@ -3,15 +3,16 @@ import classnames from "classnames";
 import CardHeader from "./Header";
 import CardBody from "./Body";
 import CardFooter from "./Footer";
+import { attachPropsToComp } from "../_utils/index";
 
 // CardProps Type
-export type CardProps = {
+export type CardProps = React.HTMLProps<HTMLDivElement> & {
   prefixCls?: string;
   full?: boolean;
 };
 
 // Card FC
-const Card: React.FC = <CardProps extends React.HTMLProps<HTMLDivElement>>(props) => {
+const Card: React.FC<CardProps> = (props) => {
   const {
     prefixCls,
     full,
@@ -40,8 +41,12 @@ Card.defaultProps = {
   full: false,
 };
 
-Card.Header = CardHeader;
-Card.Body = CardBody;
-Card.Footer = CardFooter;
+// Card.Header = CardHeader;
+// Card.Body = CardBody;
+// Card.Footer = CardFooter;
 
-export default Card;
+export default attachPropsToComp(Card, {
+  Header: CardHeader,
+  Body: CardBody,
+  Footer: CardFooter,
+});
