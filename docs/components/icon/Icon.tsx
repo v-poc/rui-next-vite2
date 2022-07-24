@@ -5,11 +5,11 @@ import loadSprite from "../_utils/loadSprite";
 // SvgProps
 export type SvgProps = Omit<
   HTMLProps<SVGSVGElement>,
-  "size" | "type"
+  "size" | "type" | "crossOrigin"
 >;
 
 // IconProps Type
-export type IconProps = {
+export type IconProps = SvgProps & {
   prefixCls?: string;
   className?: string;
   size?: "xxs" | "xs" | "sm" | "md" | "lg";
@@ -19,7 +19,7 @@ export type IconProps = {
 };
 
 // Icon FC
-const Icon: React.FC = <IconProps extends SvgProps>(props) => {
+const Icon: React.FC<IconProps> = (props) => {
   // useEffect hook
   useEffect(() => loadSprite(), []);
 
