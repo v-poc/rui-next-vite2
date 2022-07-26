@@ -22,7 +22,7 @@ const GridItem: React.FC<GridItemProps> = (props) => {
   } = props;
 
   const itemStyle: styleProps = {
-    "--item-span": span.toString(),
+    "--item-span": span?.toString(),
   };
 
   return (
