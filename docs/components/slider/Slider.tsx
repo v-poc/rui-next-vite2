@@ -34,19 +34,19 @@ export const Slider: React.FC<SliderProps> = (props) => {
     className,
     defaultValue,
     value,
-    min,
-    max,
+    min = 0,
+    max = 0,
     disabled,
     icon,
     marks,
     ticks,
     range,
-    step,
+    step = 0,
     onChange,
     onAfterChange,
   } = props;
 
-  const trackRef = useRef<HTMLDivElement>();
+  const trackRef = useRef<any>();
   const dragLockRef = useRef(0);
   const valueBeforeDragRef = useRef<[number, number]>();
 
@@ -152,7 +152,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
       value={sliderValue[index]}
       min={min}
       max={max}
-      disabled={disabled}
+      disabled={!!disabled}
       icon={icon}
       trackRef={trackRef}
       onDrag={(pos, first, last) => {

@@ -25,7 +25,7 @@ export type ThumbProps = {
   max: number;
   disabled: boolean;
   icon?: ReactNode;
-  trackRef: React.RefObject<HTMLDivElement>;
+  trackRef: React.MutableRefObject<HTMLDivElement | undefined>;
   onDrag: (value: number, first: boolean, last: boolean) => void;
 };
 

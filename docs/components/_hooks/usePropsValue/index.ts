@@ -14,7 +14,7 @@ const usePropsValue = <T>(props: PropsType<T>) => {
     value,
     onChange,
   } = props;
-
+  // @ts-ignore
   const valRef = useRef<T>(value !== undefined ? value : defaultValue);
 
   if (value !== undefined) {
@@ -23,7 +23,7 @@ const usePropsValue = <T>(props: PropsType<T>) => {
 
   const forceReRender = useUpdate();
 
-  const setValue = useMemoizedFn((val: T) => {
+  const setValue: any = useMemoizedFn((val: T) => {
     if (value === undefined) {
       valRef.current = val;
       forceReRender();
