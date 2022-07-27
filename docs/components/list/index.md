@@ -56,12 +56,13 @@ const ExampleContainer = styled.div`
     padding-top: 0;
   }
 
-  .card-wrapper {
+  .list-card-wrapper {
     padding: 10px 0;
     background-color: #EEE;
   }
 
-  .avatar-item {
+  img.list-avatar-item {
+    margin: 0;
     width: 40px;
     height: 40px;
     border-radius: 20px;
@@ -83,7 +84,7 @@ const Example = () => (
     </List>
 
     <div className="sub-title">Card mode</div>
-    <div className="card-wrapper">
+    <div className="list-card-wrapper">
       <List
         mode="card"
       >
@@ -119,7 +120,7 @@ const Example = () => (
     <List>
       {arrUsers.map((item, i) => {
         const { index, avatar, name, desc } = item;
-        const renderImage = <img className="avatar-item" src={avatar} />;
+        const renderImage = <img className="list-avatar-item" src={avatar} />;
         return (
           <List.Item
             key={`user${index}`}
