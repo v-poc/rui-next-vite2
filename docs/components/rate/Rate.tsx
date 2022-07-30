@@ -3,6 +3,12 @@ import classnames from "classnames";
 import Icon from "../icon/index";
 import usePropsValue from "../_hooks/usePropsValue/index";
 
+type itemStyleType = {
+  fontSize?: string;
+  lineHeight?: string;
+  color?: string;
+};
+
 // RateProps type
 export type RateProps = {
   prefixCls?: string;
@@ -56,7 +62,7 @@ export const Rate: React.FC<RateProps> = (props) => {
     v: number,
     isHalf: boolean
   ) => {
-    const itemStyle = {
+    const itemStyle: itemStyleType = {
       fontSize: `${size}px`,
       lineHeight: `${size}px`,
     };
