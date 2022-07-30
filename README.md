@@ -19,8 +19,9 @@ Try [QR code playground](https://nikoni.top/rui-next/docs/components/qr-code/ind
 
 ## Status
 
-- More UI components WIP based on React hooks.
-- About project test, will provide unit/e2e test in next major version.
+- Migration from [`vitepress-rc`](https://github.com/cvnine/vitepress-rc) to [`Pressify`](http://github.com/codpoe/pressify).
+
+> `vitepress-rc` lacks of regular maintenance, this PoC will be publicly archived after the migration.
 
 ## Project setup
 
