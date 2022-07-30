@@ -64,6 +64,7 @@ export type TextAreaRef = {
   blur: () => void;
   clear: () => void;
   focus: () => void;
+  nativeElement: HTMLTextAreaElement | null;
 };
 
 // TextArea FC
@@ -96,7 +97,7 @@ export const TextArea = forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
     value: value === null ? "" : value,
   });
   
-  const nativeTextAreaRef = useRef<HTMLTextAreaElement>();
+  const nativeTextAreaRef = useRef<HTMLTextAreaElement>(null);
   const compositionRef = useRef(false);
 
   // useImperativeHandle hook
@@ -104,6 +105,9 @@ export const TextArea = forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
     blur: () => nativeTextAreaRef.current?.blur(),
     clear: () => setVal(""),
     focus: () => nativeTextAreaRef.current?.focus(),
+    get nativeElement() {
+      return nativeTextAreaRef.current;
+    },
   }));
 
   // useEffect hook
@@ -133,8 +137,10 @@ export const TextArea = forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
 
   const renderCount = () => {
     let res;
-    
-    if (showCount) {
+
+    if (typeof showCount === "function") {
+      res = showCount([...val].length, maxLength);
+    } else if (showCount) {
       res = (
         <div
           className={`${prefixCls}-count`}
@@ -142,8 +148,6 @@ export const TextArea = forwardRef<TextAreaRef, TextAreaProps>((props, ref) => {
           {maxLength ? `${val.length}/${maxLength}` : val.length}
         </div>
       );
-    } else if (typeof showCount === "function") {
-      res = showCount([...val].length, maxLength);
     }
 
     return res;
