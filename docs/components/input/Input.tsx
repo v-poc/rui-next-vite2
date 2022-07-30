@@ -103,7 +103,7 @@ export const Input = forwardRef<InputRef, InputProps>((props, ref) => {
   const [val, setVal] = usePropsValue(props);
 
   const [isFocus, setIsFocus] = useState<boolean>(false);
-  const nativeInputRef = useRef<HTMLInputElement>();
+  const nativeInputRef = useRef<HTMLInputElement>(null);
 
   // useImperativeHandle hook
   useImperativeHandle(ref, () => ({
