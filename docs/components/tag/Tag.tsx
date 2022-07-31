@@ -80,7 +80,11 @@ const Tag: React.FC<TagProps> = (props) => {
     }
   );
 
-  return !closed && (
+  if (closed) {
+    return null;
+  }
+
+  return (
     <div
       {...dataAttributes}
       className={wrapCls}
