@@ -46,7 +46,7 @@ export const Slider: React.FC<SliderProps> = (props) => {
     onAfterChange,
   } = props;
 
-  const trackRef = useRef<any>();
+  const trackRef = useRef<HTMLDivElement>(null);
   const dragLockRef = useRef(0);
   const valueBeforeDragRef = useRef<[number, number]>();
 
