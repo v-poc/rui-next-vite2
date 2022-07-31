@@ -27,7 +27,7 @@ export const NoticeBar: React.FC<NoticeBarProps> = (props) => {
     extra,
     icon,
     onClose,
-    speed,
+    speed = 0,
     type,
   } = props;
 
@@ -94,7 +94,11 @@ export const NoticeBar: React.FC<NoticeBarProps> = (props) => {
     `${prefixCls}-${type}`,
   );
 
-  return visible && (
+  if (!visible) {
+    return null;
+  }
+
+  return (
     <div
       className={wrapCls}
     >
