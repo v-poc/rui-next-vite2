@@ -14,10 +14,10 @@ export type CheckListItemProps = {
   readOnly?: boolean;
   title?: ReactNode;
   value: string;
-  onClick?: (e: MouseEvent) => void;
+  onClick?: (e: React.MouseEvent<Element, MouseEvent>) => void;
 };
 
-// CheckListItem FC
+// @ts-ignore CheckListItem FC
 const CheckListItem: React.FC<CheckListItemProps> = (props) => {
   const {
     prefixCls,
@@ -53,7 +53,7 @@ const CheckListItem: React.FC<CheckListItemProps> = (props) => {
     </div>
   );
 
-  const handleClick = (e: MouseEvent) => {
+  const handleClick = (e: React.MouseEvent<Element, MouseEvent>) => {
     if (isReadOnly) {
       return;
     }

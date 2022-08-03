@@ -101,14 +101,18 @@ const ListItem: React.FC<ListItemProps> = (props) => {
     },
   );
 
-  return isClickable ? (
-    <a
-      className={wrapCls}
-      onClick={handleClick}
-    >
-      {renderContent}
-    </a>
-  ): (
+  if (isClickable) {
+    return (
+      <a
+        className={wrapCls}
+        onClick={handleClick}
+      >
+        {renderContent}
+      </a>
+    );
+  }
+
+  return (
     <div
       className={wrapCls}
       onClick={handleClick}

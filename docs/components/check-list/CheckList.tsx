@@ -29,7 +29,7 @@ const CheckList: React.FC<CheckListProps> = (props) => {
     defaultValue,
     multiple,
     readOnly,
-    value,
+    value = [],
     onChange,
   } = props;
 
