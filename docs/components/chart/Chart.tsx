@@ -72,7 +72,7 @@ export const Chart: React.FC<ChartProps> = (props) => {
   });
 
   // get stop style
-  const getStopStyle = (color) => {
+  const getStopStyle = (color: string) => {
     return {
       stopColor: color,
     }
@@ -97,7 +97,7 @@ export const Chart: React.FC<ChartProps> = (props) => {
     ) {
       return parseFloat(size[0]) * params.unit;
     } else {
-      return parseFloat(size[0]);
+      return parseFloat(size[0] as string);
     }
   };
 
@@ -109,7 +109,7 @@ export const Chart: React.FC<ChartProps> = (props) => {
     ) {
       return parseFloat(size[1]) * params.unit;
     } else {
-      return parseFloat(size[1]);
+      return parseFloat(size[1] as string);
     }
   };
 
@@ -139,7 +139,7 @@ export const Chart: React.FC<ChartProps> = (props) => {
 
   // get y axis
   const yAxis = () => {
-    const items = [];
+    const items: any = [];
     const deltaY = getInnerHeight() / lines;
 
     for (let i = 0; i < lines; i++) {
@@ -164,7 +164,7 @@ export const Chart: React.FC<ChartProps> = (props) => {
     return datasets.map((data) => {
       const deltaX = getInnerWidth() / (data.values.length - 1);
       const deltaY = getInnerHeight() / lines;
-      const points = data.values.map((value, index) => {
+      const points = data.values.map((value: number, index: number) => {
         const lowerVal = getLower();
         if (value < lowerVal) {
           return {
@@ -197,7 +197,7 @@ export const Chart: React.FC<ChartProps> = (props) => {
         ret.area = {
           value:
             `M0,${getInnerHeight()} ` +
-            points.map((point) => `L${point.x},${point.y}`).join(" ") +
+            points.map((point: { x?: number; y?: number; }) => `L${point.x},${point.y}`).join(" ") +
             ` L${points[points.length - 1].x},${getInnerHeight()}`,
           style: {
             fill: `url(#path-fill-gradient-${data.color})`,
@@ -208,17 +208,17 @@ export const Chart: React.FC<ChartProps> = (props) => {
 
       ret.value =
         `M0,${points.shift().y} ` +
-        points.map((point) => `L${point.x},${point.y}`).join(" ");
+        points.map((point: { x?: number; y?: number; }) => `L${point.x},${point.y}`).join(" ");
       return ret;
     });
   };
 
   // get colors
   const getColors = () => {
-    const uniqueColors = [];
-    datasets.map((data) => {
-      if (data.color && uniqueColors.indexOf(data.color) === -1) {
-        uniqueColors.push(data.color);
+    const uniqueColors: string[] = [];
+    datasets.forEach((data) => {
+      if (data?.color && uniqueColors.indexOf(data?.color) === -1) {
+        uniqueColors.push(data?.color);
       }
     });
     return uniqueColors;
@@ -297,7 +297,7 @@ export const Chart: React.FC<ChartProps> = (props) => {
         transform={`translate(${getOffset().left}, ${getOffset().top})`}
       >
         <g className={`${prefixCls}-axis-y`}>
-          {yAxis().map((item, index) => (
+          {yAxis().map((item: { offset?: number; label?: string; }, index: number) => (
             <g
               key={`y-axis-${index}`}
               transform={`translate(0, ${item.offset})`}

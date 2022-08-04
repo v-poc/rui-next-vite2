@@ -61,7 +61,7 @@ function useEventListener(
   // useEffect hook
   useEffect(() => {
     const targetElement = getTargetElement(target, window);
-    if (!targetElement.addEventListener) {
+    if (!targetElement?.addEventListener) {
       return;
     }
 
@@ -71,14 +71,14 @@ function useEventListener(
       return handlerRef.current && handlerRef.current(event);
     };
 
-    targetElement.addEventListener(eventName, eventListener, {
+    targetElement?.addEventListener(eventName, eventListener, {
       capture,
       once,
       passive,
     });
 
     return () => {
-      targetElement.removeEventListener(eventName, eventListener, {
+      targetElement?.removeEventListener(eventName, eventListener, {
         capture,
       });
     };
