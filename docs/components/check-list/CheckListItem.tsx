@@ -1,4 +1,4 @@
-import React, { ReactNode, useContext } from "react";
+import React, { ReactNode, MouseEvent, useContext } from "react";
 import classnames from "classnames";
 import List from "../list/index";
 import { CheckListContext } from "./CheckListContext";
@@ -14,10 +14,10 @@ export type CheckListItemProps = {
   readOnly?: boolean;
   title?: ReactNode;
   value: string;
-  onClick?: (e: React.MouseEvent<Element, MouseEvent>) => void;
+  onClick?: (e: MouseEvent) => void;
 };
 
-// @ts-ignore CheckListItem FC
+// CheckListItem FC
 const CheckListItem: React.FC<CheckListItemProps> = (props) => {
   const {
     prefixCls,
@@ -34,7 +34,7 @@ const CheckListItem: React.FC<CheckListItemProps> = (props) => {
   const ctx = useContext(CheckListContext);
   if (!ctx) {
     logInfo("CheckList.Item can ONLY be used inside CheckList.", "warn");
-    return;
+    return null;
   }
 
   const isActive = ctx.value.includes(value);
@@ -53,7 +53,7 @@ const CheckListItem: React.FC<CheckListItemProps> = (props) => {
     </div>
   );
 
-  const handleClick = (e: React.MouseEvent<Element, MouseEvent>) => {
+  const handleClick = (e: MouseEvent) => {
     if (isReadOnly) {
       return;
     }
