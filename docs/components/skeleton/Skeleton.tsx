@@ -62,7 +62,7 @@ const Skeleton: React.FC<SkeletonProps> = (props) => {
   };
 
   // get row width
-  const getRowWidth = (index) => {
+  const getRowWidth = (index: number) => {
     if (rowWidth) {
       if (Array.isArray(rowWidth)) {
         return typeof rowWidth[index] === 'number'
@@ -78,7 +78,7 @@ const Skeleton: React.FC<SkeletonProps> = (props) => {
   };
 
   // row width style
-  const rowWidthStyle = (index) => {    
+  const rowWidthStyle = (index: number) => {    
     return {
       width:
         index === row
