@@ -59,7 +59,7 @@ const Example = () => {
         message="Next Generation Frontend Tooling"
         buttonType="primary"
         buttonText="Get Started"
-        onButtonClick={() => handlePrimaryBtnClick()}
+        onButtonClick={handlePrimaryBtnClick}
 
       />
       <br /><br />
@@ -70,7 +70,7 @@ const Example = () => {
         message={`Detect current state: ${isOnline ? "online" : "offline"}`}
         buttonType="ghost"
         buttonText="Learn More"
-        onButtonClick={() => handleGhostBtnClick()}
+        onButtonClick={handleGhostBtnClick}
       />
     </ExampleContainer>
   );
